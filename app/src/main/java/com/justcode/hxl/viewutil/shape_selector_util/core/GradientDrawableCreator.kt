@@ -70,18 +70,6 @@ class GradientDrawableCreator(var typedArray: TypedArray) {
                 drawable.gradientType = gradientType
             } else if (attr == R.styleable.background_bl_gradient_useLevel) {
                 drawable.useLevel = typedArray.getBoolean(attr, false)
-            } else if (attr == R.styleable.background_bl_padding_left) {
-                padding.left = typedArray.getDimension(attr, 0f).toInt()
-            } else if (attr == R.styleable.background_bl_padding_top) {
-                padding.top = typedArray.getDimension(attr, 0f).toInt()
-            } else if (attr == R.styleable.background_bl_padding_right) {
-                padding.right = typedArray.getDimension(attr, 0f).toInt()
-            } else if (attr == R.styleable.background_bl_padding_bottom) {
-                padding.bottom = typedArray.getDimension(attr, 0f).toInt()
-            } else if (attr == R.styleable.background_bl_size_width) {
-                sizeWidth = typedArray.getDimension(attr, 0f)
-            } else if (attr == R.styleable.background_bl_size_height) {
-                sizeHeight = typedArray.getDimension(attr, 0f)
             } else if (attr == R.styleable.background_bl_stroke_width) {
                 strokeWidth = typedArray.getDimension(attr, 0f)
             } else if (attr == R.styleable.background_bl_stroke_color) {
@@ -94,9 +82,6 @@ class GradientDrawableCreator(var typedArray: TypedArray) {
         }
         if (hasSetRadius(cornerRadius)) {
             drawable.cornerRadii = cornerRadius
-        }
-        if (typedArray.hasValue(R.styleable.background_bl_size_width) && typedArray.hasValue(R.styleable.background_bl_size_height)) {
-            drawable.setSize(sizeWidth.toInt(), sizeHeight.toInt())
         }
         //设置填充颜色
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -270,22 +255,7 @@ class GradientDrawableCreator(var typedArray: TypedArray) {
 
         }
 
-        if (typedArray.hasValue(R.styleable.background_bl_padding_left) &&
-            typedArray.hasValue(R.styleable.background_bl_padding_top) &&
-            typedArray.hasValue(R.styleable.background_bl_padding_right) &&
-            typedArray.hasValue(R.styleable.background_bl_padding_bottom)
-        ) {
-            try {
-                val paddingField = drawable.javaClass.getDeclaredField("mPadding")
-                paddingField.isAccessible = true
-                paddingField.set(drawable, padding)
-            } catch (e: NoSuchFieldException) {
-                e.printStackTrace()
-            } catch (e: IllegalAccessException) {
-                e.printStackTrace()
-            }
 
-        }
         return drawable
     }
     private fun hasSetRadius(radius: FloatArray): Boolean {

@@ -1,31 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              tools:context=".shape_selector_util.ShapeAndSelectorActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".shape_selector_util.ShapeAndSelectorActivity">
 
     <ScrollView
 
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
 
         <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            <RelativeLayout
-                    app:bl_stroke_width="1dp"
-                    app:bl_stroke_color="@android:color/black"
-                    app:bl_solid_color="@android:color/white"
-                    app:bl_stroke_position="left|bottom|right"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    tools:ignore="MissingPrefix">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="MissingPrefix">
 
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:bl_corners_radius="50dp"
+                app:bl_shape="oval"
+                app:bl_solid_color="#ffff00"
+                app:bl_stroke_color="@android:color/holo_blue_dark"
+                app:bl_stroke_width="1dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="圆形" />
             </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:bl_corners_radius="25dp"
+                app:bl_shape="oval"
+                app:bl_solid_color="#ffff00"
+                app:bl_stroke_color="@android:color/holo_blue_dark"
+                app:bl_stroke_width="1dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="椭圆" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:bl_corners_radius="20dp"
+                app:bl_shape="rectangle"
+                app:bl_solid_color="#ffff00"
+                app:bl_stroke_color="@android:color/holo_blue_dark"
+                app:bl_stroke_width="1dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="圆角" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:bl_corners_bottomLeftRadius="10dp"
+                app:bl_corners_bottomRightRadius="20dp"
+                app:bl_corners_radius="20dp"
+                app:bl_corners_topLeftRadius="30dp"
+                app:bl_corners_topRightRadius="40dp"
+                app:bl_shape="rectangle"
+                app:bl_solid_color="#ffff00"
+                app:bl_stroke_color="@android:color/holo_blue_dark"
+                app:bl_stroke_width="1dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="不规则圆角" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:bl_corners_radius="20dp"
+                app:bl_shape="rectangle"
+                app:bl_solid_color="#ffff00"
+                app:bl_stroke_color="@android:color/holo_blue_dark"
+                app:bl_stroke_dashGap="5dp"
+                app:bl_stroke_dashWidth="10dp"
+                app:bl_stroke_width="1dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="圆角虚线" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:bl_solid_color="@android:color/white"
+                app:bl_stroke_color="@android:color/black"
+                app:bl_stroke_position="left|bottom|right"
+                app:bl_stroke_width="1dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="添加边框" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:bl_gradient_angle="0"
+                app:bl_gradient_centerColor="#ffffff"
+                app:bl_gradient_centerX="0"
+                app:bl_gradient_centerY="0"
+                app:bl_gradient_endColor="#00ffff"
+                app:bl_gradient_startColor="#ffff00">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="颜色渐变" />
+            </RelativeLayout>
+
+            <!--上面是形状和渐变-->
+
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="点击填充变色"
+                app:bl_corners_radius="4dp"
+                app:bl_pressed_drawable="@android:color/darker_gray"
+                app:bl_stroke_color="@android:color/black"
+                app:bl_stroke_width="0.51dp"
+                app:bl_unPressed_drawable="#00FFFFFF" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="点击水波纹"
+                app:bl_corners_radius="20dp"
+                app:bl_ripple_color="#71C671"
+                app:bl_ripple_enable="true"
+                app:bl_solid_color="#7CFC00"
+                app:bl_stroke_color="#8c6822"
+                app:bl_stroke_width="2dp" />
+
+            <RadioGroup
+                android:id="@+id/rg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_enable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:text="enable"
+                    android:textSize="15sp"
+                    app:bl_checked_drawable="#ff00ff"
+                    app:bl_unChecked_drawable="#ffff00" />
+
+                <RadioButton
+                    android:id="@+id/rb_unenable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:button="@null"
+                    android:text="unenable"
+                    android:textSize="15sp"
+                    app:bl_checked_drawable="#ff00ff"
+                    app:bl_unChecked_drawable="#ffff00" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_enable"
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="enable"
+                app:bl_enabled_drawable="#1B82D1"
+                app:bl_unEnabled_drawable="#9DD1F6" />
+
+            <TextView
+                android:id="@+id/tv_selector"
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="selector"
+                app:bl_position="left"
+                app:bl_selected_drawable="@drawable/circle_like_pressed"
+                app:bl_selected_textColor="#fbdc4a"
+                app:bl_unSelected_drawable="@drawable/circle_like_normal"
+                app:bl_unSelected_textColor="@android:color/black" />
+
+
         </LinearLayout>
     </ScrollView>
 

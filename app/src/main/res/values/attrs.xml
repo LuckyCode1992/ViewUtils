@@ -33,19 +33,7 @@
         </attr>
         <attr name="bl_gradient_useLevel" format="boolean" />
 
-        <attr name="bl_padding_left" format="dimension" />
-        <attr name="bl_padding_top" format="dimension" />
-        <attr name="bl_padding_right" format="dimension" />
-        <attr name="bl_padding_bottom" format="dimension" />
 
-        <attr name="bl_size_width" format="dimension">
-            <enum name="wrap_content" value="-2" />
-            <enum name="match_parent" value="-1" />
-        </attr>
-        <attr name="bl_size_height" format="dimension">
-            <enum name="wrap_content" value="-2" />
-            <enum name="match_parent" value="-1" />
-        </attr>
 
         <attr name="bl_stroke_width" format="dimension" />
         <attr name="bl_stroke_color" format="color" />
