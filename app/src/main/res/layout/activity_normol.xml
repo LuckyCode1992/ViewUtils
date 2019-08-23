@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".recycleview_util.NormolActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Linear_LayoutManager_V"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingPrefix">
+
+        <Button
+            android:id="@+id/btn_nor"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="正序"
+            android:textSize="20sp"
+            app:bl_corners_radius="20dp"
+            app:bl_ripple_color="#71C671"
+            app:bl_ripple_enable="true"
+            app:bl_solid_color="#7CFC00"
+            app:bl_stroke_color="#8c6822"
+            app:bl_stroke_width="2dp" />
+
+        <Button
+            android:id="@+id/btn_reverse"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="倒序"
+            android:textSize="20sp"
+            app:bl_corners_radius="20dp"
+            app:bl_ripple_color="#71C671"
+            app:bl_ripple_enable="true"
+            app:bl_solid_color="#7CFC00"
+            app:bl_stroke_color="#8c6822"
+            app:bl_stroke_width="2dp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/not_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
