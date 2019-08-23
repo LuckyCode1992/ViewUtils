@@ -5,11 +5,14 @@ import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.StaggeredGridLayoutManager
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.Toast
 import com.justcode.hxl.viewutil.R
 import com.justcode.hxl.viewutil.extend.bundleOf
 import com.justcode.hxl.viewutil.extend.start
 import com.justcode.hxl.viewutil.recycleview_util.core.BaseItemViewBinder
+import com.justcode.hxl.viewutil.recycleview_util.core.HeaderFooterViewBinder
 import com.justcode.hxl.viewutil.recycleview_util.core.MultiTypeAdapter
 import com.justcode.hxl.viewutil.recycleview_util.core.MyViewHolder
 import kotlinx.android.synthetic.main.activity_normol.*
@@ -88,10 +91,10 @@ class NormolActivity : AppCompatActivity() {
                 if (data == "Grid_LayoutManager") {
                     start<NormolActivity>(bundleOf(NormolActivity.LAYOUTMANAGER to Grid_LayoutManager))
                 }
-                if (data== StaggeredGrid_LayoutManager_V){
+                if (data == StaggeredGrid_LayoutManager_V) {
                     start<NormolActivity>(bundleOf(LAYOUTMANAGER to StaggeredGrid_LayoutManager_V))
                 }
-                if (data== StaggeredGrid_LayoutManager_H){
+                if (data == StaggeredGrid_LayoutManager_H) {
                     start<NormolActivity>(bundleOf(LAYOUTMANAGER to StaggeredGrid_LayoutManager_H))
                 }
             }
@@ -106,13 +109,21 @@ class NormolActivity : AppCompatActivity() {
                 Toast.makeText(this@NormolActivity, "position:${position}-data:${data}", Toast.LENGTH_SHORT).show()
             }
         }
+        val header: View = LayoutInflater.from(this).inflate(R.layout.recycle_header, not_recyclerview, false)
+        val footer: View = LayoutInflater.from(this).inflate(R.layout.recycle_footer, not_recyclerview, false)
+        val emp = LayoutInflater.from(this).inflate(R.layout.recycle_emp, not_recyclerview, false)
+        adapter.register(View::class.java, HeaderFooterViewBinder(not_recyclerview))
+        adapter.addHeader(header)
+        adapter.addFooter(footer)
+        adapter.emptyView = emp
         adapter.register(itemBinderString)
         adapter.register(itemBinderData1)
         adapter.register(itemBinderData2)
         not_recyclerview.adapter = adapter
-        adapter.update(list)
-//        adapter.items = list
-//        adapter.notifyDataSetChanged()
+//        list.clear()
+        adapter.items = list
+        adapter.notifyItems()
+
     }
 
     private fun recycleLayoutSet() {

@@ -4,6 +4,7 @@ import android.support.annotation.CheckResult
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 
 
@@ -21,10 +22,50 @@ open class MultiTypeAdapter @JvmOverloads constructor(
          *
          * @since v2.4.1
          */
-        open var items: List<Any> = emptyList(),
+
         open val initialCapacity: Int = 0,
         open var types: Types = MutableTypes(initialCapacity)
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
+
+
+    private val headerList = mutableListOf<View>()
+    private val footerList = mutableListOf<View>()
+    private val allItemList = mutableListOf<Any>()
+
+
+    var emptyView: View? = null
+
+    var items: List<Any> = emptyList()
+
+    fun notifyItems() {
+        allItemList.clear()
+        allItemList.addAll(headerList)
+
+        if (items.isEmpty()) {
+            emptyView?.let { allItemList.add(it) }
+        }
+
+        allItemList.addAll(items)
+        allItemList.addAll(footerList)
+        items = allItemList
+        notifyDataSetChanged()
+    }
+
+    fun addHeader(view: View) {
+        headerList.add(view)
+        notifyItems()
+    }
+
+    fun addFooter(view: View) {
+        footerList.add(view)
+        notifyItems()
+    }
+
+
+    fun getHeaderCount(): Int = headerList.size
+
+    fun getFooterCount(): Int = footerList.size
 
     /**
      * Registers a type class and its item view binder. If you have registered the class,
@@ -218,13 +259,5 @@ open class MultiTypeAdapter @JvmOverloads constructor(
         private const val TAG = "MultiTypeAdapter"
     }
 
-    /**
-     * 更新列表
-     */
-    fun update(items: List<Any>) {
-        this.items = items
-        notifyDataSetChanged()
-
-    }
 
 }
