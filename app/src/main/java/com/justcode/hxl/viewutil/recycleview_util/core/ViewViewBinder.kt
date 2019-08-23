@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 
-class HeaderFooterViewBinder(private val recyclerView: RecyclerView) : ItemViewBinder<View, HeaderFooterViewBinder.HeaderFooterViewHolder>() {
+class ViewViewBinder(private val recyclerView: RecyclerView) : ItemViewBinder<View, ViewViewBinder.HeaderFooterViewHolder>() {
 
     override fun onCreateViewHolder(inflater: LayoutInflater, parent: ViewGroup): HeaderFooterViewHolder {
         val frameLayout = FrameLayout(parent.context)

@@ -12,7 +12,7 @@ import com.justcode.hxl.viewutil.R
 import com.justcode.hxl.viewutil.extend.bundleOf
 import com.justcode.hxl.viewutil.extend.start
 import com.justcode.hxl.viewutil.recycleview_util.core.BaseItemViewBinder
-import com.justcode.hxl.viewutil.recycleview_util.core.HeaderFooterViewBinder
+import com.justcode.hxl.viewutil.recycleview_util.core.ViewViewBinder
 import com.justcode.hxl.viewutil.recycleview_util.core.MultiTypeAdapter
 import com.justcode.hxl.viewutil.recycleview_util.core.MyViewHolder
 import kotlinx.android.synthetic.main.activity_normol.*
@@ -112,7 +112,7 @@ class NormolActivity : AppCompatActivity() {
         val header: View = LayoutInflater.from(this).inflate(R.layout.recycle_header, not_recyclerview, false)
         val footer: View = LayoutInflater.from(this).inflate(R.layout.recycle_footer, not_recyclerview, false)
         val emp = LayoutInflater.from(this).inflate(R.layout.recycle_emp, not_recyclerview, false)
-        adapter.register(View::class.java, HeaderFooterViewBinder(not_recyclerview))
+        adapter.register(View::class.java, ViewViewBinder(not_recyclerview))
         adapter.addHeader(header)
         adapter.addFooter(footer)
         adapter.emptyView = emp
