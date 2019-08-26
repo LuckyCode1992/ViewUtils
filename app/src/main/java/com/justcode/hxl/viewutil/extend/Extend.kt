@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.os.Parcelable
 import android.util.Size
 import android.util.SizeF
+import android.widget.Toast
 import java.io.Serializable
 
 inline fun <reified T : Activity> Context.start() {
@@ -100,4 +101,9 @@ fun bundleOf(vararg pairs: Pair<String, Any?>) = Bundle(pairs.size).apply {
             }
         }
     }
+}
+
+
+inline fun String.toast(context: Context){
+    Toast.makeText(context,this,Toast.LENGTH_SHORT).show()
 }

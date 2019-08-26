@@ -15,6 +15,7 @@ abstract class BaseItemViewBinder<T> : ItemViewBinder<T, MyViewHolder>() {
     var itemDataCallBack: ((T) -> Unit) = { }
     var itemPositionCallBack: ((Int) -> Unit) = {}
     var itemPositionDataCallBack: ((Int, T) -> Unit) = { position, data -> }
+    var itemPositionViewCallBack: ((Int, View) -> Unit) = { position, view -> }
     override fun onCreateViewHolder(inflater: LayoutInflater, parent: ViewGroup): MyViewHolder {
         return MyViewHolder(inflater.inflate(layoutRes, parent, false))
     }

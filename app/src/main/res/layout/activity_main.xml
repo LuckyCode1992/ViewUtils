@@ -24,6 +24,19 @@
                 android:text="RecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+            <Button
+                    android:id="@+id/btn_fanlayoutmanager"
+                    android:text="Fan layout manager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+
+            <Button
+                android:id="@+id/btn_basis_view"
+                android:text="自定义控件，绘图基础"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
     </ScrollView>

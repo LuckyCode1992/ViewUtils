@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:tools="http://schemas.android.com/tools"
+                                    android:id="@+id/card_layout"
+                                    android:background="@color/colorAccent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="8dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="4dp">
+
+        <RelativeLayout
+                android:id="@+id/rlTitleContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tvSportTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="Table tennis"/>
+
+            <TextView
+                    android:id="@+id/tvSportSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSportTitle"
+                    android:layout_centerHorizontal="true"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    tools:text="Women's singles"/>
+
+            <TextView
+                    android:id="@+id/tvSportRound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSportSubtitle"
+                    android:layout_centerHorizontal="true"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="Preliminaries"/>
+
+        </RelativeLayout>
+
+        <ImageView
+                android:id="@+id/ivSportPreview"
+                android:src="@drawable/pic_card_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlTitleContainer"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"/>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivSportPreview">
+
+            <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="3:00"/>
+
+            <TextView
+                    android:id="@+id/tvDayPart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTime"
+                    android:layout_centerHorizontal="true"
+                    android:text="PM"/>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
