@@ -10,13 +10,19 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
             <com.justcode.hxl.viewutil.自定义控件.绘图基础.BasisView
-                android:layout_width="200dp"
-                android:layout_height="200dp" />
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.justcode.hxl.viewutil.自定义控件.绘图基础.RegionView
+                android:layout_width="match_parent"
+                android:layout_height="1000dp" />
         </LinearLayout>
     </ScrollView>
 
