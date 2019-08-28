@@ -23,6 +23,10 @@
             <com.justcode.hxl.viewutil.自定义控件.绘图基础.RegionView
                 android:layout_width="match_parent"
                 android:layout_height="1000dp" />
+
+            <com.justcode.hxl.viewutil.自定义控件.绘图基础.CanvasView
+                android:layout_width="match_parent"
+                android:layout_height="500dp" />
         </LinearLayout>
     </ScrollView>
 
