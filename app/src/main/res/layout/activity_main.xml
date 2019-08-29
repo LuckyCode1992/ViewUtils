@@ -10,33 +10,42 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
             <Button
                 android:id="@+id/btn_shape"
-                android:text="shape工具"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="shape工具" />
+
             <Button
                 android:id="@+id/btn_recyclerview"
-                android:text="RecyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                    android:id="@+id/btn_fanlayoutmanager"
-                    android:text="Fan layout manager"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="RecyclerView" />
 
+            <Button
+                android:id="@+id/btn_fanlayoutmanager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fan layout manager" />
 
 
             <Button
                 android:id="@+id/btn_basis_view"
-                android:text="自定义控件，绘图基础"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="自定义控件，绘图基础" />
+
+            <Button
+                android:id="@+id/btn_basis_demo_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="自定义控件，绘图基础demo" />
         </LinearLayout>
 
     </ScrollView>

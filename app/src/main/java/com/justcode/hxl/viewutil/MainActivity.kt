@@ -8,6 +8,7 @@ import com.justcode.hxl.viewutil.recycleview_util.FanLayoutManagerActivity
 import com.justcode.hxl.viewutil.recycleview_util.NormolActivity
 import com.justcode.hxl.viewutil.shape_selector_util.ShapeAndSelectorActivity
 import com.justcode.hxl.viewutil.自定义控件.绘图基础.DrawingBasisActivity
+import com.justcode.hxl.viewutil.自定义控件.绘图基础.DrawingBasisDemoActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +31,9 @@ class MainActivity : AppCompatActivity() {
 
         btn_basis_view.setOnClickListener {
             start<DrawingBasisActivity>()
+        }
+        btn_basis_demo_view.setOnClickListener {
+            start<DrawingBasisDemoActivity>()
         }
 
     }
