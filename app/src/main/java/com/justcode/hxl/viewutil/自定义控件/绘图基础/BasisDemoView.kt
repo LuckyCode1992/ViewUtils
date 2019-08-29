@@ -21,6 +21,9 @@ class BasisDemoView @JvmOverloads constructor(
     //计算出每个夹角的度数
     val angle: Double = Math.PI * 2 / count
 
+    var data = doubleArrayOf(2.0, 3.0, 5.0, 4.0, 1.0, 2.0)
+    val maxValue = 6.0
+
     init {
         radarPaint.style = Paint.Style.STROKE
         radarPaint.color = Color.GREEN
@@ -55,19 +58,44 @@ class BasisDemoView @JvmOverloads constructor(
         drawPolygon(canvas)
 
         //绘制网格中线
-        drawLines()
+        drawLines(canvas)
 
         //绘制数据图
-        drawRegion()
+        drawRegion(canvas)
     }
 
 
-    private fun drawRegion() {
-
+    private fun drawRegion(canvas: Canvas) {
+        val path = Path()
+        valuePaint.alpha = 127
+        for (i in 0 until count) {
+            val percent = data[i] / maxValue
+            val x = centerX + radius * Math.cos(angle * i) * percent
+            val y = centerY + radius * Math.sin(angle * i) * percent
+            if (i == 0) {
+                path.moveTo(x.toFloat(), y.toFloat())
+            } else {
+                path.lineTo(x.toFloat(), y.toFloat())
+            }
+            //绘制圆点
+            canvas.drawCircle(x.toFloat(), y.toFloat(), 10f, valuePaint)
+        }
+        valuePaint.style = Paint.Style.FILL_AND_STROKE
+        canvas.drawPath(path, valuePaint)
 
     }
 
-    private fun drawLines() {
+    private fun drawLines(canvas: Canvas) {
+        val path = Path()
+        for (i in 0 until count) {
+            path.reset()
+            path.moveTo(centerX.toFloat(), centerY.toFloat())
+            val x = centerX + radius * Math.cos(angle * i)
+            val y = centerY + radius * Math.sin(angle * i)
+            path.lineTo(x.toFloat(), y.toFloat())
+            canvas.drawPath(path, radarPaint)
+        }
+
 
     }
 
