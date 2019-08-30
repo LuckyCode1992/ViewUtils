@@ -4,11 +4,13 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.justcode.hxl.viewutil.extend.bundleOf
 import com.justcode.hxl.viewutil.extend.start
+import com.justcode.hxl.viewutil.recycleview_util.CarouseLayoutManagerActivity
 import com.justcode.hxl.viewutil.recycleview_util.FanLayoutManagerActivity
 import com.justcode.hxl.viewutil.recycleview_util.NormolActivity
 import com.justcode.hxl.viewutil.shape_selector_util.ShapeAndSelectorActivity
 import com.justcode.hxl.viewutil.自定义控件.绘图基础.DrawingBasisActivity
 import com.justcode.hxl.viewutil.自定义控件.绘图基础.DrawingBasisDemoActivity
+import com.justcode.hxl.viewutil.自定义控件.视图动画.ViewAnimationActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +27,9 @@ class MainActivity : AppCompatActivity() {
         btn_fanlayoutmanager.setOnClickListener {
             start<FanLayoutManagerActivity>()
         }
+        btn_carouselayoutmananger.setOnClickListener {
+            start<CarouseLayoutManagerActivity>()
+        }
 
 
 
@@ -34,6 +39,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_basis_demo_view.setOnClickListener {
             start<DrawingBasisDemoActivity>()
+        }
+        btn_view_animation.setOnClickListener {
+            start<ViewAnimationActivity>()
         }
 
     }

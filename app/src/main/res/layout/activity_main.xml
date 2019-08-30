@@ -34,6 +34,12 @@
                 android:layout_height="wrap_content"
                 android:text="Fan layout manager" />
 
+            <Button
+                    android:id="@+id/btn_carouselayoutmananger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="carouse layout manager" />
+
 
             <Button
                 android:id="@+id/btn_basis_view"
@@ -46,6 +52,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="自定义控件，绘图基础demo" />
+            <Button
+                android:id="@+id/btn_view_animation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="自定义控件，属性动画" />
         </LinearLayout>
 
     </ScrollView>
