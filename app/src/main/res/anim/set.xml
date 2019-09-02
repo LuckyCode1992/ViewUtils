@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+     android:duration="3000"
+     android:repeatMode="reverse"
+     android:repeatCount="3"
+        >
+    <alpha
+            android:fromAlpha="1.0"
+            android:toAlpha="0.1"
+            android:duration="1000"
+            android:repeatCount="10"
+            android:repeatMode="restart"
+            />
+    <scale
+            android:fromXScale="1.0"
+            android:fromYScale="1.0"
+            android:toXScale="1.5"
+            android:toYScale="1.5"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:repeatCount="20"
+            />
+    <rotate
+
+            android:fromDegrees="0"
+            android:toDegrees="359"
+            android:duration="1000"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:repeatCount="-1"
+            />
+    <translate
+            android:fromXDelta="0%"
+            android:toXDelta="180"
+            android:fromYDelta="0%"
+            android:toYDelta="300"
+            android:duration="2000"
+            android:repeatCount="-1"
+            />
+    <!--参考scale标签-->
+
+    <!--
+    set标签，是一个容器类标签，可以组合动画
+
+    set和具体动画都实现的属性，以set属性为准。
+    set中repeatCount属性无效
+
+    -->
+
+</set>
