@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.justcode.hxl.viewutil.extend.bundleOf
 import com.justcode.hxl.viewutil.extend.start
 import com.justcode.hxl.viewutil.recycleview_util.CarouseLayoutManagerActivity
+import com.justcode.hxl.viewutil.recycleview_util.ChipsLayoutManagerActivity
 import com.justcode.hxl.viewutil.recycleview_util.FanLayoutManagerActivity
 import com.justcode.hxl.viewutil.recycleview_util.NormolActivity
 import com.justcode.hxl.viewutil.shape_selector_util.ShapeAndSelectorActivity
@@ -13,6 +14,12 @@ import com.justcode.hxl.viewutil.自定义控件.绘图基础.DrawingBasisDemoAc
 import com.justcode.hxl.viewutil.自定义控件.视图动画.ViewAnimationActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
+
+/**
+ * gradlew compileDebugSources 这个命令可以查找错误资源文件
+ *
+ *  gradlew processDebugManifest --stacktrace 可以查看 Manifest merger failed with multiple errors, see logs的问题
+ */
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +36,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_carouselayoutmananger.setOnClickListener {
             start<CarouseLayoutManagerActivity>()
+        }
+        btn_chipslayoutmanager.setOnClickListener {
+            start<ChipsLayoutManagerActivity>()
         }
 
 

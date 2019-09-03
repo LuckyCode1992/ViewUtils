@@ -19,8 +19,15 @@
                 android:authorities="${applicationId}.backgroundLibrary"
                 android:exported="false"
                 android:multiprocess="true"/>
-        <activity android:name=".recycleview_util.CarouseLayoutManagerActivity"
-                  android:screenOrientation="portrait"/>
+
+        <activity
+                android:name=".recycleview_util.ChipsLayoutManagerActivity"
+                android:screenOrientation="portrait"
+                />
+
+        <activity
+                android:name=".recycleview_util.CarouseLayoutManagerActivity"
+                android:screenOrientation="portrait"/>
         <activity
                 android:name=".自定义控件.视图动画.ViewAnimationActivity"
                 android:screenOrientation="portrait"/>
