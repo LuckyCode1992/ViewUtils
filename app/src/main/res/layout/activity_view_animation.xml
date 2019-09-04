@@ -212,6 +212,33 @@
                 </LinearLayout>
 
 
+                <!--***********************分割线******************************-->
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:background="@drawable/shape_corners_5dp"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp">
+
+                    <Button
+                            android:id="@+id/btn_order"
+                            android:text="代码实现视图动画组合,顺序播放"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:id="@+id/tv_order"
+                            android:layout_marginTop="50dp"
+                            android:background="#007700"
+                            android:layout_marginLeft="50dp"
+                            android:gravity="center"
+                            android:text="hello"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"/>
+
+                </LinearLayout>
+
+
             </LinearLayout>
 
             <LinearLayout

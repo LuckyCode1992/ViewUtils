@@ -2,6 +2,7 @@ package com.justcode.hxl.viewutil.自定义控件.视图动画
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.animation.*
 import com.justcode.hxl.viewutil.R
 import kotlinx.android.synthetic.main.activity_view_animation.*
@@ -72,9 +73,9 @@ class ViewAnimationActivity : AppCompatActivity() {
         )
         scaleAnimation.duration = 2000
 
-        scaleAnimation.fillBefore = true
+//        scaleAnimation.fillBefore = true
         scaleAnimation.fillAfter = true
-        scaleAnimation.repeatMode = Animation.REVERSE
+//        scaleAnimation.repeatMode = Animation.REVERSE
         scaleAnimation.repeatCount = -1
 
         //调用方式也是一模一样
@@ -84,7 +85,7 @@ class ViewAnimationActivity : AppCompatActivity() {
         )
         alphaAnimation.duration = 2000
         alphaAnimation.fillAfter = true
-        alphaAnimation.repeatMode = Animation.REVERSE
+//        alphaAnimation.repeatMode = Animation.REVERSE
         alphaAnimation.repeatCount = -1
 
         val rotateAnimation = RotateAnimation(
@@ -92,7 +93,7 @@ class ViewAnimationActivity : AppCompatActivity() {
         )
         rotateAnimation.duration = 2000
         rotateAnimation.fillAfter = true
-        rotateAnimation.repeatMode = Animation.RESTART
+//        rotateAnimation.repeatMode = Animation.RESTART
         rotateAnimation.repeatCount = -1
 
         val translateAnimation = TranslateAnimation(
@@ -107,8 +108,14 @@ class ViewAnimationActivity : AppCompatActivity() {
         )
         translateAnimation.duration = 2000
         translateAnimation.fillAfter = true
-        translateAnimation.repeatMode = Animation.REVERSE
+//        translateAnimation.repeatMode = Animation.REVERSE
         translateAnimation.repeatCount = -1
+
+
+//        取消动画
+//        translateAnimation.cancel()
+//        重置动画
+//        translateAnimation.reset()
 
 
         btn_set_together.setOnClickListener {
@@ -119,6 +126,11 @@ class ViewAnimationActivity : AppCompatActivity() {
              * 注意，添加的顺序不同，效果可能会不同
              *
              */
+            alphaAnimation.repeatCount = -1
+            scaleAnimation.repeatCount = -1
+            rotateAnimation.repeatCount = -1
+            translateAnimation.repeatCount = -1
+
             animationSet.addAnimation(alphaAnimation)
             animationSet.addAnimation(scaleAnimation)
             animationSet.addAnimation(rotateAnimation)
@@ -130,6 +142,76 @@ class ViewAnimationActivity : AppCompatActivity() {
 
             tv_set_together.startAnimation(animationSet)
 
+        }
+
+
+        btn_order.setOnClickListener {
+            alphaAnimation.repeatCount = 0
+            scaleAnimation.repeatCount = 0
+            rotateAnimation.repeatCount = 0
+            translateAnimation.repeatCount = 0
+
+            translateAnimation.setAnimationListener(object : Animation.AnimationListener {
+                //动画重复
+                override fun onAnimationRepeat(animation: Animation) {
+
+                }
+
+                //动画结束
+                override fun onAnimationEnd(animation: Animation) {
+
+                    tv_order.startAnimation(scaleAnimation)
+                }
+
+                //动画开始
+                override fun onAnimationStart(animation: Animation) {
+
+                }
+
+            })
+            scaleAnimation.setAnimationListener(object : Animation.AnimationListener {
+                override fun onAnimationRepeat(animation: Animation?) {
+
+                }
+
+                override fun onAnimationEnd(animation: Animation?) {
+                    tv_order.startAnimation(alphaAnimation)
+                }
+
+                override fun onAnimationStart(animation: Animation?) {
+
+                }
+
+            })
+            alphaAnimation.setAnimationListener(object : Animation.AnimationListener {
+                override fun onAnimationRepeat(animation: Animation?) {
+
+                }
+
+                override fun onAnimationEnd(animation: Animation?) {
+                    tv_order.startAnimation(rotateAnimation)
+                }
+
+                override fun onAnimationStart(animation: Animation?) {
+
+                }
+
+            })
+            rotateAnimation.setAnimationListener(object : Animation.AnimationListener {
+                override fun onAnimationRepeat(animation: Animation?) {
+                    Log.d("animation_listener", "onAnimationRepeat")
+                }
+
+                override fun onAnimationEnd(animation: Animation?) {
+                    Log.d("animation_listener", "onAnimationEnd")
+                }
+
+                override fun onAnimationStart(animation: Animation?) {
+                    Log.d("animation_listener", "onAnimationStart")
+                }
+
+            })
+            tv_order.startAnimation(translateAnimation)
         }
     }
 
