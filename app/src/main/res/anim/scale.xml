@@ -10,6 +10,7 @@
        android:fillBefore="true"
        android:repeatMode="reverse"
        android:repeatCount="-1"
+       android:interpolator="@android:anim/accelerate_decelerate_interpolator"
        android:duration="1000"/>
         <!--
         fromXScale: 动画起始，X轴方向上的变化 1.0表示原样
@@ -30,6 +31,10 @@
         repeatCount:重复次数 (-1表示，无限次，一直播放)
         repeatMode：动画重复模式，类型 reverse表示 反向播放 restart 表示重新播放
 
+        -->
+
+        <!--
+        interpolator:插值器
         -->
 
 

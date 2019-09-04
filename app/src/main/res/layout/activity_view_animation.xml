@@ -242,6 +242,7 @@
             </LinearLayout>
 
             <LinearLayout
+                    android:id="@+id/ll_interpolator"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -262,6 +263,7 @@
             </LinearLayout>
 
             <LinearLayout
+                    android:id="@+id/ll_animation_demo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -282,6 +284,7 @@
             </LinearLayout>
 
             <LinearLayout
+                    android:id="@+id/ll_frame"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"

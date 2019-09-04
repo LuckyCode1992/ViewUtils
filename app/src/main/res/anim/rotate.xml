@@ -7,6 +7,7 @@
         android:pivotY="50%"
         android:repeatCount="-1"
         android:repeatMode="reverse"
+        android:interpolator="@android:anim/linear_interpolator"
         >
     <!--解释参考scale-->
     <!--

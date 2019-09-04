@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.animation.*
 import com.justcode.hxl.viewutil.R
+import com.justcode.hxl.viewutil.extend.start
 import kotlinx.android.synthetic.main.activity_view_animation.*
 
 /**
@@ -56,6 +57,7 @@ class ViewAnimationActivity : AppCompatActivity() {
 
         repeatCount:重复次数 (-1表示，无限次，一直播放)
         repeatMode：动画重复模式，类型 reverse表示 反向播放 restart 表示重新播放
+        interpolator：插值器：控制动画的变化速率。比如匀速，加速，具体看demo效果
          */
         //这里的Animation.RELATIVE_TO_SELF 对应 xml中的 50%
         //Animation.ABSOLUTE 对应xml中的50px
@@ -77,6 +79,8 @@ class ViewAnimationActivity : AppCompatActivity() {
         scaleAnimation.fillAfter = true
 //        scaleAnimation.repeatMode = Animation.REVERSE
         scaleAnimation.repeatCount = -1
+        //代码实现插值器
+        scaleAnimation.interpolator = AccelerateDecelerateInterpolator()
 
         //调用方式也是一模一样
         //tv_set.startAnimation(scaleAnimation)
@@ -212,6 +216,17 @@ class ViewAnimationActivity : AppCompatActivity() {
 
             })
             tv_order.startAnimation(translateAnimation)
+        }
+
+
+        ll_interpolator.setOnClickListener {
+            start<ViewAnimationInterpolatorActivity>()
+        }
+        ll_animation_demo.setOnClickListener {
+
+        }
+        ll_frame.setOnClickListener {
+
         }
     }
 

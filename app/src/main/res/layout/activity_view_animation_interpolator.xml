@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".自定义控件.视图动画.ViewAnimationInterpolatorActivity">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <!--*******************************************分割线******************************************-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:id="@+id/btn_accelerate_decelerate_interpolator"
+                        android:text="AccelerateDecelerateInterpolator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_accelerate_decelerate_interpolator"
+                        android:text="hello"
+                        android:layout_margin="20dp"
+                        android:background="#007700"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+            <!--*******************************************分割线******************************************-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:id="@+id/btn_accelerate_interpolator"
+                        android:text="AccelerateInterpolator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_accelerate_interpolator"
+                        android:text="hello"
+                        android:layout_margin="20dp"
+                        android:background="#007700"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+            <!--*******************************************分割线******************************************-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:id="@+id/btn_decelerate_interpolator"
+                        android:text="DecelerateInterpolator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_decelerate_interpolator"
+                        android:text="hello"
+                        android:layout_margin="20dp"
+                        android:background="#007700"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+            <!--*******************************************分割线******************************************-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:id="@+id/btn_linear_interpolator"
+                        android:text="LinearInterpolator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv__linear_interpolator"
+                        android:text="hello"
+                        android:layout_margin="20dp"
+                        android:background="#007700"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+            <!--*******************************************分割线******************************************-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:id="@+id/btn_bounce_interpolator"
+                        android:text="BounceInterpolator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_bounce_interpolator"
+                        android:text="hello"
+                        android:layout_margin="20dp"
+                        android:background="#007700"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+            <!--*******************************************分割线******************************************-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:id="@+id/btn_anticipate_interpolator"
+                        android:text="AnticipateInterpolator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_anticipate_interpolator"
+                        android:text="hello"
+                        android:layout_margin="20dp"
+                        android:background="#007700"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+            <!--*******************************************分割线******************************************-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:id="@+id/btn_overshoot_interpolator"
+                        android:text="OvershootInterpolator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_overshoot_interpolator"
+                        android:text="hello"
+                        android:layout_margin="20dp"
+                        android:background="#007700"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+            <!--*******************************************分割线******************************************-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:id="@+id/btn_anticipate_overshoot_interpolator"
+                        android:text="AnticipateOvershootInterpolator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_anticipate_overshoot_interpolator"
+                        android:text="hello"
+                        android:layout_margin="20dp"
+                        android:background="#007700"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+            <!--*******************************************分割线******************************************-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+
+                        android:id="@+id/btn_cycle_interpolator"
+                        android:text="CycleInterpolator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_cycle_interpolator"
+                        android:text="hello"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="#007700"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

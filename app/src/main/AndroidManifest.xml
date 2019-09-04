@@ -21,10 +21,11 @@
                 android:multiprocess="true"/>
 
         <activity
+                android:name=".自定义控件.视图动画.ViewAnimationInterpolatorActivity"
+                android:screenOrientation="portrait"/>
+        <activity
                 android:name=".recycleview_util.ChipsLayoutManagerActivity"
-                android:screenOrientation="portrait"
-                />
-
+                android:screenOrientation="portrait"/>
         <activity
                 android:name=".recycleview_util.CarouseLayoutManagerActivity"
                 android:screenOrientation="portrait"/>
