@@ -223,7 +223,7 @@ class ViewAnimationActivity : AppCompatActivity() {
             start<ViewAnimationInterpolatorActivity>()
         }
         ll_animation_demo.setOnClickListener {
-
+            start<ViewAnimationDemoActivity>()
         }
         ll_frame.setOnClickListener {
 
