@@ -20,6 +20,11 @@
                 android:exported="false"
                 android:multiprocess="true"/>
 
+
+        <activity
+                android:name=".自定义控件.属性动画.ValueAnimatorActivity"
+                android:screenOrientation="portrait"/>
+
         <activity
                 android:name=".自定义控件.视图动画.FrameAnimationActivity"
                 android:screenOrientation="portrait"/>

@@ -63,7 +63,12 @@
                 android:id="@+id/btn_view_animation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="自定义控件，属性动画" />
+                android:text="自定义控件，视图动画" />
+            <Button
+                    android:id="@+id/btn_value_animator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="自定义控件，属性动画" />
         </LinearLayout>
 
     </ScrollView>
