@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".自定义控件.视图动画.FrameAnimationActivity">
+
+    <Button
+            android:id="@+id/btn_frame"
+            android:text="帧动画开始"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/btn_frame_stop"
+            android:text="帧动画停止"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/iv_frame"
+                android:background="@drawable/playing_ani"
+                android:layout_width="32dp"
+                android:layout_height="20dp"/>
+
+        <ImageView
+
+                android:layout_margin="50dp"
+                android:id="@+id/iv_frame2"
+                android:layout_width="32dp"
+                android:layout_height="20dp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

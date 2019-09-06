@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+                android:oneshot="false"
+        >
+    <!--
+     android:oneshot   true | false  必须作为根元素，true 只执行一次， false 表示一直循环
+     android:drawable 表示帧动画对应的图片，
+     android:duration表示帧动画持续的时间 单位毫秒
+     -->
+    <item
+            android:drawable="@drawable/list_icon_gif_playing1"
+            android:duration="60"/>
+    <item
+            android:drawable="@drawable/list_icon_gif_playing2"
+            android:duration="60"/>
+    <item
+            android:drawable="@drawable/list_icon_gif_playing3"
+            android:duration="60"/>
+    <item
+            android:drawable="@drawable/list_icon_gif_playing4"
+            android:duration="60"/>
+    <item
+            android:drawable="@drawable/list_icon_gif_playing5"
+            android:duration="60"/>
+    <item
+            android:drawable="@drawable/list_icon_gif_playing6"
+            android:duration="60"/>
+    <item
+            android:drawable="@drawable/list_icon_gif_playing7"
+            android:duration="60"/>
+    <item
+            android:drawable="@drawable/list_icon_gif_playing8"
+            android:duration="60"/>
+    <item
+            android:drawable="@drawable/list_icon_gif_playing9"
+            android:duration="60"/>
+    <item
+            android:drawable="@drawable/list_icon_gif_playing10"
+            android:duration="60"/>
+    <item
+            android:drawable="@drawable/list_icon_gif_playing11"
+            android:duration="60"/>
+    <item
+            android:drawable="@drawable/list_icon_gif_playing12"
+            android:duration="60"/>
+    <item
+            android:drawable="@drawable/list_icon_gif_playing13"
+            android:duration="60"/>
+    <item
+            android:drawable="@drawable/list_icon_gif_playing14"
+            android:duration="60"/>
+
+
+</animation-list>

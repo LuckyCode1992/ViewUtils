@@ -226,7 +226,7 @@ class ViewAnimationActivity : AppCompatActivity() {
             start<ViewAnimationDemoActivity>()
         }
         ll_frame.setOnClickListener {
-
+            start<FrameAnimationActivity>()
         }
     }
 
