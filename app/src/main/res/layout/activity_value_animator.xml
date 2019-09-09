@@ -134,12 +134,12 @@
                             android:text="弹跳加载中效果"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
-                <ImageView
+                <com.justcode.hxl.viewutil.自定义控件.属性动画.LoadingImageView
                         android:id="@+id/iv_loading_tantiao"
                         android:src="@drawable/pic_1"
                         android:layout_centerInParent="true"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"/>
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
 
             </RelativeLayout>
 

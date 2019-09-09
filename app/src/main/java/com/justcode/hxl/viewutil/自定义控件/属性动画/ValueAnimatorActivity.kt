@@ -2,8 +2,12 @@ package com.justcode.hxl.viewutil.自定义控件.属性动画
 
 import android.animation.Animator
 import android.animation.ValueAnimator
+import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.animation.AccelerateDecelerateInterpolator
+import android.widget.ImageView
 import com.justcode.hxl.viewutil.R
 import com.justcode.hxl.viewutil.extend.toast
 import com.justcode.hxl.viewutil.recycleview_util.chipslayoutmanager.util.log.Log
@@ -36,7 +40,52 @@ class ValueAnimatorActivity : AppCompatActivity() {
     }
 
     private fun tantiaoDemo() {
+        var currentIndex = 0
+        val imgCount = 3
 
+        val valueAnimator = ValueAnimator.ofInt(0, 100, 0)
+        valueAnimator.repeatMode = ValueAnimator.RESTART
+        valueAnimator.repeatCount = ValueAnimator.INFINITE
+        valueAnimator.duration = 2000
+        valueAnimator.interpolator = AccelerateDecelerateInterpolator()
+        valueAnimator.addUpdateListener {
+            val dx: Int = it.getAnimatedValue() as Int
+            iv_loading_tantiao.top = iv_loading_tantiao.mTop - dx
+        }
+        valueAnimator.addListener(object : Animator.AnimatorListener {
+            override fun onAnimationRepeat(animation: Animator?) {
+                currentIndex++
+                when (currentIndex % imgCount) {
+                    0 -> {
+                        iv_loading_tantiao.setImageResource(R.drawable.pic_1)
+                    }
+                    1 -> {
+                        iv_loading_tantiao.setImageResource(R.drawable.pic_2)
+                    }
+                    2 -> {
+                        iv_loading_tantiao.setImageResource(R.drawable.pic_3)
+                    }
+                }
+
+            }
+
+            override fun onAnimationEnd(animation: Animator?) {
+
+            }
+
+            override fun onAnimationCancel(animation: Animator?) {
+
+            }
+
+            override fun onAnimationStart(animation: Animator?) {
+                iv_loading_tantiao.setImageResource(R.drawable.pic_1)
+            }
+
+        })
+
+        btn_loading_tantiao.setOnClickListener {
+            valueAnimator.start()
+        }
 
     }
 
@@ -112,4 +161,16 @@ class ValueAnimatorActivity : AppCompatActivity() {
         }
 
     }
+}
+
+class LoadingImageView @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : ImageView(context, attrs, defStyleAttr) {
+    var mTop = 0
+    override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
+        super.onLayout(changed, left, top, right, bottom)
+        mTop = top
+
+    }
+
 }
