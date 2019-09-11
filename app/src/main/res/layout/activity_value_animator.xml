@@ -105,12 +105,14 @@
                         android:text="hello ValueAnimator float"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
+
                 <EditText
                         android:id="@+id/et_input"
                         android:layout_above="@+id/btn_set_count"
                         android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
+
                 <Button
                         android:id="@+id/btn_set_count"
                         android:text="设置循环次数"
@@ -129,17 +131,88 @@
                     android:layout_width="match_parent"
                     android:layout_height="400dp">
 
-                    <Button
-                            android:id="@+id/btn_loading_tantiao"
-                            android:text="弹跳加载中效果"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                <Button
+                        android:id="@+id/btn_loading_tantiao"
+                        android:text="弹跳加载中效果"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
                 <com.justcode.hxl.viewutil.自定义控件.属性动画.LoadingImageView
                         android:id="@+id/iv_loading_tantiao"
                         android:src="@drawable/pic_1"
                         android:layout_centerInParent="true"
                         android:layout_width="50dp"
                         android:layout_height="50dp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp">
+
+                <Button
+                        android:id="@+id/btn_my_interpolator"
+                        android:text="自定义插值器demo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_my_interpolator"
+                        android:background="#ff00ff"
+                        android:text="自定义插值器"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp">
+
+                <Button
+                        android:id="@+id/btn_my_evaluator"
+                        android:text="自定义估值器demo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_my_evaluator"
+                        android:background="#ff00ff"
+                        android:text="自定义估值器evaluator"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp">
+
+                <Button
+                        android:id="@+id/btn_argb_evaluator"
+                        android:text="argbEvaluator 颜色改变"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_argb_evaluator"
+                        android:background="#ff00ff"
+                        android:text="argbEvaluator"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
 
             </RelativeLayout>
 

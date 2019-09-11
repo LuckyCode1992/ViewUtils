@@ -1,17 +1,21 @@
 package com.justcode.hxl.viewutil.自定义控件.属性动画
 
 import android.animation.Animator
+import android.animation.ArgbEvaluator
+import android.animation.TypeEvaluator
 import android.animation.ValueAnimator
 import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.AttributeSet
 import android.view.animation.AccelerateDecelerateInterpolator
+import android.view.animation.Interpolator
 import android.widget.ImageView
 import com.justcode.hxl.viewutil.R
 import com.justcode.hxl.viewutil.extend.toast
 import com.justcode.hxl.viewutil.recycleview_util.chipslayoutmanager.util.log.Log
 import kotlinx.android.synthetic.main.activity_value_animator.*
+import kotlinx.android.synthetic.main.itembinder_data1.*
 
 class ValueAnimatorActivity : AppCompatActivity() {
 
@@ -37,6 +41,48 @@ class ValueAnimatorActivity : AppCompatActivity() {
         ofFloatDemo()
         listenerDemo()
         tantiaoDemo()
+
+        btn_my_interpolator.setOnClickListener {
+            val animator = ValueAnimator.ofInt(0, 300)
+            animator.duration = 1000
+            animator.addUpdateListener {
+                val curValue: Int = it.animatedValue as Int
+                tv_my_interpolator.layout(
+                    tv_my_interpolator.left,
+                    curValue,
+                    tv_my_interpolator.right,
+                    curValue + tv_my_interpolator.height
+                )
+            }
+            animator.interpolator = MyInterpolator()
+            animator.start()
+        }
+        btn_my_evaluator.setOnClickListener {
+            val animator = ValueAnimator.ofInt(0, 300)
+            animator.duration = 1000
+            animator.addUpdateListener {
+                val curValue: Int = it.animatedValue as Int
+                tv_my_evaluator.layout(
+                    tv_my_evaluator.left,
+                    curValue,
+                    tv_my_evaluator.right,
+                    curValue + tv_my_evaluator.height
+                )
+            }
+            animator.setEvaluator(ReverseEvaluator())
+            animator.start()
+        }
+
+        btn_argb_evaluator.setOnClickListener {
+            val animator = ValueAnimator.ofInt(0xffffff00.toInt(), 0xff0000ff.toInt())
+            animator.setEvaluator(ArgbEvaluator())
+            animator.duration = 3000
+            animator.addUpdateListener {
+                val curValue: Int = it.animatedValue as Int
+                tv_argb_evaluator.setBackgroundColor(curValue)
+            }
+            animator.start()
+        }
     }
 
     private fun tantiaoDemo() {
@@ -171,6 +217,54 @@ class LoadingImageView @JvmOverloads constructor(
         super.onLayout(changed, left, top, right, bottom)
         mTop = top
 
+    }
+
+}
+
+/**
+ * 自定义插值器
+ *
+ * 插值器接口，总共只有一个方法需要实现 getInterpolation
+ * input 参数，是float，取值范围0-1  表示当前动画的进度。而返回值表示实际显示的进度，返回值可以小于0 ，也可以大于1。
+ * 所以，插值器的关键就是这个返回值和这个input之间的函数关系。
+ * 比如 返回值 = input 则表示匀速
+ *
+ */
+
+class MyInterpolator : Interpolator {
+    override fun getInterpolation(input: Float): Float {
+
+
+        return input * input * input
+    }
+
+}
+
+/**
+ *  自定义 估值器（Evaluator）
+ *  Evaluator 是另外一种改变动画的东西
+ *  fraction ： 参数是插值器的返回值，表示当前动画的数值进度，小数
+ *  startValue和endValue：对应animator.ofInt(start,end)
+ *  返回值 就是当前进度所对应的具体数值，这个值就是addUpdateListener回掉中 it.animatedValue
+ *
+ *  下面就解释了，Evaluator在动画播放中作用。
+ *
+ *  假如 动画为 animator.ofInt(0,300)，  return (startValue + (endValue - startValue) * fraction).toInt() 则是和原来一样
+ *
+ *  return (200+startValue + (endValue - startValue) * fraction).toInt() 则相当于animator.ofInt(200,500)
+ *
+ *
+ */
+class IntEvaluator : TypeEvaluator<Int> {
+    override fun evaluate(fraction: Float, startValue: Int, endValue: Int): Int {
+        return (startValue + (endValue - startValue) * fraction).toInt()
+    }
+
+}
+
+class ReverseEvaluator : TypeEvaluator<Int> {
+    override fun evaluate(fraction: Float, startValue: Int, endValue: Int): Int {
+        return (endValue - fraction * (endValue - startValue)).toInt()
     }
 
 }
