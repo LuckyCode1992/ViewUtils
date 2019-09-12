@@ -26,7 +26,7 @@ class OfOjectActivity : AppCompatActivity() {
             animatior.start()
         }
         btn_of_obj_paowu.setOnClickListener {
-            val animator = ValueAnimator.ofObject(FallingBallEvaluator(), Point(0, 0), Point(500, 500))
+            val animator = ValueAnimator.ofObject(FallingBallEvaluator(), Point(0, 0), Point(800, 500))
             animator.addUpdateListener {
                 val point: Point = it.animatedValue as Point
                 iv_of_obj_paowu.layout(
@@ -65,8 +65,7 @@ class FallingBallEvaluator : TypeEvaluator<Point> {
     override fun evaluate(fraction: Float, startValue: Point, endValue: Point): Point {
         point.x =
             (startValue.x + fraction * (endValue.x - startValue.x)).toInt()
-        //解释一下，因为给的点的 x,y 的坐标值相同，所以，下面用谁都一样
-//        point.y = (startValue.y+2*fraction*fraction*(endValue.x-startValue.x)).toInt()
+
         point.y = (startValue.y + 2 * fraction * fraction * (endValue.y - startValue.y)).toInt()
 
         return point
