@@ -4,10 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.justcode.hxl.viewutil.extend.bundleOf
 import com.justcode.hxl.viewutil.extend.start
-import com.justcode.hxl.viewutil.recycleview_util.CarouseLayoutManagerActivity
-import com.justcode.hxl.viewutil.recycleview_util.ChipsLayoutManagerActivity
-import com.justcode.hxl.viewutil.recycleview_util.FanLayoutManagerActivity
-import com.justcode.hxl.viewutil.recycleview_util.NormolActivity
+import com.justcode.hxl.viewutil.recycleview_util.*
 import com.justcode.hxl.viewutil.shape_selector_util.ShapeAndSelectorActivity
 import com.justcode.hxl.viewutil.自定义控件.属性动画.ValueAnimatorActivity
 import com.justcode.hxl.viewutil.自定义控件.绘图基础.DrawingBasisActivity
@@ -41,6 +38,10 @@ class MainActivity : AppCompatActivity() {
         btn_chipslayoutmanager.setOnClickListener {
             start<ChipsLayoutManagerActivity>()
         }
+        btn_hivelayoutmanager.setOnClickListener {
+            start<HiveLayoutmanagerActivity>()
+        }
+
 
 
 

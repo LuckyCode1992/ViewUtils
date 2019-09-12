@@ -21,9 +21,12 @@
                 android:multiprocess="true"/>
 
         <activity
+                android:name=".recycleview_util.HiveLayoutmanagerActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
                 android:name=".自定义控件.属性动画.OfOjectActivity"
                 android:screenOrientation="portrait"/>
-
         <activity
                 android:name=".自定义控件.属性动画.ValueAnimatorActivity"
                 android:screenOrientation="portrait"/>

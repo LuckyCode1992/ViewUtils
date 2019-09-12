@@ -44,7 +44,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="chips layout manager" />
-
+            <Button
+                    android:id="@+id/btn_hivelayoutmanager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="hive layout manager" />
 
 
 
