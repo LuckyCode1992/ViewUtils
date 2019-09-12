@@ -12,6 +12,7 @@ import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.Interpolator
 import android.widget.ImageView
 import com.justcode.hxl.viewutil.R
+import com.justcode.hxl.viewutil.extend.start
 import com.justcode.hxl.viewutil.extend.toast
 import com.justcode.hxl.viewutil.recycleview_util.chipslayoutmanager.util.log.Log
 import kotlinx.android.synthetic.main.activity_value_animator.*
@@ -82,6 +83,10 @@ class ValueAnimatorActivity : AppCompatActivity() {
                 tv_argb_evaluator.setBackgroundColor(curValue)
             }
             animator.start()
+        }
+
+        rl_of_object.setOnClickListener {
+            start<OfOjectActivity>()
         }
     }
 

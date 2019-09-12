@@ -216,6 +216,26 @@
 
             </RelativeLayout>
 
+            <RelativeLayout
+                    android:id="@+id/rl_of_object"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="#00aa00"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="valueAnimator进阶 ofObject"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+            </RelativeLayout>
         </LinearLayout>
 
     </ScrollView>
