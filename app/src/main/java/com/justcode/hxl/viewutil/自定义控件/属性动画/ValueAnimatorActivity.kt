@@ -88,6 +88,9 @@ class ValueAnimatorActivity : AppCompatActivity() {
         rl_of_object.setOnClickListener {
             start<OfOjectActivity>()
         }
+        rl_object_animator.setOnClickListener {
+            start<ObjectAnimatorActivity>()
+        }
     }
 
     private fun tantiaoDemo() {

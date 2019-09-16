@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".自定义控件.属性动画.ObjectAnimatorActivity">
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:background="@drawable/shape_corners_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                    style="@style/layout_local">
+
+                <Button
+                        android:id="@+id/btn_alpha"
+                        android:text="改变透明度"
+                        style="@style/button"/>
+                <ImageView
+                        android:id="@+id/iv_alpha"
+                        android:background="@drawable/img_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local">
+
+                <Button
+                        android:id="@+id/btn_rotation"
+                        android:text="旋转"
+                        style="@style/button"/>
+                <ImageView
+                        android:id="@+id/iv_rotation_z"
+                        android:background="@drawable/img_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <ImageView
+                        android:id="@+id/iv_rotation_x"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/img_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <ImageView
+                        android:id="@+id/iv_rotation_y"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/img_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local">
+
+                <Button
+                        android:id="@+id/btn_translation"
+                        android:text="位移"
+                        style="@style/button"/>
+                <ImageView
+                        android:id="@+id/iv_translation_x"
+                        android:background="@drawable/img_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <ImageView
+                        android:id="@+id/iv_translation_y"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/img_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>
