@@ -81,6 +81,28 @@
 
             </LinearLayout>
 
+
+            <LinearLayout
+                    style="@style/layout_local">
+
+                <Button
+                        android:id="@+id/btn_scale"
+                        android:text="缩放"
+                        style="@style/button"/>
+                <ImageView
+                        android:id="@+id/iv_scale_x"
+                        android:background="@drawable/img_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <ImageView
+                        android:id="@+id/iv_scale_y"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/img_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 

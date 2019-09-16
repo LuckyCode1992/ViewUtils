@@ -7,6 +7,7 @@ import android.animation.ValueAnimator
 import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.AttributeSet
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.Interpolator
@@ -152,6 +153,8 @@ class ValueAnimatorActivity : AppCompatActivity() {
         animator.start()
 
         btn_set_count.setOnClickListener {
+            val input = et_input.text.toString()
+            if (TextUtils.isEmpty(input)) return@setOnClickListener
             val count: Int = et_input.text.toString().toInt()
             animator.repeatCount = count
             animator.start()

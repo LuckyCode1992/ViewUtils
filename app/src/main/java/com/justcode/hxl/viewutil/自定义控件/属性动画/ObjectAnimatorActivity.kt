@@ -47,11 +47,13 @@ class ObjectAnimatorActivity : AppCompatActivity() {
         /**
          * 重点，propertyName这个属性，对应的其实，就是view所列出来的这些属性 、
          *
-         * 我们总结出两点：
+         * 我们总结出三点：
          *
          * 1.使用ObjectAnimator 来构造动画，propertyName属性，只能是view对应的set函数，如上面写的这些
          *
          * 2.propertyName属性对应的名称是上述这样的写法，简而言之，复制上述的属性名称，即可
+         *
+         * 3.values 的类型，要与view对应的属性的类型一致，view的alpha是float，那么values 也要是float
          */
         btn_rotation.setOnClickListener {
 
@@ -99,6 +101,16 @@ class ObjectAnimatorActivity : AppCompatActivity() {
             )
             translationY.duration = 2000
             translationY.start()
+        }
+        btn_scale.setOnClickListener {
+            val scaleX = ObjectAnimator.ofFloat(iv_scale_x, "scaleX", 0f, 2f, 1f)
+            scaleX.duration = 2000
+            scaleX.start()
+            //下面这种是不会有效果的，参考总结第三点
+//            val scaleY = ObjectAnimator.ofInt(iv_scale_y, "scaleY", 0, 3, 1)
+            val scaleY = ObjectAnimator.ofFloat(iv_scale_y, "scaleY", 0f, 3f, 1f)
+            scaleY.duration = 2000
+            scaleY.start()
         }
     }
 }
