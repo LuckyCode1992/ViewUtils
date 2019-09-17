@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.support.annotation.RequiresApi
 import android.view.View
 import com.justcode.hxl.viewutil.R
-import com.justcode.hxl.viewutil.recycleview_util.chipslayoutmanager.util.log.Log
 import kotlinx.android.synthetic.main.activity_object_animator.*
 
 class ObjectAnimatorActivity : AppCompatActivity() {

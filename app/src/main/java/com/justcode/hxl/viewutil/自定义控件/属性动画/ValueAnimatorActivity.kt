@@ -15,9 +15,8 @@ import android.widget.ImageView
 import com.justcode.hxl.viewutil.R
 import com.justcode.hxl.viewutil.extend.start
 import com.justcode.hxl.viewutil.extend.toast
-import com.justcode.hxl.viewutil.recycleview_util.chipslayoutmanager.util.log.Log
+import com.justcode.hxl.viewutil.recycleview_util.layoutmanager.chipslayoutmanager.util.log.Log
 import kotlinx.android.synthetic.main.activity_value_animator.*
-import kotlinx.android.synthetic.main.itembinder_data1.*
 
 class ValueAnimatorActivity : AppCompatActivity() {
 

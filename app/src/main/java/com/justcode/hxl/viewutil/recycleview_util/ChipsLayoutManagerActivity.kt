@@ -7,9 +7,9 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.justcode.hxl.viewutil.R
 import com.justcode.hxl.viewutil.extend.toast
-import com.justcode.hxl.viewutil.recycleview_util.chipslayoutmanager.ChipsLayoutManager
-import com.justcode.hxl.viewutil.recycleview_util.chipslayoutmanager.SpacingItemDecoration
-import com.justcode.hxl.viewutil.recycleview_util.chipslayoutmanager.util.CircleTransform
+import com.justcode.hxl.viewutil.recycleview_util.layoutmanager.chipslayoutmanager.ChipsLayoutManager
+import com.justcode.hxl.viewutil.recycleview_util.layoutmanager.chipslayoutmanager.SpacingItemDecoration
+import com.justcode.hxl.viewutil.recycleview_util.layoutmanager.chipslayoutmanager.util.CircleTransform
 import com.justcode.hxl.viewutil.recycleview_util.core.BaseItemViewBinder
 import com.justcode.hxl.viewutil.recycleview_util.core.MultiTypeAdapter
 import com.justcode.hxl.viewutil.recycleview_util.core.MyViewHolder
@@ -104,7 +104,11 @@ class ChipsItemBinder : BaseItemViewBinder<ChipsEntity>() {
             item.imgId?.let {
                 iv_icon.visibility = View.VISIBLE
                 Glide.with(context).load(it)
-                    .transform(CircleTransform(context)).into(iv_icon)
+                    .transform(
+                        CircleTransform(
+                            context
+                        )
+                    ).into(iv_icon)
             } ?: kotlin.run {
                 iv_icon.visibility = View.GONE
             }

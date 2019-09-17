@@ -1,17 +1,15 @@
 package com.justcode.hxl.viewutil.recycleview_util
 
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.LruCache
 import com.justcode.hxl.viewutil.R
 import com.justcode.hxl.viewutil.extend.toast
 import com.justcode.hxl.viewutil.recycleview_util.core.BaseItemViewBinder
 import com.justcode.hxl.viewutil.recycleview_util.core.MultiTypeAdapter
 import com.justcode.hxl.viewutil.recycleview_util.core.MyViewHolder
-import com.justcode.hxl.viewutil.recycleview_util.hiveLayoutmanager.HiveDrawable
-import com.justcode.hxl.viewutil.recycleview_util.hiveLayoutmanager.HiveLayoutManager
+import com.justcode.hxl.viewutil.recycleview_util.layoutmanager.hiveLayoutmanager.HiveDrawable
+import com.justcode.hxl.viewutil.recycleview_util.layoutmanager.hiveLayoutmanager.HiveLayoutManager
 import kotlinx.android.synthetic.main.activity_hive_layoutmanager.*
 import kotlinx.android.synthetic.main.itembinder_hive.view.*
 import java.util.*
@@ -46,7 +44,10 @@ class HiveLayoutmanagerActivity : AppCompatActivity() {
         initList()
 
         adapter.register(HiveItemBinder())
-        recycle_hive.layoutManager = HiveLayoutManager(HiveLayoutManager.HORIZONTAL)
+        recycle_hive.layoutManager =
+            HiveLayoutManager(
+                HiveLayoutManager.HORIZONTAL
+            )
         recycle_hive.adapter = adapter
         adapter.items = list
         adapter.notifyItems()
@@ -88,7 +89,10 @@ class HiveItemBinder : BaseItemViewBinder<Int>() {
         with(holder.itemView) {
 
             val bitmap = BitmapFactory.decodeResource(context.resources, item)
-            val drawable = HiveDrawable(HiveLayoutManager.HORIZONTAL, bitmap)
+            val drawable = HiveDrawable(
+                HiveLayoutManager.HORIZONTAL,
+                bitmap
+            )
 
             tv_number.text = "${holder.adapterPosition}"
             iv_img_img.setImageDrawable(drawable)

@@ -5,9 +5,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.justcode.hxl.viewutil.R
 import com.justcode.hxl.viewutil.extend.toast
-import com.justcode.hxl.viewutil.recycleview_util.carousellayoutmanager.CarouselLayoutManager
-import com.justcode.hxl.viewutil.recycleview_util.carousellayoutmanager.CarouselZoomPostLayoutListener
-import com.justcode.hxl.viewutil.recycleview_util.carousellayoutmanager.CenterScrollListener
+import com.justcode.hxl.viewutil.recycleview_util.layoutmanager.carousellayoutmanager.CarouselLayoutManager
+import com.justcode.hxl.viewutil.recycleview_util.layoutmanager.carousellayoutmanager.CarouselZoomPostLayoutListener
+import com.justcode.hxl.viewutil.recycleview_util.layoutmanager.carousellayoutmanager.CenterScrollListener
 import com.justcode.hxl.viewutil.recycleview_util.core.BaseItemViewBinder
 import com.justcode.hxl.viewutil.recycleview_util.core.MultiTypeAdapter
 import com.justcode.hxl.viewutil.recycleview_util.core.MyViewHolder
@@ -25,8 +25,16 @@ class CarouseLayoutManagerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_carouse_layout_manager)
-        val carouseLayoutmangerV = CarouselLayoutManager(CarouselLayoutManager.VERTICAL, true)
-        val carouseLayoutmangerH = CarouselLayoutManager(CarouselLayoutManager.HORIZONTAL, false)
+        val carouseLayoutmangerV =
+            CarouselLayoutManager(
+                CarouselLayoutManager.VERTICAL,
+                true
+            )
+        val carouseLayoutmangerH =
+            CarouselLayoutManager(
+                CarouselLayoutManager.HORIZONTAL,
+                false
+            )
 
         //添加动画效果
         carouseLayoutmangerV.setPostLayoutListener(CarouselZoomPostLayoutListener())

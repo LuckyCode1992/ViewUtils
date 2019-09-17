@@ -13,12 +13,17 @@
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
 
+
         <provider
                 android:name=".shape_selector_util.core.BackgroundContentProvider"
                 android:authorities="${applicationId}.backgroundLibrary"
                 android:exported="false"
                 android:multiprocess="true"/>
 
+        <activity
+                android:name=".recycleview_util.DiscreateScrollLayoutMangerActivity"
+                android:screenOrientation="portrait">
+        </activity>
         <activity
                 android:name=".自定义控件.属性动画.ObjectAnimatorActivity"
                 android:screenOrientation="portrait">
