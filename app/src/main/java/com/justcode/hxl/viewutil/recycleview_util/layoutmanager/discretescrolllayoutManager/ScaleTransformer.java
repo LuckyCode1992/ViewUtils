@@ -6,7 +6,7 @@ import android.view.View;
 /**
  * Created by yarolegovich on 03.03.2017.
  */
-public class ScaleTransformer  {
+public class ScaleTransformer implements DiscreteScrollItemTransformer {
 
     private Pivot pivotX;
     private Pivot pivotY;
@@ -20,6 +20,7 @@ public class ScaleTransformer  {
         maxMinDiff = 0.2f;
     }
 
+    @Override
     public void transformItem(View item, float position) {
         pivotX.setOn(item);
         pivotY.setOn(item);

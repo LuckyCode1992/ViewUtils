@@ -20,44 +20,44 @@ import android.view.accessibility.AccessibilityEvent;
 import java.util.Locale;
 
 
-class DiscreteScrollLayoutManager extends RecyclerView.LayoutManager {
+public class DiscreteScrollLayoutManager extends RecyclerView.LayoutManager {
 
-    static final int NO_POSITION = -1;
+    public static final int NO_POSITION = -1;
 
-    private static final String EXTRA_POSITION = "extra_position";
-    private static final int DEFAULT_TIME_FOR_ITEM_SETTLE = 300;
-    private static final int DEFAULT_FLING_THRESHOLD = 2100; //Decrease to increase sensitivity.
-    private static final int DEFAULT_TRANSFORM_CLAMP_ITEM_COUNT = 1;
+    public static final String EXTRA_POSITION = "extra_position";
+    public static final int DEFAULT_TIME_FOR_ITEM_SETTLE = 300;
+    public static final int DEFAULT_FLING_THRESHOLD = 2100; //Decrease to increase sensitivity.
+    public static final int DEFAULT_TRANSFORM_CLAMP_ITEM_COUNT = 1;
 
-    protected static final float SCROLL_TO_SNAP_TO_ANOTHER_ITEM = 0.6f;
+    public static final float SCROLL_TO_SNAP_TO_ANOTHER_ITEM = 0.6f;
 
     //This field will take value of all visible view's center points during the fill phase
-    protected Point viewCenterIterator;
-    protected Point recyclerCenter;
-    protected Point currentViewCenter;
-    protected int childHalfWidth, childHalfHeight;
-    protected int extraLayoutSpace;
+    public Point viewCenterIterator;
+    public Point recyclerCenter;
+    public Point currentViewCenter;
+    public int childHalfWidth, childHalfHeight;
+    public int extraLayoutSpace;
 
     //Max possible distance a view can travel during one scroll phase
-    protected int scrollToChangeCurrent;
-    protected int currentScrollState;
+    public int scrollToChangeCurrent;
+    public int currentScrollState;
 
-    protected int scrolled;
-    protected int pendingScroll;
-    protected int currentPosition;
-    protected int pendingPosition;
+    public int scrolled;
+    public int pendingScroll;
+    public int currentPosition;
+    public int pendingPosition;
 
-    protected SparseArray<View> detachedCache;
+    public SparseArray<View> detachedCache;
 
-    private DSVOrientation.Helper orientationHelper;
+    public DSVOrientation.Helper orientationHelper;
 
-    protected boolean isFirstOrEmptyLayout;
+    public boolean isFirstOrEmptyLayout;
 
-    private Context context;
+    public Context context;
 
-    private int timeForItemSettle;
-    private int offscreenItems;
-    private int transformClampItemCount;
+    public int timeForItemSettle;
+    public int offscreenItems;
+    public int transformClampItemCount;
 
     private boolean dataSetChangeShiftedPosition;
 
@@ -68,7 +68,7 @@ class DiscreteScrollLayoutManager extends RecyclerView.LayoutManager {
 
     @NonNull
     private final ScrollStateListener scrollStateListener;
-    private ScaleTransformer itemTransformer;
+    private DiscreteScrollItemTransformer itemTransformer;
 
     private RecyclerViewProxy recyclerViewProxy;
 
@@ -611,7 +611,7 @@ class DiscreteScrollLayoutManager extends RecyclerView.LayoutManager {
         }
     }
 
-    public void setItemTransformer(ScaleTransformer itemTransformer) {
+    public void setItemTransformer(DiscreteScrollItemTransformer itemTransformer) {
         this.itemTransformer = itemTransformer;
     }
 

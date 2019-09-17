@@ -41,6 +41,11 @@ class MainActivity : AppCompatActivity() {
         btn_hivelayoutmanager.setOnClickListener {
             start<HiveLayoutmanagerActivity>()
         }
+        btn_discrete_layout.setOnClickListener {
+            start<DiscreateScrollLayoutMangerActivity>()
+        }
+
+
 
 
 
