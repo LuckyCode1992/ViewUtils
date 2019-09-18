@@ -24,11 +24,9 @@ class DiscreateScrollLayoutMangerActivity : AppCompatActivity() {
             start<ShopActivity>()
         }
         btn_weather.setOnClickListener {
-
+            start<WeatherActivity>()
         }
-        btn_pic.setOnClickListener {
 
-        }
     }
 
 
