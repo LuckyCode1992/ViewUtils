@@ -1,10 +1,9 @@
 package com.justcode.hxl.viewutil.自定义控件.属性动画
 
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
-import android.animation.ValueAnimator
+import android.animation.*
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.animation.AccelerateInterpolator
 import com.justcode.hxl.viewutil.R
@@ -47,6 +46,8 @@ class AnimatorSetActivity : AppCompatActivity() {
             val animatorSet = AnimatorSet()
             animatorSet.playTogether(tv1BgAnimator, tv1TranslateX, tv2TranslateX)
             animatorSet.duration = 2000
+            //设置动画控件目标，一旦设置，其他动画中设置无效
+//            animatorSet.setTarget(tv_1_together)
             animatorSet.start()
         }
         /**
@@ -67,7 +68,7 @@ class AnimatorSetActivity : AppCompatActivity() {
                 val char: Char = it.animatedValue as Char
                 tv_set.text = char.toString()
             }
-            animatior.interpolator = AccelerateInterpolator()
+            animatior.interpolator = AccelerateInterpolator() as TimeInterpolator
             animatior.repeatCount = ValueAnimator.INFINITE
             animatior.repeatMode = ValueAnimator.REVERSE
             val tvBgAnimator = ObjectAnimator.ofInt(
@@ -86,6 +87,79 @@ class AnimatorSetActivity : AppCompatActivity() {
             animatorSet.duration = 3000
             animatorSet.playTogether(animatior, tvBgAnimator, tvTranslateX)
             animatorSet.start()
+        }
+
+
+        btn_play_builder.setOnClickListener {
+            val animatior = ValueAnimator.ofObject(CharEvaluator(), '0', 'z')
+            animatior.addUpdateListener {
+                val char: Char = it.animatedValue as Char
+                tv_builder.text = char.toString()
+            }
+            animatior.duration = 3000
+            val tvBgAnimator = ObjectAnimator.ofInt(
+                tv_builder,
+                "BackgroundColor",
+                0xffff00ff.toInt(),
+                0xffffff00.toInt(),
+                0xffff00ff.toInt()
+            )
+            tvBgAnimator.duration = 2000
+
+            val tvTranslateX = ObjectAnimator.ofFloat(tv_builder, "translationX", 0f, 400f, 0f)
+            tvTranslateX.duration = 4000
+
+            val rotationZ = ObjectAnimator.ofFloat(tv_builder, "rotation", 0f, 180f, 0f)
+            rotationZ.duration = 3000
+
+
+            val animatorSet = AnimatorSet()
+
+            // addListener 是监听 animatorSet的状态，而animatorSet 没有 循环的说法，所以，永远不会走onAnimationRepeat
+            animatorSet.addListener(object : Animator.AnimatorListener {
+                override fun onAnimationRepeat(animation: Animator?) {
+                    Log.d("animatorSet__", "onAnimationRepeat")
+                }
+
+                override fun onAnimationEnd(animation: Animator?) {
+                    Log.d("animatorSet__", "onAnimationEnd")
+                }
+
+                override fun onAnimationCancel(animation: Animator?) {
+                    Log.d("animatorSet__", "onAnimationCancel")
+                }
+
+                override fun onAnimationStart(animation: Animator?) {
+                    Log.d("animatorSet__", "onAnimationStart")
+                }
+
+            })
+
+            //这里有一点需要注意， play 的是主体，如果 play 的动画是无限循环或者play之前动画是无限循环
+            // 在该动画之后执行的动画都不会执行，但是其他的可以无限循环，后面依然会执行
+            //也就是说，只有 with 和 before 是 无限循环，动画才能执行后续 串行的动画
+//            tvTranslateX.repeatCount = ValueAnimator.INFINITE
+            tvBgAnimator.repeatCount = ValueAnimator.INFINITE
+//            animatior.repeatCount = ValueAnimator.INFINITE
+            rotationZ.repeatCount = ValueAnimator.INFINITE
+
+            //可以统一设置 插值器，并且一旦设置了，其他动画设置就无效了
+            animatorSet.interpolator = AccelerateInterpolator()
+
+
+            //下面这段代码，解释一下： 播放tvTranslateX 同时 播放tvBgAnimator 在 animatior 之后播放 在rotationZ 之前播放 延时 5000ms播放
+            //转换为人话就是 ： 先播放 animatior 然后播放tvTranslateX和播放tvBgAnimator，最后播放rotationZ
+            // 延时5000ms，是从start开始，而本例中，因为animatior 是3秒，所以，在现象中，是animatior完毕后 延时2秒
+            animatorSet
+                .play(tvTranslateX)
+                .with(tvBgAnimator)
+                .after(animatior)
+                .before(rotationZ)
+                .after(5000)
+
+
+            animatorSet.start()
+
         }
 
     }

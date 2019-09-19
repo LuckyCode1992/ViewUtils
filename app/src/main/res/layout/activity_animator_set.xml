@@ -82,6 +82,30 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                    style="@style/layout_local">
+                <Button
+                        android:id="@+id/btn_play_builder"
+                        android:text="animatorSet.Builder"
+                        style="@style/button"/>
+                <TextView
+                        android:id="@+id/tv_builder"
+                        android:text="1"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="#123456"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_height="500dp"
+                    style="@style/layout_local">
+
+
+            </LinearLayout>
+
         </LinearLayout>
 
 
