@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".自定义控件.属性动画.AnimatorSetActivity">
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:background="@drawable/shape_corners_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                  style="@style/layout_local">
+                <Button
+                        android:id="@+id/btn_play_sequentially"
+                        android:text="playSequentially(按顺序播放)"
+                       style="@style/button"/>
+                <TextView
+                        android:id="@+id/tv_1_sequentially"
+                        android:text="1"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="#123456"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"/>
+                <TextView
+                        android:id="@+id/tv_2_sequentially"
+                        android:layout_marginTop="30dp"
+                        android:textColor="#ffffff"
+                        android:text="2"
+                        android:gravity="center"
+                        android:background="#123456"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local">
+                <Button
+                        android:id="@+id/btn_play_together"
+                        android:text="playTogether(一起播放)"
+                        style="@style/button"/>
+                <TextView
+                        android:id="@+id/tv_1_together"
+                        android:text="1"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="#123456"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"/>
+                <TextView
+                        android:id="@+id/tv_2_together"
+                        android:layout_marginTop="30dp"
+                        android:textColor="#ffffff"
+                        android:text="2"
+                        android:gravity="center"
+                        android:background="#123456"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"/>
+            </LinearLayout>
+            <LinearLayout
+                    style="@style/layout_local">
+                <Button
+                        android:id="@+id/btn_play_set"
+                        android:text="一个稍微复杂的动画效果"
+                        style="@style/button"/>
+                <TextView
+                        android:id="@+id/tv_set"
+                        android:text="1"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="#123456"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
