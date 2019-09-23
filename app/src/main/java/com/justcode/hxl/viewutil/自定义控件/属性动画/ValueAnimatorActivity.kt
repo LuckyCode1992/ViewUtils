@@ -24,6 +24,10 @@ class ValueAnimatorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_value_animator)
 
+        /**
+         * 属性动画，除了可以如下使用 代码实现，还可以使用xml 实现，就像视图动画那样，但是，平时习惯，更喜欢代码。故不作demo了
+         */
+
         btn_demo1.setOnClickListener {
             //解释一下这个属性动画
             // 这里ValueAnimator.ofInt(0, 300)是为了配合addUpdateListener使用。这里设置一个数值，从0到300，
@@ -93,6 +97,9 @@ class ValueAnimatorActivity : AppCompatActivity() {
         }
         rl_animator_set.setOnClickListener {
             start<AnimatorSetActivity>()
+        }
+        rl_animator_path.setOnClickListener {
+            start<AnimatorPathActivity>()
         }
     }
 

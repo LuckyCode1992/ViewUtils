@@ -276,6 +276,26 @@
                         android:textStyle="bold"/>
 
             </RelativeLayout>
+            <RelativeLayout
+                    android:id="@+id/rl_animator_path"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="#00aa00"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="路径动画示例"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+            </RelativeLayout>
         </LinearLayout>
 
     </ScrollView>
