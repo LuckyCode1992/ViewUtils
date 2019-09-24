@@ -45,7 +45,9 @@ class MainActivity : AppCompatActivity() {
             start<DiscreateScrollLayoutMangerActivity>()
         }
 
-
+        btn_greedo_layout.setOnClickListener {
+            start<GreedoLayoutManagerActivity>()
+        }
 
 
 

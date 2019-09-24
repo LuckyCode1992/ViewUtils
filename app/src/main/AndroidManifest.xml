@@ -21,6 +21,10 @@
                 android:multiprocess="true"/>
 
         <activity
+                android:name=".recycleview_util.GreedoLayoutManagerActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
                 android:name=".自定义控件.属性动画.AnimatorPathActivity"
                 android:screenOrientation="portrait">
         </activity>

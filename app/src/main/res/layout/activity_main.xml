@@ -54,6 +54,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="discrete layout" />
+            <Button
+                    android:id="@+id/btn_greedo_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="greedo layout" />
 
 
             <Button
