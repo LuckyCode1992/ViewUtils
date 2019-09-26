@@ -21,6 +21,10 @@
                 android:multiprocess="true"/>
 
         <activity
+                android:name=".recycleview_util.TantanCardLayoutActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
                 android:name=".recycleview_util.GreedoLayoutManagerActivity"
                 android:screenOrientation="portrait">
         </activity>

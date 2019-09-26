@@ -48,6 +48,9 @@ class MainActivity : AppCompatActivity() {
         btn_greedo_layout.setOnClickListener {
             start<GreedoLayoutManagerActivity>()
         }
+        btn_tantan_layout.setOnClickListener {
+            start<TantanCardLayoutActivity>()
+        }
 
 
 
