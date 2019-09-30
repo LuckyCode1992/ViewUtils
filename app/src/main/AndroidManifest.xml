@@ -104,6 +104,25 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+                android:name=".recycleview_util.viewpagerlayoutactivity.scale.ScaleLayoutActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".recycleview_util.viewpagerlayoutactivity.rotate.RotateLayoutActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".recycleview_util.viewpagerlayoutactivity.gallery.GalleryLayoutActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".recycleview_util.viewpagerlayoutactivity.circlescale.CircleScaleLayoutActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".recycleview_util.viewpagerlayoutactivity.circle.CircleLayoutActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".recycleview_util.viewpagerlayoutactivity.carousel.CarouselLayoutActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name=".recycleview_util.viewpagerlayoutactivity.ViewPagerActivity"/>
     </application>
 
 </manifest>

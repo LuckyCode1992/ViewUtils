@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+  >
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/bt_circle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="circle_layout_manger"
+        app:textAllCaps="false" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/bt_scale"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="scale_layout_manager"
+        app:textAllCaps="false" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/bt_circle_scale"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="circle_scale_layout_manager"
+        app:textAllCaps="false" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/bt_elevate_scale"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="carousel_layout_manager"
+        app:textAllCaps="false" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/bt_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="gallery_layout_manager"
+        app:textAllCaps="false" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/bt_rotate"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="rotate_layout_manager"
+        app:textAllCaps="false" />
+</LinearLayout>

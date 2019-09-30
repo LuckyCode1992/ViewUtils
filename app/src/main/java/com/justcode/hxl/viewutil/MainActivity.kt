@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.justcode.hxl.viewutil.extend.bundleOf
 import com.justcode.hxl.viewutil.extend.start
 import com.justcode.hxl.viewutil.recycleview_util.*
+import com.justcode.hxl.viewutil.recycleview_util.viewpagerlayoutactivity.ViewPagerActivity
 import com.justcode.hxl.viewutil.shape_selector_util.ShapeAndSelectorActivity
 import com.justcode.hxl.viewutil.自定义控件.属性动画.ValueAnimatorActivity
 import com.justcode.hxl.viewutil.自定义控件.绘图基础.DrawingBasisActivity
@@ -50,6 +51,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_tantan_layout.setOnClickListener {
             start<TantanCardLayoutActivity>()
+        }
+        btn_view_pager_layout.setOnClickListener {
+            start<ViewPagerActivity>()
         }
 
 

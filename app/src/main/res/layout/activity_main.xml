@@ -64,6 +64,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="探探" />
+            <Button
+                    android:id="@+id/btn_view_pager_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="viewpager_layout 合集" />
+
 
 
             <Button
