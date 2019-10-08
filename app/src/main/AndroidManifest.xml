@@ -21,6 +21,10 @@
                 android:multiprocess="true"/>
 
         <activity
+                android:name=".自定义控件.属性动画进阶.PropertyActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
                 android:name=".recycleview_util.TantanCardLayoutActivity"
                 android:screenOrientation="portrait">
         </activity>

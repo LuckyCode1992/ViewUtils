@@ -93,6 +93,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="自定义控件，属性动画" />
+            <Button
+                    android:id="@+id/btn_value_animator_jinjie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="自定义控件，属性动画进阶" />
         </LinearLayout>
 
     </ScrollView>
