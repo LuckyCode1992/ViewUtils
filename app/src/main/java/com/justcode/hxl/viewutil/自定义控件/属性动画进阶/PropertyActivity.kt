@@ -11,6 +11,7 @@ import android.util.AttributeSet
 import android.view.animation.AccelerateInterpolator
 import android.widget.TextView
 import com.justcode.hxl.viewutil.R
+import com.justcode.hxl.viewutil.extend.start
 import kotlinx.android.synthetic.main.activity_property.*
 
 class PropertyActivity : AppCompatActivity() {
@@ -158,6 +159,10 @@ class PropertyActivity : AppCompatActivity() {
             val animator = ObjectAnimator.ofPropertyValuesHolder(iv_ring2, frameHolder, frameHolder2, frameHolder3)
             animator.duration = 1000
             animator.start()
+        }
+
+        btn_6.setOnClickListener {
+            start<ViewPropertyAnimatorActivity>()
         }
     }
 }
