@@ -4,6 +4,7 @@ import android.animation.*
 import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
@@ -181,6 +182,28 @@ class ViewPropertyAnimatorActivity : AppCompatActivity() {
         transitioner.setAnimator(LayoutTransition.DISAPPEARING, animOut)
         transitioner.setAnimator(LayoutTransition.APPEARING, animIn)
         ll_layout_transition.layoutTransition = transitioner
+
+        transitioner.addTransitionListener(object : LayoutTransition.TransitionListener {
+            override fun startTransition(
+                transition: LayoutTransition?,
+                container: ViewGroup?,
+                view: View?,
+                transitionType: Int
+            ) {
+
+            }
+
+            override fun endTransition(
+                transition: LayoutTransition?,
+                container: ViewGroup?,
+                view: View?,
+                transitionType: Int
+            ) {
+
+            }
+
+        })
+
         btn_transition_add_view.setOnClickListener {
             addTransitionView()
 
