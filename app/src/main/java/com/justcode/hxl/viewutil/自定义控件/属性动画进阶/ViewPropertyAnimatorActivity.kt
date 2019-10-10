@@ -1,8 +1,6 @@
 package com.justcode.hxl.viewutil.自定义控件.属性动画进阶
 
-import android.animation.Animator
-import android.animation.LayoutTransition
-import android.animation.ObjectAnimator
+import android.animation.*
 import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -128,7 +126,8 @@ class ViewPropertyAnimatorActivity : AppCompatActivity() {
          *  3.将LayoutTransition 设置到ViewGroup中
          *  LayoutTransition.DISAPPEARING:元素在容器中消失时的动画
          *  LayoutTransition.APPEARING:元素在容器中显示时的动画
-         *
+         *  LayoutTransition.CHANGE_APPEARING:容器中添加元素时，其他元素的改变动画  只能用ofPropertyValuesHolder实现，不能用ofFloat等实现
+         *  LayoutTransition.CHANGE_DISAPPEARING:容器中移除元素时，其他元素的改变动画  只能用ofPropertyValuesHolder实现，不能用ofFloat等实现
          */
         val transitioner = LayoutTransition()
         //出场动画
@@ -136,6 +135,49 @@ class ViewPropertyAnimatorActivity : AppCompatActivity() {
         //入场动画
         val animIn = ObjectAnimator.ofFloat(null, "rotationY", 0f, 360f, 0f)
 
+
+        //入场时，其他元素变化时的动画（如果其他元素位置并没有改变，将不会有动画）
+        //pvLeft 和 pvTop必须写，没有变化就是如下
+        val pvLeft = PropertyValuesHolder.ofInt("left", 0, 0)
+        val pvTop = PropertyValuesHolder.ofInt("top", 0, 0)
+        val pvScaleX = PropertyValuesHolder.ofFloat("scaleX", 1f, 0f, 1f)
+        val changeAnimator = ObjectAnimator.ofPropertyValuesHolder(ll_layout_transition, pvLeft, pvTop, pvScaleX)
+
+        //出场时，其他动画变化时的动画
+        val pvLeft2 = PropertyValuesHolder.ofInt("left", 0, 0)
+        val pvTop2 = PropertyValuesHolder.ofInt("top", 0, 0)
+        val frame0 = Keyframe.ofFloat(0f, 0f)
+        val frame1 = Keyframe.ofFloat(0.1f, -20f)
+        val frame2 = Keyframe.ofFloat(0.2f, 20f)
+        val frame3 = Keyframe.ofFloat(0.3f, -20f)
+        val frame4 = Keyframe.ofFloat(0.4f, 20f)
+        val frame5 = Keyframe.ofFloat(0.5f, -20f)
+        val frame6 = Keyframe.ofFloat(0.6f, 20f)
+        val frame7 = Keyframe.ofFloat(0.7f, -20f)
+        val frame8 = Keyframe.ofFloat(0.8f, 20f)
+        val frame9 = Keyframe.ofFloat(0.9f, -20f)
+        val frame10 = Keyframe.ofFloat(1f, 0f)
+        val propertyHolder = PropertyValuesHolder.ofKeyframe(
+            "rotation",
+            frame0,
+            frame1,
+            frame2,
+            frame3,
+            frame4,
+            frame5,
+            frame6,
+            frame7,
+            frame8,
+            frame9,
+            frame10
+        )
+
+
+        val changeDisAppearing = ObjectAnimator.ofPropertyValuesHolder(ll_layout_transition,pvLeft2,pvTop2,propertyHolder)
+
+
+        transitioner.setAnimator(LayoutTransition.CHANGE_DISAPPEARING,changeDisAppearing)
+        transitioner.setAnimator(LayoutTransition.CHANGE_APPEARING, changeAnimator)
         transitioner.setAnimator(LayoutTransition.DISAPPEARING, animOut)
         transitioner.setAnimator(LayoutTransition.APPEARING, animIn)
         ll_layout_transition.layoutTransition = transitioner
@@ -153,9 +195,11 @@ class ViewPropertyAnimatorActivity : AppCompatActivity() {
     fun addTransitionView() {
         j++
         val button = Button(this)
+        button.text = "button${j}"
         val params = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         button.layoutParams = params
-        ll_layout_transition.addView(button)
+        //注意这里，要在首位添加。如果在尾部添加，那么原来的控件就不会改变
+        ll_layout_transition.addView(button, 0)
     }
 
     fun removeTransitionView() {
