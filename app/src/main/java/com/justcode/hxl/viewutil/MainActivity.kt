@@ -56,7 +56,9 @@ class MainActivity : AppCompatActivity() {
         btn_view_pager_layout.setOnClickListener {
             start<ViewPagerActivity>()
         }
-
+        btn_flow_drag_layout.setOnClickListener {
+            start<FlowDragLayoutManagerActivity>()
+        }
 
 
 

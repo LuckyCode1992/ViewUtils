@@ -71,6 +71,11 @@
                     android:text="viewpager_layout 合集" />
 
 
+            <Button
+                    android:id="@+id/btn_flow_drag_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="标签layout manager" />
 
             <Button
                 android:id="@+id/btn_basis_view"
