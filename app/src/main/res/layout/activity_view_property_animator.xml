@@ -100,7 +100,34 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:orientation="vertical">
 
+                <Button
+                        android:id="@+id/btn_transition_add_view"
+                        android:text="添加view"
+                        style="@style/button"/>
+                <Button
+                        android:id="@+id/btn_transition_remove_view"
+                        android:text="移除view"
+                        style="@style/button"/>
+
+                <LinearLayout
+                        android:id="@+id/ll_layout_transition"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

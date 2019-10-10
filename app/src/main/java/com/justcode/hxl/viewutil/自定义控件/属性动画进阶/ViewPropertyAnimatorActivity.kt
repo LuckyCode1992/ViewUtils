@@ -1,6 +1,8 @@
 package com.justcode.hxl.viewutil.自定义控件.属性动画进阶
 
 import android.animation.Animator
+import android.animation.LayoutTransition
+import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -23,7 +25,9 @@ class ViewPropertyAnimatorActivity : AppCompatActivity() {
 
 
     var i = 0
+    var j = 0
 
+    @SuppressLint("ObjectAnimatorBinding")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_property_animator)
@@ -115,6 +119,50 @@ class ViewPropertyAnimatorActivity : AppCompatActivity() {
             removeButtonView()
         }
 
+        // LayoutTransition
+
+        /**
+         *  LayoutTransition 使用方法
+         *  1.创建实例
+         *  2.创建动画并进行设置
+         *  3.将LayoutTransition 设置到ViewGroup中
+         *  LayoutTransition.DISAPPEARING:元素在容器中消失时的动画
+         *  LayoutTransition.APPEARING:元素在容器中显示时的动画
+         *
+         */
+        val transitioner = LayoutTransition()
+        //出场动画
+        val animOut = ObjectAnimator.ofFloat(null, "rotation", 0f, 90f, 0f)
+        //入场动画
+        val animIn = ObjectAnimator.ofFloat(null, "rotationY", 0f, 360f, 0f)
+
+        transitioner.setAnimator(LayoutTransition.DISAPPEARING, animOut)
+        transitioner.setAnimator(LayoutTransition.APPEARING, animIn)
+        ll_layout_transition.layoutTransition = transitioner
+        btn_transition_add_view.setOnClickListener {
+            addTransitionView()
+
+        }
+        btn_transition_remove_view.setOnClickListener {
+            removeTransitionView()
+        }
+
+    }
+
+
+    fun addTransitionView() {
+        j++
+        val button = Button(this)
+        val params = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        button.layoutParams = params
+        ll_layout_transition.addView(button)
+    }
+
+    fun removeTransitionView() {
+        if (j > 0) {
+            ll_layout_transition.removeViewAt(0)
+            j--
+        }
     }
 
 
