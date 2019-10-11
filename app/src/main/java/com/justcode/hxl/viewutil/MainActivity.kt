@@ -7,6 +7,7 @@ import com.justcode.hxl.viewutil.extend.start
 import com.justcode.hxl.viewutil.recycleview_util.*
 import com.justcode.hxl.viewutil.recycleview_util.viewpagerlayoutactivity.ViewPagerActivity
 import com.justcode.hxl.viewutil.shape_selector_util.ShapeAndSelectorActivity
+import com.justcode.hxl.viewutil.自定义控件.动画进阶.PathMeasureActivity
 import com.justcode.hxl.viewutil.自定义控件.属性动画.ValueAnimatorActivity
 import com.justcode.hxl.viewutil.自定义控件.属性动画进阶.PropertyActivity
 import com.justcode.hxl.viewutil.自定义控件.绘图基础.DrawingBasisActivity
@@ -77,6 +78,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_value_animator_jinjie.setOnClickListener {
             start<PropertyActivity>()
+        }
+        btn_path_measure.setOnClickListener {
+            start<PathMeasureActivity>()
         }
 
     }
