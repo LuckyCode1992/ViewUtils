@@ -189,7 +189,6 @@ class PathMeasureSimpleView4 @JvmOverloads constructor(
 
 
         val animator = ValueAnimator.ofFloat(0f, 1f)
-        animator.repeatCount = ValueAnimator.INFINITE
         animator.addUpdateListener {
             curAnimValue = it.animatedValue as Float
             invalidate()
@@ -250,7 +249,6 @@ class GetPosTanView @JvmOverloads constructor(
             invalidate()
         }
         animator.duration = 2000
-        animator.repeatCount = Animation.INFINITE
         animator.start()
     }
 
@@ -327,7 +325,6 @@ class AliPayView @JvmOverloads constructor(
             invalidate()
         }
         animator.duration = 4000
-        animator.repeatCount = Animation.INFINITE
         animator.start()
     }
 
