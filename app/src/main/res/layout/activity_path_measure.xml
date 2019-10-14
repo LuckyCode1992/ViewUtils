@@ -66,9 +66,9 @@
                         android:text="getSegment 函数使用"
                         style="@style/button"/>
 
-             <com.justcode.hxl.viewutil.自定义控件.动画进阶.PathMeasureSimpleView3
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"/>
+                <com.justcode.hxl.viewutil.自定义控件.动画进阶.PathMeasureSimpleView3
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -83,9 +83,9 @@
                         android:text="路径加载动画"
                         style="@style/button"/>
 
-             <com.justcode.hxl.viewutil.自定义控件.动画进阶.PathMeasureSimpleView4
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"/>
+                <com.justcode.hxl.viewutil.自定义控件.动画进阶.PathMeasureSimpleView4
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -106,10 +106,23 @@
                         android:layout_height="wrap_content"/>
             </LinearLayout>
 
-            <Button
-                    android:id="@+id/btn_6"
-                    android:text="ViewPropertyAnimator demo"
-                    style="@style/button"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/shape_corners_5dp"
+                    android:orientation="vertical">
+
+                <Button
+
+                        android:text="支付宝支付成功动画"
+                        style="@style/button"/>
+
+
+                <com.justcode.hxl.viewutil.自定义控件.动画进阶.AliPayView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

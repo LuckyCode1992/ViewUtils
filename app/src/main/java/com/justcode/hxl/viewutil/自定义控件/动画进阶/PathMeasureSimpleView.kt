@@ -274,11 +274,81 @@ class GetPosTanView @JvmOverloads constructor(
 //        canvas.drawBitmap(arrawBitmap,matrix,paint)
 
         //修改bug之后
-        matrix.postRotate(degrees.toFloat(), (arrawBitmap.width/2).toFloat(), (arrawBitmap.height/2).toFloat())
-        matrix.postTranslate(pos[0]-arrawBitmap.width/2,pos[1]-arrawBitmap.height/2)
-        canvas.drawBitmap(arrawBitmap,matrix,paint)
+//        matrix.postRotate(degrees.toFloat(), (arrawBitmap.width / 2).toFloat(), (arrawBitmap.height / 2).toFloat())
+//        matrix.postTranslate(pos[0] - arrawBitmap.width / 2, pos[1] - arrawBitmap.height / 2)
+//        canvas.drawBitmap(arrawBitmap, matrix, paint)
 
+        //通过计算方位角实现
+        measure.getMatrix(stop, matrix, PathMeasure.POSITION_MATRIX_FLAG or PathMeasure.TANGENT_MATRIX_FLAG)
+        matrix.preTranslate((-arrawBitmap.width / 2).toFloat(), (-arrawBitmap.height / 2).toFloat())
+        canvas.drawBitmap(arrawBitmap, matrix, paint)
+
+        //   measure.getMatrix(stop, matrix, PathMeasure.POSITION_MATRIX_FLAG or PathMeasure.TANGENT_MATRIX_FLAG)
+        // distance: 距离path起点的长度
+        // matrix: 根据 flags封装好的matrix会根据flags的设置而存入不同的内容
+        // flags: 用于指定哪些内容存入matrix中
 
     }
 
+}
+
+class AliPayView @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : View(context, attrs, defStyleAttr) {
+
+    var next = false
+    val circlePath = Path()
+    val dstPath = Path()
+    val paint = Paint()
+    val measure = PathMeasure()
+    var curAnimaValue = 0f
+
+    init {
+        setLayerType(LAYER_TYPE_SOFTWARE, null)
+        paint.isAntiAlias = true
+        paint.color = Color.BLACK
+        paint.strokeWidth = 4f
+        paint.style = Paint.Style.STROKE
+
+        circlePath.addCircle(100f, 100f, 50f, Path.Direction.CW)
+
+
+        //圆形内画一个勾
+        circlePath.moveTo(100f - 50f / 2, 100f)
+        circlePath.lineTo(100f, 100f + 50f / 2)
+        circlePath.lineTo(100f + 50f / 2, 100f - 50f / 3)
+
+        measure.setPath(circlePath, false)
+
+
+        val animator = ValueAnimator.ofFloat(0f, 2f)
+        animator.addUpdateListener {
+            curAnimaValue = it.animatedValue as Float
+            invalidate()
+        }
+        animator.duration = 4000
+        animator.repeatCount = Animation.INFINITE
+        animator.start()
+    }
+
+    override fun onDraw(canvas: Canvas) {
+        super.onDraw(canvas)
+
+        if (curAnimaValue < 1f) {
+            val stop = measure.length * curAnimaValue
+            Log.d("AliPayView_", "stop:${stop}--lenth:${measure.length}")
+            measure.getSegment(0f, stop, dstPath, true)
+        } else {
+            if (!next) {
+                next = true
+                measure.getSegment(0f, measure.length, dstPath, true)
+                measure.nextContour()
+            }
+            val stop = measure.length * (curAnimaValue - 1f)
+            measure.getSegment(0f, stop, dstPath, true)
+        }
+
+
+        canvas.drawPath(dstPath, paint)
+    }
 }
