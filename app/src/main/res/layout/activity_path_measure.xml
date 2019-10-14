@@ -97,15 +97,13 @@
 
                 <Button
                         android:id="@+id/btn_5"
-                        android:text="完整响铃效果"
+                        android:text="getPosTan 函数运用"
                         style="@style/button"/>
 
-                <ImageView
-                        android:id="@+id/iv_ring2"
-                        android:layout_margin="20dp"
-                        android:background="@drawable/phone"
-                        android:layout_width="100dp"
-                        android:layout_height="60dp"/>
+
+                <com.justcode.hxl.viewutil.自定义控件.动画进阶.GetPosTanView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <Button

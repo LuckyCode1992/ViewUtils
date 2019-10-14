@@ -1,11 +1,14 @@
 package com.justcode.hxl.viewutil.自定义控件.动画进阶
 
+import android.animation.Animator
 import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View
+import android.view.animation.Animation
+import com.justcode.hxl.viewutil.R
 
 class PathMeasureSimpleView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -47,6 +50,9 @@ class PathMeasureSimpleView @JvmOverloads constructor(
     }
 }
 
+/**
+ *  length
+ */
 class PathMeasureSimpleView2 @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
@@ -83,6 +89,9 @@ class PathMeasureSimpleView2 @JvmOverloads constructor(
 }
 
 
+/**
+ * getSegment 介绍
+ */
 class PathMeasureSimpleView3 @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
@@ -152,6 +161,9 @@ class PathMeasureSimpleView3 @JvmOverloads constructor(
     }
 }
 
+/**
+ *  getSegment 函数运用
+ */
 class PathMeasureSimpleView4 @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
@@ -209,4 +221,64 @@ class PathMeasureSimpleView4 @JvmOverloads constructor(
 
 
     }
+}
+
+class GetPosTanView @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : View(context, attrs, defStyleAttr) {
+    val circlePath = Path()
+    val dstPath = Path()
+    val paint = Paint()
+    val measure = PathMeasure()
+    var curAnimaValue = 0f
+    lateinit var arrawBitmap: Bitmap
+    private val pos = FloatArray(2)
+    private val tan = FloatArray(2)
+
+    init {
+        paint.isAntiAlias = true
+        paint.color = Color.BLACK
+        paint.strokeWidth = 4f
+        paint.style = Paint.Style.STROKE
+        circlePath.addCircle(100f, 100f, 50f, Path.Direction.CW)
+        measure.setPath(circlePath, true)
+        arrawBitmap = BitmapFactory.decodeResource(resources, R.drawable.arraw)
+
+        val animator = ValueAnimator.ofFloat(0f, 1f)
+        animator.addUpdateListener {
+            curAnimaValue = it.animatedValue as Float
+            invalidate()
+        }
+        animator.duration = 2000
+        animator.repeatCount = Animation.INFINITE
+        animator.start()
+    }
+
+    override fun onDraw(canvas: Canvas) {
+        super.onDraw(canvas)
+
+        canvas.drawColor(Color.WHITE)
+        val lenth = measure.length
+        val stop = lenth * curAnimaValue
+
+        dstPath.reset()
+        measure.getSegment(0f, stop, dstPath, true)
+        canvas.drawPath(dstPath, paint)
+
+        //旋转箭头 但是，会发现有一个bug
+        measure.getPosTan(stop, pos, tan)
+        val degrees = Math.toDegrees(Math.atan2(tan[1].toDouble(), tan[0].toDouble()))
+        val matrix = Matrix()
+//        matrix.postRotate(degrees.toFloat(), (arrawBitmap.width/2).toFloat(), (arrawBitmap.height/2).toFloat())
+//        matrix.postTranslate(pos[0],pos[1])
+//        canvas.drawBitmap(arrawBitmap,matrix,paint)
+
+        //修改bug之后
+        matrix.postRotate(degrees.toFloat(), (arrawBitmap.width/2).toFloat(), (arrawBitmap.height/2).toFloat())
+        matrix.postTranslate(pos[0]-arrawBitmap.width/2,pos[1]-arrawBitmap.height/2)
+        canvas.drawBitmap(arrawBitmap,matrix,paint)
+
+
+    }
+
 }
