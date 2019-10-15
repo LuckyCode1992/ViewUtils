@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="300dp"
+        android:height="300dp"
+        android:viewportHeight="300"
+        android:viewportWidth="300"
+        >
+    <path
+            android:name="bar1"
+            android:pathData="M10,10,L200,10"
+            android:strokeWidth="3"
+            android:strokeLineCap="butt"
+            android:strokeColor="@color/colorAccent"/>
+    <path
+            android:name="bar2"
+            android:pathData="M10,20,H200"
+            android:strokeWidth="3"
+            android:strokeLineCap="butt"
+            android:strokeColor="@color/colorAccent"/>
+
+    <path
+            android:name="bar3"
+            android:pathData="m220,20,v100"
+            android:strokeWidth="3"
+            android:strokeLineCap="butt"
+            android:strokeColor="@color/colorAccent"/>
+    <path
+            android:name="bar4"
+            android:pathData="M10,50,C10,20,60,30,70,40"
+            android:strokeWidth="3"
+            android:strokeLineCap="butt"
+            android:strokeColor="@color/colorAccent"/>
+    <path
+            android:name="bar5"
+            android:pathData="M10,50,S60,30,70,40"
+            android:strokeWidth="3"
+            android:strokeLineCap="butt"
+            android:strokeColor="@color/colorAccent"/>
+
+    <path
+
+            android:pathData="M10,80,Q40,90,50,150"
+            android:strokeWidth="3"
+            android:strokeLineCap="butt"
+            android:strokeColor="@color/colorAccent"/>
+    <path
+
+            android:pathData="M10,80,T150,150"
+            android:strokeWidth="3"
+            android:strokeLineCap="butt"
+            android:strokeColor="@color/colorAccent"/>
+
+    <path
+
+            android:pathData="M10,150,A50,150,100,0,0,170,170"
+            android:strokeWidth="3"
+            android:strokeLineCap="butt"
+            android:strokeColor="@color/colorAccent"/>
+    <!--
+    M = moveTo(x,y) 移动画笔
+    L = lineTo(x,y)画线到某个位置
+    H = horizontal lineto(x),画水平路径
+    V = vertical lineto(y) 画垂直路径
+    C = curveto(x1,y1,x2,y2,x3,y3) 三阶贝塞尔曲线
+    S = smooth curto(x2,y2,x3,y3) 三阶贝塞尔曲线 接上一个路径的终点作为这个曲线的起点
+    Q = quadratic Belzier curve(x1,y1,x2,y2) 二阶贝塞尔曲线
+    T = smooth quadratic Bezier curveto(x2,y2) 映射前面路径的终点（投影）
+    A = elliptical Arc(rx,ry,xrotation,flag1,flag2,x,y) 弧线
+    rx,ry :椭圆的半轴大小
+    xrotation: x轴和水平方向顺时针的夹角
+    flags1：1表示大角弧度，0表示小角弧度
+    flags2:1表示顺时针，0表示逆时针
+    x,y：弧线终点
+
+    指令大写表示绝对定位，参照全局坐标系
+    指令小写表示相对定位，参照父容器坐标系
+    -->
+
+</vector>

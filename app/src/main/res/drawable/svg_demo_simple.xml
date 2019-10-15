@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:width="200dp"
+        android:height="100dp"
+        android:viewportWidth="100"
+        android:viewportHeight="50"
+        >
+    <path
+            android:name="bar1"
+            android:pathData="M10,23,L90,23"
+            android:strokeWidth="2"
+            android:strokeLineCap="round"
+            android:strokeColor="@color/colorAccent"/>
+    <path
+            android:name="bar2"
+            android:pathData="M10,28,L90,28"
+            android:strokeWidth="2"
+            android:strokeLineCap="round"
+            android:trimPathStart="0.23"
+            android:strokeColor="@color/colorAccent"/>
+
+    <path
+            android:name="bar3"
+            android:pathData="M10,34,L90,34"
+            android:strokeWidth="2"
+            android:strokeLineCap="round"
+            android:trimPathEnd="0.23"
+            android:strokeColor="@color/colorAccent"/>
+
+    <path
+            android:name="bar4"
+            android:pathData="M10,39,L90,39"
+            android:strokeWidth="2"
+            android:strokeLineCap="round"
+            android:trimPathOffset="0.23"
+            android:trimPathStart="0.23"
+            android:strokeColor="@color/colorAccent"/>
+    <path
+            android:name="bar5"
+            android:pathData="M10,49,L90,49,L91,44"
+            android:strokeWidth="2"
+            android:strokeColor="@color/colorPrimary"
+            android:strokeLineJoin="miter"
+            android:strokeAlpha="0.6"
+            />
+    <!--
+    width:svg的宽度
+    height：svg的高度
+    viewportWidth:宽分为多少个点
+    viewportHeight：高分为多少点
+    解释：一个宽200dp，高100dp的svg，将宽分为100份，每份2dp，高度同理
+
+    path是一个标签。表示路径
+    name：一个名字，标记，类似ID
+    pathData：对svg矢量图的描述：M10,23表示，moveTo(10,23)。L90,23表示lineTo(90,23)
+    strokeLineJoin：折现拐角的形状，miter表示锐角（直角），round表示圆弧（圆角），bevel表示直线（斜切）
+    strokeLineCap:线条的终点的形状（线帽），butt：无线帽，round：圆形线帽，square:方形线帽
+    strokeMiterLimit:设置斜角的上限，     android:strokeLineJoin="miter" 有效，其他无效
+    trimPathStart:从开始处剪切路径，取值0-1.百分比  android:trimPathStart="0.23"表示显示0.23-1的路径
+    trimPathEnd:从0开始，剪切到此。取值 0-1.  android:trimPathEnd="0.23" 表示，显示0-0.23的路径
+    trimPathOffset:路径位移，需要和trimPathStart或者trimPathEnd 配合使用
+
+
+
+
+    -->
+
+
+</vector>
