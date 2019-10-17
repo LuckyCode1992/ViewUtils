@@ -118,6 +118,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="动画进阶 PathMeasure" />
+            <Button
+                    android:id="@+id/btn_svg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="动画进阶 SVG" />
         </LinearLayout>
 
     </ScrollView>

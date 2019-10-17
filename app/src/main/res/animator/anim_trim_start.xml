@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+                android:propertyName="trimPathStart"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:duration="2000"
+        >
+
+
+</objectAnimator>
+        <!--
+        trimPathStart 是 path的一个属性值  参考  svg_demo_simple.xml
+        这个动画，就是动态改变  path 的 trimPathStart ，从0到1.
+
+        -->

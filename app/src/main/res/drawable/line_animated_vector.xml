@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:tools="http://schemas.android.com/tools"
+                 android:drawable="@drawable/svg_line"
+                 tools:targetApi="lollipop">
+    <target
+            android:animation="@animator/anim_trim_start"
+            android:name="bar"/>
+
+
+</animated-vector>
+<!--
+animated-vector 指定vector ：svg_line
+关联这个vector 中名字为bar 的path
+和动画 anim_trim_start
+-->

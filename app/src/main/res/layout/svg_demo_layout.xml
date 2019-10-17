@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ImageView
+                    android:src="@drawable/iconfont_svg_demo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"/>
+            <ImageButton
+                   android:background="@drawable/iconfont_svg_demo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+            <ImageView
+                    android:id="@+id/iv_svg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
