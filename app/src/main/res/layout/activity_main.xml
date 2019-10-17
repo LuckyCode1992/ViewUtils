@@ -76,6 +76,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="标签layout manager" />
+            <Button
+                    android:id="@+id/btn_expand_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="展开layout ExpandLayout" />
+
+
+
+
 
             <Button
                 android:id="@+id/btn_basis_view"

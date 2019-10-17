@@ -10,52 +10,52 @@
             android:pathData="M10,10,L200,10"
             android:strokeWidth="3"
             android:strokeLineCap="butt"
-            android:strokeColor="@color/colorAccent"/>
+            android:strokeColor="#D81B60"/>
     <path
             android:name="bar2"
             android:pathData="M10,20,H200"
             android:strokeWidth="3"
             android:strokeLineCap="butt"
-            android:strokeColor="@color/colorAccent"/>
+            android:strokeColor="#D81B60"/>
 
     <path
             android:name="bar3"
             android:pathData="m220,20,v100"
             android:strokeWidth="3"
             android:strokeLineCap="butt"
-            android:strokeColor="@color/colorAccent"/>
+            android:strokeColor="#D81B60"/>
     <path
             android:name="bar4"
             android:pathData="M10,50,C10,20,60,30,70,40"
             android:strokeWidth="3"
             android:strokeLineCap="butt"
-            android:strokeColor="@color/colorAccent"/>
+            android:strokeColor="#D81B60"/>
     <path
             android:name="bar5"
             android:pathData="M10,50,S60,30,70,40"
             android:strokeWidth="3"
             android:strokeLineCap="butt"
-            android:strokeColor="@color/colorAccent"/>
+            android:strokeColor="#D81B60"/>
 
     <path
 
             android:pathData="M10,80,Q40,90,50,150"
             android:strokeWidth="3"
             android:strokeLineCap="butt"
-            android:strokeColor="@color/colorAccent"/>
+            android:strokeColor="#D81B60"/>
     <path
 
             android:pathData="M10,80,T150,150"
             android:strokeWidth="3"
             android:strokeLineCap="butt"
-            android:strokeColor="@color/colorAccent"/>
+            android:strokeColor="#D81B60"/>
 
     <path
 
             android:pathData="M10,150,A50,150,100,0,0,170,170"
             android:strokeWidth="3"
             android:strokeLineCap="butt"
-            android:strokeColor="@color/colorAccent"/>
+            android:strokeColor="#D81B60"/>
     <!--
     M = moveTo(x,y) 移动画笔
     L = lineTo(x,y)画线到某个位置

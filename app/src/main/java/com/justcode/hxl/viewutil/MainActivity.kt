@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.justcode.hxl.viewutil.extend.bundleOf
 import com.justcode.hxl.viewutil.extend.start
 import com.justcode.hxl.viewutil.recycleview_util.*
+import com.justcode.hxl.viewutil.recycleview_util.layoutmanager.ExpandLayoutManagerActivity
 import com.justcode.hxl.viewutil.recycleview_util.viewpagerlayoutactivity.ViewPagerActivity
 import com.justcode.hxl.viewutil.shape_selector_util.ShapeAndSelectorActivity
 import com.justcode.hxl.viewutil.自定义控件.动画进阶.PathMeasureActivity
@@ -60,7 +61,9 @@ class MainActivity : AppCompatActivity() {
         btn_flow_drag_layout.setOnClickListener {
             start<FlowDragLayoutManagerActivity>()
         }
-
+        btn_expand_layout.setOnClickListener {
+            start<ExpandLayoutManagerActivity>()
+        }
 
 
 

@@ -11,14 +11,14 @@
             android:pathData="M10,23,L90,23"
             android:strokeWidth="2"
             android:strokeLineCap="round"
-            android:strokeColor="@color/colorAccent"/>
+            android:strokeColor="#D81B60"/>
     <path
             android:name="bar2"
             android:pathData="M10,28,L90,28"
             android:strokeWidth="2"
             android:strokeLineCap="round"
             android:trimPathStart="0.23"
-            android:strokeColor="@color/colorAccent"/>
+            android:strokeColor="#D81B60"/>
 
     <path
             android:name="bar3"
@@ -26,7 +26,7 @@
             android:strokeWidth="2"
             android:strokeLineCap="round"
             android:trimPathEnd="0.23"
-            android:strokeColor="@color/colorAccent"/>
+            android:strokeColor="#D81B60"/>
 
     <path
             android:name="bar4"
@@ -35,12 +35,12 @@
             android:strokeLineCap="round"
             android:trimPathOffset="0.23"
             android:trimPathStart="0.23"
-            android:strokeColor="@color/colorAccent"/>
+            android:strokeColor="#D81B60"/>
     <path
             android:name="bar5"
             android:pathData="M10,49,L90,49,L91,44"
             android:strokeWidth="2"
-            android:strokeColor="@color/colorPrimary"
+            android:strokeColor="#008577"
             android:strokeLineJoin="miter"
             android:strokeAlpha="0.6"
             />
