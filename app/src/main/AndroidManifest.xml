@@ -12,6 +12,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Main2Activity">
+        </activity>
 
         <provider
                 android:name=".shape_selector_util.core.BackgroundContentProvider"
@@ -23,7 +25,6 @@
                 android:name=".自定义控件.动画进阶.SVGdemoActivity"
                 android:screenOrientation="portrait">
         </activity>
-
         <activity
                 android:name=".recycleview_util.layoutmanager.ExpandLayoutManagerActivity"
                 android:screenOrientation="portrait"/>

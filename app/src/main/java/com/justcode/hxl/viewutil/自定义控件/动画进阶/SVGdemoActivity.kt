@@ -20,8 +20,25 @@ class SVGdemoActivity : AppCompatActivity() {
          * 3.关联动画和path  line_animated_vector.xml
          * 4.如下
          */
-        val animatedVectorDrawableCompat = AnimatedVectorDrawableCompat.create(this,R.drawable.line_animated_vector)
+        val animatedVectorDrawableCompat = AnimatedVectorDrawableCompat.create(this, R.drawable.line_animated_vector)
         iv_svg1.setImageDrawable(animatedVectorDrawableCompat)
         (iv_svg1.drawable as Animatable).start()
+
+        /**
+         * 一个搜索效果
+         */
+        //将焦点放到image上
+        iv_animation.isFocusable = true
+        iv_animation.isFocusableInTouchMode = true
+        iv_animation.requestFocus()
+        iv_animation.requestFocusFromTouch()
+        et1.setOnFocusChangeListener { v, hasFocus ->
+            if (hasFocus) {
+                val animatedVectorDrawableCompat =
+                    AnimatedVectorDrawableCompat.create(this, R.drawable.animated_vector_search)
+                iv_animation.setImageDrawable(animatedVectorDrawableCompat)
+                (iv_animation.drawable as Animatable).start()
+            }
+        }
     }
 }
