@@ -1,12 +1,9 @@
-package com.justcode.hxl.viewutil.recycleview_util.layoutmanager
+package com.justcode.hxl.viewutil.recycleview_util
 
-import android.content.Context
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.RecyclerView
 import android.util.Log
-import android.view.ViewGroup
 import com.google.gson.Gson
 import com.justcode.hxl.viewutil.R
 import com.justcode.hxl.viewutil.recycleview_util.core.BaseAdapter

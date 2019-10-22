@@ -12,8 +12,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Main2Activity">
-        </activity>
+
 
         <provider
                 android:name=".shape_selector_util.core.BackgroundContentProvider"
@@ -22,11 +21,15 @@
                 android:multiprocess="true"/>
 
         <activity
+                android:name=".recycleview_util.CircularLayoutActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
                 android:name=".自定义控件.动画进阶.SVGdemoActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".recycleview_util.layoutmanager.ExpandLayoutManagerActivity"
+                android:name=".recycleview_util.ExpandLayoutManagerActivity"
                 android:screenOrientation="portrait"/>
         <activity
                 android:name=".自定义控件.动画进阶.PathMeasureActivity"
