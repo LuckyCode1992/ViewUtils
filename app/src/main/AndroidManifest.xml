@@ -11,6 +11,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
+            android:hardwareAccelerated="false"
             tools:ignore="GoogleAppIndexingWarning">
 
 
@@ -20,6 +21,10 @@
                 android:exported="false"
                 android:multiprocess="true"/>
 
+        <activity
+                android:name=".自定义控件.paint基本使用.PaintSimpleActivity"
+                android:screenOrientation="portrait">
+        </activity>
         <activity
                 android:name=".recycleview_util.CircularLayoutActivity"
                 android:screenOrientation="portrait">

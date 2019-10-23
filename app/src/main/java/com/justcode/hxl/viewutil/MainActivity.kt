@@ -8,6 +8,7 @@ import com.justcode.hxl.viewutil.recycleview_util.*
 import com.justcode.hxl.viewutil.recycleview_util.ExpandLayoutManagerActivity
 import com.justcode.hxl.viewutil.recycleview_util.viewpagerlayoutactivity.ViewPagerActivity
 import com.justcode.hxl.viewutil.shape_selector_util.ShapeAndSelectorActivity
+import com.justcode.hxl.viewutil.自定义控件.paint基本使用.PaintSimpleActivity
 import com.justcode.hxl.viewutil.自定义控件.动画进阶.PathMeasureActivity
 import com.justcode.hxl.viewutil.自定义控件.动画进阶.SVGdemoActivity
 import com.justcode.hxl.viewutil.自定义控件.属性动画.ValueAnimatorActivity
@@ -91,6 +92,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_svg.setOnClickListener {
             start<SVGdemoActivity>()
+        }
+        btn_paint_simple.setOnClickListener {
+            start<PaintSimpleActivity>()
         }
 
     }

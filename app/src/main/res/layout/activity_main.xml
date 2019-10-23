@@ -127,6 +127,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="动画进阶 SVG" />
+            <Button
+                    android:id="@+id/btn_paint_simple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="paint基本使用" />
         </LinearLayout>
 
     </ScrollView>
