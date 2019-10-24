@@ -7,55 +7,81 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".自定义控件.paint基本使用.PaintSimpleActivity">
-<android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <LinearLayout
-            android:orientation="vertical"
+
+    <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <LinearLayout
-                style="@style/layout_local"
-                android:layout_width="match_parent"
-                android:layout_height="300dp">
-            <Button
-                    style="@style/button"
-                    android:text="文字的基线和绘制"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            <com.justcode.hxl.viewutil.自定义控件.paint基本使用.Text1
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-        </LinearLayout>
-        <LinearLayout
-                style="@style/layout_local"
-                android:layout_width="match_parent"
-                android:layout_height="300dp">
-            <Button
-                    style="@style/button"
-                    android:text="绘图四格，fontMetrics"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            <com.justcode.hxl.viewutil.自定义控件.paint基本使用.Text2
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-        </LinearLayout>
 
         <LinearLayout
-                style="@style/layout_local"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="400dp">
-            <Button
-                    style="@style/button"
-                    android:text="实例，定点写字"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            <com.justcode.hxl.viewutil.自定义控件.paint基本使用.Text3
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-        </LinearLayout>
+                android:layout_height="match_parent">
 
-    </LinearLayout>
-</android.support.v4.widget.NestedScrollView>
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                <Button
+                        style="@style/button"
+                        android:text="文字的基线和绘制"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <com.justcode.hxl.viewutil.自定义控件.paint基本使用.Text1
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                <Button
+                        style="@style/button"
+                        android:text="绘图四格，fontMetrics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <com.justcode.hxl.viewutil.自定义控件.paint基本使用.Text2
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp">
+
+                <Button
+                        style="@style/button"
+                        android:text="实例，定点写字"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <com.justcode.hxl.viewutil.自定义控件.paint基本使用.Text3
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp">
+
+                <Button
+                        style="@style/button"
+                        android:text="paint 常用函数"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <com.justcode.hxl.viewutil.自定义控件.paint基本使用.PaintFunDemo
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 
 </LinearLayout>
