@@ -86,6 +86,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="circular 圆形layout" />
+            <Button
+                    android:id="@+id/btn_stack_card_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="stack layout 卡片layout" />
 
 
 

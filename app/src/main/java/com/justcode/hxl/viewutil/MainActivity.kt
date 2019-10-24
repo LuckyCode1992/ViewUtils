@@ -6,6 +6,7 @@ import com.justcode.hxl.viewutil.extend.bundleOf
 import com.justcode.hxl.viewutil.extend.start
 import com.justcode.hxl.viewutil.recycleview_util.*
 import com.justcode.hxl.viewutil.recycleview_util.ExpandLayoutManagerActivity
+import com.justcode.hxl.viewutil.recycleview_util.layoutmanager.StackCardLayoutActivity
 import com.justcode.hxl.viewutil.recycleview_util.viewpagerlayoutactivity.ViewPagerActivity
 import com.justcode.hxl.viewutil.shape_selector_util.ShapeAndSelectorActivity
 import com.justcode.hxl.viewutil.自定义控件.paint基本使用.PaintSimpleActivity
@@ -69,6 +70,10 @@ class MainActivity : AppCompatActivity() {
         btn_circular_layout.setOnClickListener {
             start<CircularLayoutActivity>()
         }
+        btn_stack_card_layout.setOnClickListener {
+            start<StackCardLayoutActivity>()
+        }
+
 
 
 
