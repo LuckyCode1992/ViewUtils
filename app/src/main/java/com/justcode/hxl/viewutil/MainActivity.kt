@@ -6,7 +6,7 @@ import com.justcode.hxl.viewutil.extend.bundleOf
 import com.justcode.hxl.viewutil.extend.start
 import com.justcode.hxl.viewutil.recycleview_util.*
 import com.justcode.hxl.viewutil.recycleview_util.ExpandLayoutManagerActivity
-import com.justcode.hxl.viewutil.recycleview_util.layoutmanager.StackCardLayoutActivity
+import com.justcode.hxl.viewutil.recycleview_util.StackCardLayoutActivity
 import com.justcode.hxl.viewutil.recycleview_util.viewpagerlayoutactivity.ViewPagerActivity
 import com.justcode.hxl.viewutil.shape_selector_util.ShapeAndSelectorActivity
 import com.justcode.hxl.viewutil.自定义控件.paint基本使用.PaintSimpleActivity
@@ -16,6 +16,7 @@ import com.justcode.hxl.viewutil.自定义控件.属性动画.ValueAnimatorActiv
 import com.justcode.hxl.viewutil.自定义控件.属性动画进阶.PropertyActivity
 import com.justcode.hxl.viewutil.自定义控件.绘图基础.DrawingBasisActivity
 import com.justcode.hxl.viewutil.自定义控件.绘图基础.DrawingBasisDemoActivity
+import com.justcode.hxl.viewutil.自定义控件.绘图进阶.DrawAdvancedActivity
 import com.justcode.hxl.viewutil.自定义控件.视图动画.ViewAnimationActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -100,6 +101,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_paint_simple.setOnClickListener {
             start<PaintSimpleActivity>()
+        }
+        btn_draw_advanced.setOnClickListener {
+            start<DrawAdvancedActivity>()
         }
 
     }

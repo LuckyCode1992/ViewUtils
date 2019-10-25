@@ -1,4 +1,4 @@
-package com.justcode.hxl.viewutil.recycleview_util.layoutmanager
+package com.justcode.hxl.viewutil.recycleview_util
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -43,11 +43,41 @@ class StackCardLayoutActivity : AppCompatActivity() {
     }
 
     private fun initList() {
-        list.add(StackData(R.drawable.ic_omg, R.drawable.omg_background, "omisego"))
-        list.add(StackData(R.drawable.ic_nem, R.drawable.nem_background, "NEM"))
-        list.add(StackData(R.drawable.ic_ethereum, R.drawable.ethereum_background, "Ethereum"))
-        list.add(StackData(R.drawable.ic_ripple, R.drawable.ripple_background, "Ripple"))
-        list.add(StackData(R.drawable.ic_bitcoin, R.drawable.bitcoin_background, "Bitcoin"))
+        list.add(
+            StackData(
+                R.drawable.ic_omg,
+                R.drawable.omg_background,
+                "omisego"
+            )
+        )
+        list.add(
+            StackData(
+                R.drawable.ic_nem,
+                R.drawable.nem_background,
+                "NEM"
+            )
+        )
+        list.add(
+            StackData(
+                R.drawable.ic_ethereum,
+                R.drawable.ethereum_background,
+                "Ethereum"
+            )
+        )
+        list.add(
+            StackData(
+                R.drawable.ic_ripple,
+                R.drawable.ripple_background,
+                "Ripple"
+            )
+        )
+        list.add(
+            StackData(
+                R.drawable.ic_bitcoin,
+                R.drawable.bitcoin_background,
+                "Bitcoin"
+            )
+        )
     }
 }
 

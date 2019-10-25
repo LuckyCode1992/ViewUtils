@@ -22,7 +22,15 @@
                 android:multiprocess="true"/>
 
         <activity
-                android:name=".recycleview_util.layoutmanager.StackCardLayoutActivity"
+                android:name=".自定义控件.绘图进阶.DrawAdvancedActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".自定义控件.绘图进阶.贝塞尔曲线.BezierActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".recycleview_util.StackCardLayoutActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
