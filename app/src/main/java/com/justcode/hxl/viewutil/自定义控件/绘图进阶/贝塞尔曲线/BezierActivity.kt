@@ -21,5 +21,8 @@ class BezierActivity : AppCompatActivity() {
         btn_bezier_4.setOnClickListener {
             bezier_4.startAnim()
         }
+        btn_bezier_5.setOnClickListener {
+            bezier_5.startAnim()
+        }
     }
 }

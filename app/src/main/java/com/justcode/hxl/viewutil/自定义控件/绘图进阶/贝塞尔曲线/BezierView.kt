@@ -4,7 +4,9 @@ import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
+import android.view.DragEvent
 import android.view.View
+import android.view.animation.LinearInterpolator
 
 
 /**
@@ -257,4 +259,67 @@ class BezierViewDemo @JvmOverloads constructor(
 
     }
 
+}
+
+/**
+ *    path.rQuadTo(dx1,dy1,dx2,dy2)
+ *
+ *    dx1:控制点。相对于上个x坐标的位移坐标，正表示加，负表示相减
+ *    其他相同
+ *
+ *    下面就用这个实现波浪效果
+ *
+ */
+class RquadToDemo @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : View(context, attrs, defStyleAttr) {
+
+    val path = Path()
+    val paint = Paint()
+    val itemWaveLength = 1000f
+    var dx = 0f
+
+    lateinit var animator: ValueAnimator
+
+    init {
+        paint.color = Color.BLUE
+        paint.style = Paint.Style.FILL
+
+        animator = ValueAnimator.ofFloat(0f, itemWaveLength)
+        animator.duration = 2000
+        animator.repeatCount = ValueAnimator.INFINITE
+        animator.interpolator = LinearInterpolator()
+        animator.addUpdateListener {
+            dx = animator.animatedValue as Float
+            postInvalidate()
+        }
+
+    }
+
+    fun startAnim() {
+        animator.start()
+    }
+
+
+    override fun onDraw(canvas: Canvas) {
+        super.onDraw(canvas)
+
+        path.reset()
+        val originY = 300f
+        val halfWaveLen = itemWaveLength / 2
+        path.moveTo(-itemWaveLength+dx, originY)
+
+        var i = -itemWaveLength
+        while (i <= width + itemWaveLength) {
+            i += itemWaveLength
+            path.rQuadTo(halfWaveLen / 2, -100f, halfWaveLen, 0f)
+            path.rQuadTo(halfWaveLen / 2, 100f, halfWaveLen, 0f)
+
+        }
+        path.lineTo(width.toFloat(), height.toFloat())
+        path.lineTo(0f, height.toFloat())
+        path.close()
+        canvas.drawPath(path, paint)
+
+    }
 }
