@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".自定义控件.绘图进阶.阴影效果.ShadowLayerActivity">
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                style="@style/layout_local"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    style="@style/layout_local"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp">
+
+                <Button
+                        android:id="@+id/btn_add_shadow"
+                        android:text="添加阴影效果"
+                        style="@style/button"/>
+
+                <Button
+                        android:id="@+id/btn_delete_shadow"
+                        android:text="去除阴影效果"
+                        style="@style/button"/>
+
+                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.阴影效果.ShadowLayerView
+                        android:id="@+id/shadow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
