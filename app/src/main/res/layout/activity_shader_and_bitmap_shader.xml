@@ -64,6 +64,37 @@
                         android:layout_height="wrap_content"/>
 
             </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                <Button
+                        android:text="望远镜效果"
+                        style="@style/button"
+                        />
+
+                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.TelescopeView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                <Button
+                        android:text="不规则头像"
+                        style="@style/button"
+                        />
+
+                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.AvatorView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"/>
+
+            </LinearLayout>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
