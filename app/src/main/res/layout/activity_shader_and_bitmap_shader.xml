@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".自定义控件.绘图进阶.shader.BitmapShaderActivity">
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                style="@style/layout_local"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                <Button
+                        android:text="重复原图"
+                        style="@style/button"
+                        />
+
+                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.BitmapShaderView1
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                <Button
+                        android:text="镜像原图"
+                        style="@style/button"
+                        />
+
+                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.BitmapShaderView2
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                <Button
+                        android:text="边缘色彩填充"
+                        style="@style/button"
+                        />
+
+                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.BitmapShaderView3
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

@@ -27,6 +27,10 @@
                     android:id="@+id/btn_set_blur_mask_filter"
                     android:text="BlurMaskFilter 发光效果和图片阴影"
                     style="@style/button"/>
+            <Button
+                    android:id="@+id/btn_bitmap_shader"
+                    android:text="bitmapShader 使用"
+                    style="@style/button"/>
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
