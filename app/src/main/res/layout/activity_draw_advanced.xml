@@ -31,6 +31,14 @@
                     android:id="@+id/btn_bitmap_shader"
                     android:text="bitmapShader 使用"
                     style="@style/button"/>
+            <Button
+                    android:id="@+id/btn_linear_shader"
+                    android:text="LinearGradient 使用"
+                    style="@style/button"/>
+            <Button
+                    android:id="@+id/btn_radial_shader"
+                    android:text="RadialGradient 使用"
+                    style="@style/button"/>
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

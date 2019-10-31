@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".自定义控件.绘图进阶.shader.LinearGradientActivity">
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                style="@style/layout_local"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:text="双色渐变"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.LinearGradient1View
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"/>
+            </LinearLayout>
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:text="多色渐变"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.LinearGradient2View
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:text="多色渐变Clamp"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.LinearGradient2ViewClamp
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:text="多色渐变Mirror"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.LinearGradient2ViewMirror
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:text="多色渐变Repeat"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.LinearGradient2ViewRepeat
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:text="渐变文字"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.ShaderTextView1
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:text="闪光文字效果"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.ShimmerTextView
+                        android:text="欢迎光临我的空间"
+                        android:textSize="24sp"
+                        android:layout_margin="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
