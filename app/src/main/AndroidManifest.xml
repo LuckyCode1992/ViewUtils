@@ -22,6 +22,10 @@
                 android:multiprocess="true"/>
 
         <activity
+                android:name=".recycleview_util.StickyLayoutActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
                 android:name=".自定义控件.绘图进阶.shader.RadialGradientActivity"
                 android:screenOrientation="portrait">
         </activity>

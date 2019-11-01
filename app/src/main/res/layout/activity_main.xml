@@ -92,6 +92,14 @@
                     android:layout_height="wrap_content"
                     android:text="stack layout 卡片layout" />
 
+            <Button
+                    android:id="@+id/btn_sticky_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="sticky 顶部粘连 悬浮" />
+
+
+
 
 
 

@@ -74,7 +74,9 @@ class MainActivity : AppCompatActivity() {
         btn_stack_card_layout.setOnClickListener {
             start<StackCardLayoutActivity>()
         }
-
+        btn_sticky_layout.setOnClickListener {
+            start<StickyLayoutActivity>()
+        }
 
 
 
