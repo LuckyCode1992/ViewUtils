@@ -22,6 +22,10 @@
                 android:multiprocess="true"/>
 
         <activity
+                android:name=".recycleview_util.TurnLayoutManagerActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
                 android:name=".recycleview_util.StickyLayoutActivity"
                 android:screenOrientation="portrait">
         </activity>

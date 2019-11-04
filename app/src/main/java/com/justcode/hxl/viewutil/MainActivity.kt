@@ -77,6 +77,9 @@ class MainActivity : AppCompatActivity() {
         btn_sticky_layout.setOnClickListener {
             start<StickyLayoutActivity>()
         }
+        btn_turn_layout.setOnClickListener {
+            start<TurnLayoutManagerActivity>()
+        }
 
 
 

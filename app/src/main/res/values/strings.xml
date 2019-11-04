@@ -37,4 +37,13 @@
     <string name="menu_show_eassy">展示文章</string>
     <string name="random_add">随机增加</string>
     <string name="random_delete">随机删除</string>
+
+
+    <string name="radius_format">Radius: %1$d</string>
+    <string name="peek_format">Peek: %1$d</string>
+
+
+    <string name="orientation">Orientation</string>
+    <string name="rotate">Rotate</string>
+    <string name="controls">Controls</string>
 </resources>

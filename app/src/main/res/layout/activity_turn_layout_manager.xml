@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".recycleview_util.TurnLayoutManagerActivity">
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_turn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+            android:id="@+id/control_panel"
+            android:background="#e1e1e1e1"
+            android:paddingTop="20dp"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingBottom="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <SeekBar
+                android:id="@+id/seek_radius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="300"
+                android:max="4000"/>
+
+        <TextView
+                android:id="@+id/radius_text"
+                tools:text="Radius: 125"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seek_radius"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"/>
+
+        <SeekBar
+                android:id="@+id/seek_peek"
+                android:progress="300"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radius_text"
+                android:max="1000"/>
+
+        <TextView
+                android:id="@+id/peek_text"
+                tools:text="Peek: 75"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seek_peek"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"/>
+
+        <TextView
+                android:id="@+id/gravity_label"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_below="@id/peek_text"
+                android:gravity="center_vertical"
+                android:text="Gravity"/>
+
+        <Spinner
+                android:id="@+id/gravity"
+                android:layout_width="140dp"
+                android:layout_height="52dp"
+                android:layout_below="@id/peek_text"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentRight="true"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_alignTop="@+id/orientation"
+                android:gravity="center_vertical"
+                android:text="@string/orientation"/>
+
+        <Spinner
+                android:id="@+id/orientation"
+                android:layout_width="140dp"
+                android:layout_height="52dp"
+                android:layout_below="@id/gravity"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentRight="true"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_alignTop="@+id/rotate"
+                android:gravity="center_vertical"
+                android:text="@string/rotate"/>
+
+        <CheckBox
+                android:id="@+id/rotate"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_below="@+id/orientation"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"/>
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/control_handle"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_above="@+id/control_panel"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:clickable="true"
+            android:background="@drawable/controls_selector"
+            android:text="@string/controls"/>
+
+</RelativeLayout>
