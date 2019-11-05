@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                style="@style/layout_local"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="ProterDuffXermode混合模式ADD"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewADD
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="ProterDuffXermode混合模式LIGHTEN"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewLIGHTEN
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="ProterDuffXermode混合模式darken 变暗"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewDARKEN
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="ProterDuffXermode混合模式MULTIPLY 正片叠底"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewMUTIPLY
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="ProterDuffXermode混合模式overlay 叠加"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewOVERLAY
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="ProterDuffXermode混合模式screen 滤色"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewSCREEN
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="ProterDuffXermode混合模式实例 twitter"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.混合模式.TwitterView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

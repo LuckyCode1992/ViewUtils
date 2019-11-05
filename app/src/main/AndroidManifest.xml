@@ -22,6 +22,10 @@
                 android:multiprocess="true"/>
 
         <activity
+                android:name=".自定义控件.混合模式.MixedModeActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
                 android:name=".recycleview_util.TurnLayoutManagerActivity"
                 android:screenOrientation="portrait">
         </activity>

@@ -14,6 +14,7 @@ import com.justcode.hxl.viewutil.自定义控件.动画进阶.PathMeasureActivit
 import com.justcode.hxl.viewutil.自定义控件.动画进阶.SVGdemoActivity
 import com.justcode.hxl.viewutil.自定义控件.属性动画.ValueAnimatorActivity
 import com.justcode.hxl.viewutil.自定义控件.属性动画进阶.PropertyActivity
+import com.justcode.hxl.viewutil.自定义控件.混合模式.MixedModeActivity
 import com.justcode.hxl.viewutil.自定义控件.绘图基础.DrawingBasisActivity
 import com.justcode.hxl.viewutil.自定义控件.绘图基础.DrawingBasisDemoActivity
 import com.justcode.hxl.viewutil.自定义控件.绘图进阶.DrawAdvancedActivity
@@ -110,6 +111,8 @@ class MainActivity : AppCompatActivity() {
         btn_draw_advanced.setOnClickListener {
             start<DrawAdvancedActivity>()
         }
-
+        btn_hunhe_mode.setOnClickListener {
+            start<MixedModeActivity>()
+        }
     }
 }
