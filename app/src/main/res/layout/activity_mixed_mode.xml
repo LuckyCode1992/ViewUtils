@@ -107,6 +107,96 @@
                         android:layout_height="wrap_content"/>
             </LinearLayout>
 
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="ProterDuffXermode混合模式 SRC"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewSRC
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="ProterDuffXermode混合模式 SRC_IN"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewSRCIN
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="ProterDuffXermode混合模式 SRC_IN 倒影效果"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.混合模式.InvertedImageView_SRCIN
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="ProterDuffXermode混合模式 SRC_OUT"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewSRCOUT
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="ProterDuffXermode混合模式 SRC_OUT 擦除效果"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.混合模式.EraserView_SRCOUT
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="ProterDuffXermode混合模式 SRC_OVER"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewSRCOVER
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="ProterDuffXermode混合模式 SRC_ATOP"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewSRCATOP
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
