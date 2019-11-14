@@ -9,6 +9,7 @@ import com.justcode.hxl.viewutil.recycleview_util.ExpandLayoutManagerActivity
 import com.justcode.hxl.viewutil.recycleview_util.StackCardLayoutActivity
 import com.justcode.hxl.viewutil.recycleview_util.viewpagerlayoutactivity.ViewPagerActivity
 import com.justcode.hxl.viewutil.shape_selector_util.ShapeAndSelectorActivity
+import com.justcode.hxl.viewutil.自定义控件.canvas与图层.CanvasMainActivity
 import com.justcode.hxl.viewutil.自定义控件.paint基本使用.PaintSimpleActivity
 import com.justcode.hxl.viewutil.自定义控件.动画进阶.PathMeasureActivity
 import com.justcode.hxl.viewutil.自定义控件.动画进阶.SVGdemoActivity
@@ -113,6 +114,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_hunhe_mode.setOnClickListener {
             start<MixedModeActivity>()
+        }
+        btn_canvas_main.setOnClickListener {
+            start<CanvasMainActivity>()
         }
     }
 }
