@@ -103,6 +103,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="turn 旋转效果" />
+            <Button
+                    android:id="@+id/btn_vega_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="vega_layout" />
 
 
 

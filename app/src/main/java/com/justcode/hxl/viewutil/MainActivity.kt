@@ -83,6 +83,9 @@ class MainActivity : AppCompatActivity() {
             start<TurnLayoutManagerActivity>()
         }
 
+        btn_vega_layout.setOnClickListener {
+            start<VegaLayoutActivity>()
+        }
 
 
         btn_basis_view.setOnClickListener {
