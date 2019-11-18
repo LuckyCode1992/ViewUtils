@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".自定义控件.绘图基础.DrawingBasisActivity">
+    tools:context=".自定义控件.第一章_绘图基础.DrawingBasisActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,15 +16,15 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.justcode.hxl.viewutil.自定义控件.绘图基础.BasisView
+            <com.justcode.hxl.viewutil.自定义控件.第一章_绘图基础.BasisView
                 android:layout_width="match_parent"
                 android:layout_height="300dp" />
 
-            <com.justcode.hxl.viewutil.自定义控件.绘图基础.RegionView
+            <com.justcode.hxl.viewutil.自定义控件.第一章_绘图基础.RegionView
                 android:layout_width="match_parent"
                 android:layout_height="1000dp" />
 
-            <com.justcode.hxl.viewutil.自定义控件.绘图基础.CanvasView
+            <com.justcode.hxl.viewutil.自定义控件.第一章_绘图基础.CanvasView
                 android:layout_width="match_parent"
                 android:layout_height="500dp" />
         </LinearLayout>

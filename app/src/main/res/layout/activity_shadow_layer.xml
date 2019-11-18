@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".自定义控件.绘图进阶.阴影效果.ShadowLayerActivity">
+        tools:context=".自定义控件.第七章_绘图进阶.阴影效果.ShadowLayerActivity">
 
     <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                         android:text="去除阴影效果"
                         style="@style/button"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.阴影效果.ShadowLayerView
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.阴影效果.ShadowLayerView
                         android:id="@+id/shadow1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>

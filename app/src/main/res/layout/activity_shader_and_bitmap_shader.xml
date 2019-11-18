@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".自定义控件.绘图进阶.shader.BitmapShaderActivity">
+        tools:context=".自定义控件.第七章_绘图进阶.shader.BitmapShaderActivity">
 
     <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                         style="@style/button"
                         />
 
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.BitmapShaderView1
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.shader.BitmapShaderView1
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -43,7 +43,7 @@
                         style="@style/button"
                         />
 
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.BitmapShaderView2
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.shader.BitmapShaderView2
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -59,7 +59,7 @@
                         style="@style/button"
                         />
 
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.BitmapShaderView3
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.shader.BitmapShaderView3
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -74,7 +74,7 @@
                         style="@style/button"
                         />
 
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.TelescopeView
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.shader.TelescopeView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -90,7 +90,7 @@
                         style="@style/button"
                         />
 
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.AvatorView
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.shader.AvatorView
                         android:layout_width="100dp"
                         android:layout_height="100dp"/>
 

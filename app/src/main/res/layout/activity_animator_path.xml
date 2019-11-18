@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="10dp"
-        tools:context=".自定义控件.属性动画.AnimatorPathActivity">
+        tools:context=".自定义控件.第三章_属性动画.AnimatorPathActivity">
     <ImageView
             android:id="@+id/menu"
             android:src="@drawable/menu"

@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".自定义控件.混合模式.avoid_x_fermode.AvoidXfermodeActivity">
+        tools:context=".自定义控件.第八章_混合模式.avoid_x_fermode.AvoidXfermodeActivity">
     <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">

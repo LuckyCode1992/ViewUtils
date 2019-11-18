@@ -22,7 +22,7 @@
                 <Button
                         android:text="ProterDuffXermode混合模式ADD"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewADD
+                <com.justcode.hxl.viewutil.自定义控件.第八章_混合模式.PorterViewADD
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -35,7 +35,7 @@
                 <Button
                         android:text="ProterDuffXermode混合模式LIGHTEN"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewLIGHTEN
+                <com.justcode.hxl.viewutil.自定义控件.第八章_混合模式.PorterViewLIGHTEN
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -48,7 +48,7 @@
                 <Button
                         android:text="ProterDuffXermode混合模式darken 变暗"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewDARKEN
+                <com.justcode.hxl.viewutil.自定义控件.第八章_混合模式.PorterViewDARKEN
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -61,7 +61,7 @@
                 <Button
                         android:text="ProterDuffXermode混合模式MULTIPLY 正片叠底"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewMUTIPLY
+                <com.justcode.hxl.viewutil.自定义控件.第八章_混合模式.PorterViewMUTIPLY
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -74,7 +74,7 @@
                 <Button
                         android:text="ProterDuffXermode混合模式overlay 叠加"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewOVERLAY
+                <com.justcode.hxl.viewutil.自定义控件.第八章_混合模式.PorterViewOVERLAY
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -87,7 +87,7 @@
                 <Button
                         android:text="ProterDuffXermode混合模式screen 滤色"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewSCREEN
+                <com.justcode.hxl.viewutil.自定义控件.第八章_混合模式.PorterViewSCREEN
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -102,7 +102,7 @@
                 <Button
                         android:text="ProterDuffXermode混合模式实例 twitter"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.混合模式.TwitterView
+                <com.justcode.hxl.viewutil.自定义控件.第八章_混合模式.TwitterView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -115,7 +115,7 @@
                 <Button
                         android:text="ProterDuffXermode混合模式 SRC"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewSRC
+                <com.justcode.hxl.viewutil.自定义控件.第八章_混合模式.PorterViewSRC
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -128,7 +128,7 @@
                 <Button
                         android:text="ProterDuffXermode混合模式 SRC_IN"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewSRCIN
+                <com.justcode.hxl.viewutil.自定义控件.第八章_混合模式.PorterViewSRCIN
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -141,7 +141,7 @@
                 <Button
                         android:text="ProterDuffXermode混合模式 SRC_IN 倒影效果"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.混合模式.InvertedImageView_SRCIN
+                <com.justcode.hxl.viewutil.自定义控件.第八章_混合模式.InvertedImageView_SRCIN
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -154,7 +154,7 @@
                 <Button
                         android:text="ProterDuffXermode混合模式 SRC_OUT"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewSRCOUT
+                <com.justcode.hxl.viewutil.自定义控件.第八章_混合模式.PorterViewSRCOUT
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -167,7 +167,7 @@
                 <Button
                         android:text="ProterDuffXermode混合模式 SRC_OUT 擦除效果"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.混合模式.EraserView_SRCOUT
+                <com.justcode.hxl.viewutil.自定义控件.第八章_混合模式.EraserView_SRCOUT
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -180,7 +180,7 @@
                 <Button
                         android:text="ProterDuffXermode混合模式 SRC_OVER"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewSRCOVER
+                <com.justcode.hxl.viewutil.自定义控件.第八章_混合模式.PorterViewSRCOVER
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -193,7 +193,7 @@
                 <Button
                         android:text="ProterDuffXermode混合模式 SRC_ATOP"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.混合模式.PorterViewSRCATOP
+                <com.justcode.hxl.viewutil.自定义控件.第八章_混合模式.PorterViewSRCATOP
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>

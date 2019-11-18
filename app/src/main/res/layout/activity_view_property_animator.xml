@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".自定义控件.属性动画进阶.ViewPropertyAnimatorActivity">
+        tools:context=".自定义控件.第四章_属性动画进阶.ViewPropertyAnimatorActivity">
 
     <ScrollView
             android:layout_width="match_parent"

@@ -169,6 +169,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="canvas与图层" />
+            <Button
+                    android:id="@+id/btn_huabu_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="android 画布" />
         </LinearLayout>
 
     </ScrollView>

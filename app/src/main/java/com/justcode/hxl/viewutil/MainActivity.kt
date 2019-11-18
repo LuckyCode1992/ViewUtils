@@ -9,17 +9,18 @@ import com.justcode.hxl.viewutil.recycleview_util.ExpandLayoutManagerActivity
 import com.justcode.hxl.viewutil.recycleview_util.StackCardLayoutActivity
 import com.justcode.hxl.viewutil.recycleview_util.viewpagerlayoutactivity.ViewPagerActivity
 import com.justcode.hxl.viewutil.shape_selector_util.ShapeAndSelectorActivity
-import com.justcode.hxl.viewutil.自定义控件.canvas与图层.CanvasMainActivity
-import com.justcode.hxl.viewutil.自定义控件.paint基本使用.PaintSimpleActivity
-import com.justcode.hxl.viewutil.自定义控件.动画进阶.PathMeasureActivity
-import com.justcode.hxl.viewutil.自定义控件.动画进阶.SVGdemoActivity
-import com.justcode.hxl.viewutil.自定义控件.属性动画.ValueAnimatorActivity
-import com.justcode.hxl.viewutil.自定义控件.属性动画进阶.PropertyActivity
-import com.justcode.hxl.viewutil.自定义控件.混合模式.MixedModeActivity
-import com.justcode.hxl.viewutil.自定义控件.绘图基础.DrawingBasisActivity
-import com.justcode.hxl.viewutil.自定义控件.绘图基础.DrawingBasisDemoActivity
-import com.justcode.hxl.viewutil.自定义控件.绘图进阶.DrawAdvancedActivity
-import com.justcode.hxl.viewutil.自定义控件.视图动画.ViewAnimationActivity
+import com.justcode.hxl.viewutil.自定义控件.第十章_android画布.HuabuMainActivity
+import com.justcode.hxl.viewutil.自定义控件.第九章_canvas与图层.CanvasMainActivity
+import com.justcode.hxl.viewutil.自定义控件.第六章_paint基本使用.PaintSimpleActivity
+import com.justcode.hxl.viewutil.自定义控件.第五章_动画进阶.PathMeasureActivity
+import com.justcode.hxl.viewutil.自定义控件.第五章_动画进阶.SVGdemoActivity
+import com.justcode.hxl.viewutil.自定义控件.第三章_属性动画.ValueAnimatorActivity
+import com.justcode.hxl.viewutil.自定义控件.第四章_属性动画进阶.PropertyActivity
+import com.justcode.hxl.viewutil.自定义控件.第八章_混合模式.MixedModeActivity
+import com.justcode.hxl.viewutil.自定义控件.第一章_绘图基础.DrawingBasisActivity
+import com.justcode.hxl.viewutil.自定义控件.第一章_绘图基础.DrawingBasisDemoActivity
+import com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.DrawAdvancedActivity
+import com.justcode.hxl.viewutil.自定义控件.第二章_视图动画.ViewAnimationActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -120,6 +121,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_canvas_main.setOnClickListener {
             start<CanvasMainActivity>()
+        }
+        btn_huabu_main.setOnClickListener {
+            start<HuabuMainActivity>()
         }
     }
 }

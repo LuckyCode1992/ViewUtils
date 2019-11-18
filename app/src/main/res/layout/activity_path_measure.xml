@@ -30,7 +30,7 @@
                         android:text="简单函数使用 只能看日志"
                         style="@style/button"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.动画进阶.PathMeasureSimpleView
+                <com.justcode.hxl.viewutil.自定义控件.第五章_动画进阶.PathMeasureSimpleView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -48,7 +48,7 @@
                         android:text="nextContour函数 看日志"
                         style="@style/button"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.动画进阶.PathMeasureSimpleView2
+                <com.justcode.hxl.viewutil.自定义控件.第五章_动画进阶.PathMeasureSimpleView2
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -66,7 +66,7 @@
                         android:text="getSegment 函数使用"
                         style="@style/button"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.动画进阶.PathMeasureSimpleView3
+                <com.justcode.hxl.viewutil.自定义控件.第五章_动画进阶.PathMeasureSimpleView3
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -83,7 +83,7 @@
                         android:text="路径加载动画"
                         style="@style/button"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.动画进阶.PathMeasureSimpleView4
+                <com.justcode.hxl.viewutil.自定义控件.第五章_动画进阶.PathMeasureSimpleView4
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -101,7 +101,7 @@
                         style="@style/button"/>
 
 
-                <com.justcode.hxl.viewutil.自定义控件.动画进阶.GetPosTanView
+                <com.justcode.hxl.viewutil.自定义控件.第五章_动画进阶.GetPosTanView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -119,7 +119,7 @@
                         style="@style/button"/>
 
 
-                <com.justcode.hxl.viewutil.自定义控件.动画进阶.AliPayView
+                <com.justcode.hxl.viewutil.自定义控件.第五章_动画进阶.AliPayView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>

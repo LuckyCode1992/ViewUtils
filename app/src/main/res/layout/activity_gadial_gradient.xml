@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".自定义控件.绘图进阶.shader.LinearGradientActivity">
+        tools:context=".自定义控件.第七章_绘图进阶.shader.LinearGradientActivity">
 
     <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                 <Button
                         android:text="双色渐变"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.RadialGradientView1
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.shader.RadialGradientView1
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -41,7 +41,7 @@
                 <Button
                         android:text="多色渐变 CLAMP"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.RadialGradientView2
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.shader.RadialGradientView2
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -54,7 +54,7 @@
                 <Button
                         android:text="多色渐变 MIRROR"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.RadialGradientView3
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.shader.RadialGradientView3
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -67,7 +67,7 @@
                 <Button
                         android:text="多色渐变 REPEAT"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.shader.RadialGradientView4
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.shader.RadialGradientView4
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"/>
             </LinearLayout>

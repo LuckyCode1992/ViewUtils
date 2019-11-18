@@ -4,7 +4,7 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context=".自定义控件.视图动画.ViewAnimationActivity">
+                tools:context=".自定义控件.第二章_视图动画.ViewAnimationActivity">
 
     <ScrollView
             android:layout_width="match_parent"

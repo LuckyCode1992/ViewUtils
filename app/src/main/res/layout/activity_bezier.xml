@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".自定义控件.绘图进阶.贝塞尔曲线.BezierActivity">
+        tools:context=".自定义控件.第七章_绘图进阶.贝塞尔曲线.BezierActivity">
 
     <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -28,7 +28,7 @@
                         android:text="二阶贝塞尔曲线演示"
                         style="@style/button"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.贝塞尔曲线.BezierView2
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.贝塞尔曲线.BezierView2
                         android:id="@+id/bezier_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -45,7 +45,7 @@
                         android:text="三阶贝塞尔曲线演示"
                         style="@style/button"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.贝塞尔曲线.BezierView3
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.贝塞尔曲线.BezierView3
                         android:id="@+id/bezier_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -62,7 +62,7 @@
                         android:text="贝塞尔曲线实现波浪线"
                         style="@style/button"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.贝塞尔曲线.BezierViewDemo
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.贝塞尔曲线.BezierViewDemo
                         android:id="@+id/bezier_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -79,7 +79,7 @@
                         android:text="贝塞尔曲线实现波浪线"
                         style="@style/button"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.贝塞尔曲线.RquadToDemo
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.贝塞尔曲线.RquadToDemo
                         android:id="@+id/bezier_5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>

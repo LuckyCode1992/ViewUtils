@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".自定义控件.绘图进阶.发光效果和图片阴影.BlurMaskFilterActivity">
+        tools:context=".自定义控件.第七章_绘图进阶.发光效果和图片阴影.BlurMaskFilterActivity">
 
     <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -28,7 +28,7 @@
                         android:text="发光效果"
                         style="@style/button"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.发光效果和图片阴影.BlurMaskFilterView
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.发光效果和图片阴影.BlurMaskFilterView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -44,7 +44,7 @@
                         android:text="图片添加纯色阴影"
                         style="@style/button"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.绘图进阶.发光效果和图片阴影.BitmapShadowView
+                <com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.发光效果和图片阴影.BitmapShadowView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 

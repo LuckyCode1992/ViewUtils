@@ -13,7 +13,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".自定义控件.第十章_android画布.ShapeDrawableActivity">
+        </activity>
 
         <provider
                 android:name=".shape_selector_util.core.BackgroundContentProvider"
@@ -22,15 +23,19 @@
                 android:multiprocess="true"/>
 
         <activity
+                android:name=".自定义控件.第十章_android画布.HuabuMainActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
                 android:name=".recycleview_util.VegaLayoutActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.canvas与图层.CanvasMainActivity"
+                android:name=".自定义控件.第九章_canvas与图层.CanvasMainActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.混合模式.MixedModeActivity"
+                android:name=".自定义控件.第八章_混合模式.MixedModeActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
@@ -42,31 +47,31 @@
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.绘图进阶.shader.RadialGradientActivity"
+                android:name=".自定义控件.第七章_绘图进阶.shader.RadialGradientActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.绘图进阶.shader.LinearGradientActivity"
+                android:name=".自定义控件.第七章_绘图进阶.shader.LinearGradientActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.绘图进阶.shader.BitmapShaderActivity"
+                android:name=".自定义控件.第七章_绘图进阶.shader.BitmapShaderActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.绘图进阶.发光效果和图片阴影.BlurMaskFilterActivity"
+                android:name=".自定义控件.第七章_绘图进阶.发光效果和图片阴影.BlurMaskFilterActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.绘图进阶.阴影效果.ShadowLayerActivity"
+                android:name=".自定义控件.第七章_绘图进阶.阴影效果.ShadowLayerActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.绘图进阶.DrawAdvancedActivity"
+                android:name=".自定义控件.第七章_绘图进阶.DrawAdvancedActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.绘图进阶.贝塞尔曲线.BezierActivity"
+                android:name=".自定义控件.第七章_绘图进阶.贝塞尔曲线.BezierActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
@@ -74,7 +79,7 @@
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.paint基本使用.PaintSimpleActivity"
+                android:name=".自定义控件.第六章_paint基本使用.PaintSimpleActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
@@ -82,14 +87,14 @@
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.动画进阶.SVGdemoActivity"
+                android:name=".自定义控件.第五章_动画进阶.SVGdemoActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name=".recycleview_util.ExpandLayoutManagerActivity"
                 android:screenOrientation="portrait"/>
         <activity
-                android:name=".自定义控件.动画进阶.PathMeasureActivity"
+                android:name=".自定义控件.第五章_动画进阶.PathMeasureActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
@@ -97,11 +102,11 @@
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.属性动画进阶.ViewPropertyAnimatorActivity"
+                android:name=".自定义控件.第四章_属性动画进阶.ViewPropertyAnimatorActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.属性动画进阶.PropertyActivity"
+                android:name=".自定义控件.第四章_属性动画进阶.PropertyActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
@@ -113,11 +118,11 @@
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.属性动画.AnimatorPathActivity"
+                android:name=".自定义控件.第三章_属性动画.AnimatorPathActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.属性动画.AnimatorSetActivity"
+                android:name=".自定义控件.第三章_属性动画.AnimatorSetActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
@@ -133,7 +138,7 @@
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.属性动画.ObjectAnimatorActivity"
+                android:name=".自定义控件.第三章_属性动画.ObjectAnimatorActivity"
                 android:screenOrientation="portrait">
         </activity>
         <activity
@@ -141,19 +146,19 @@
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".自定义控件.属性动画.OfOjectActivity"
+                android:name=".自定义控件.第三章_属性动画.OfOjectActivity"
                 android:screenOrientation="portrait"/>
         <activity
-                android:name=".自定义控件.属性动画.ValueAnimatorActivity"
+                android:name=".自定义控件.第三章_属性动画.ValueAnimatorActivity"
                 android:screenOrientation="portrait"/>
         <activity
-                android:name=".自定义控件.视图动画.FrameAnimationActivity"
+                android:name=".自定义控件.第二章_视图动画.FrameAnimationActivity"
                 android:screenOrientation="portrait"/>
         <activity
-                android:name=".自定义控件.视图动画.ViewAnimationDemoActivity"
+                android:name=".自定义控件.第二章_视图动画.ViewAnimationDemoActivity"
                 android:screenOrientation="portrait"/>
         <activity
-                android:name=".自定义控件.视图动画.ViewAnimationInterpolatorActivity"
+                android:name=".自定义控件.第二章_视图动画.ViewAnimationInterpolatorActivity"
                 android:screenOrientation="portrait"/>
         <activity
                 android:name=".recycleview_util.ChipsLayoutManagerActivity"
@@ -162,16 +167,16 @@
                 android:name=".recycleview_util.CarouseLayoutManagerActivity"
                 android:screenOrientation="portrait"/>
         <activity
-                android:name=".自定义控件.视图动画.ViewAnimationActivity"
+                android:name=".自定义控件.第二章_视图动画.ViewAnimationActivity"
                 android:screenOrientation="portrait"/>
         <activity
-                android:name=".自定义控件.绘图基础.DrawingBasisDemoActivity"
+                android:name=".自定义控件.第一章_绘图基础.DrawingBasisDemoActivity"
                 android:screenOrientation="portrait"/>
         <activity
                 android:name=".recycleview_util.FanLayoutManagerActivity"
                 android:screenOrientation="portrait"/>
         <activity
-                android:name=".自定义控件.绘图基础.DrawingBasisActivity"
+                android:name=".自定义控件.第一章_绘图基础.DrawingBasisActivity"
                 android:screenOrientation="portrait"/>
         <activity
                 android:name=".shape_selector_util.ShapeAndSelectorActivity"

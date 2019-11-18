@@ -22,7 +22,7 @@
                 <Button
                         android:text="使用bitmap创建canvas并绘制"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.canvas与图层.BitmapCanvasView
+                <com.justcode.hxl.viewutil.自定义控件.第九章_canvas与图层.BitmapCanvasView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>

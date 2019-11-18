@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".自定义控件.属性动画.ValueAnimatorActivity">
+        tools:context=".自定义控件.第三章_属性动画.ValueAnimatorActivity">
 
     <ScrollView
             android:layout_width="match_parent"
@@ -137,7 +137,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.属性动画.LoadingImageView
+                <com.justcode.hxl.viewutil.自定义控件.第三章_属性动画.LoadingImageView
                         android:id="@+id/iv_loading_tantiao"
                         android:src="@drawable/pic_1"
                         android:layout_centerInParent="true"

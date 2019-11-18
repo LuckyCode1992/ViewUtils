@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".自定义控件.paint基本使用.PaintSimpleActivity">
+        tools:context=".自定义控件.第六章_paint基本使用.PaintSimpleActivity">
 
     <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -28,7 +28,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.paint基本使用.Text1
+                <com.justcode.hxl.viewutil.自定义控件.第六章_paint基本使用.Text1
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -44,7 +44,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.paint基本使用.Text2
+                <com.justcode.hxl.viewutil.自定义控件.第六章_paint基本使用.Text2
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -60,7 +60,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.paint基本使用.Text3
+                <com.justcode.hxl.viewutil.自定义控件.第六章_paint基本使用.Text3
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -76,7 +76,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
-                <com.justcode.hxl.viewutil.自定义控件.paint基本使用.PaintFunDemo
+                <com.justcode.hxl.viewutil.自定义控件.第六章_paint基本使用.PaintFunDemo
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
             </LinearLayout>

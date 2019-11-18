@@ -15,11 +15,11 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.justcode.hxl.viewutil.自定义控件.绘图基础.BasisDemoSpiderView
+            <com.justcode.hxl.viewutil.自定义控件.第一章_绘图基础.BasisDemoSpiderView
                 android:layout_width="300dp"
                 android:layout_height="300dp" />
 
-            <com.justcode.hxl.viewutil.自定义控件.绘图基础.BasisDemoTextView
+            <com.justcode.hxl.viewutil.自定义控件.第一章_绘图基础.BasisDemoTextView
                 android:layout_width="match_parent"
                 android:layout_height="700dp" />
 
