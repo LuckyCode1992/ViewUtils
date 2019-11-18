@@ -13,8 +13,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".自定义控件.第十章_android画布.ShapeDrawableActivity">
-        </activity>
+
 
         <provider
                 android:name=".shape_selector_util.core.BackgroundContentProvider"
@@ -22,6 +21,10 @@
                 android:exported="false"
                 android:multiprocess="true"/>
 
+        <activity
+                android:name=".自定义控件.第十章_android画布.ShapeDrawableActivity"
+                android:screenOrientation="portrait">
+        </activity>
         <activity
                 android:name=".自定义控件.第十章_android画布.HuabuMainActivity"
                 android:screenOrientation="portrait">

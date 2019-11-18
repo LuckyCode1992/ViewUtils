@@ -1,10 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".自定义控件.第十章_android画布.ShapeDrawableActivity">
+        android:orientation="vertical">
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                style="@style/layout_local"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                <Button
+                        android:text="RectShape"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.RectShapeView
+                        android:background="@color/colorAccent"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"/>
 
-</android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                <Button
+                        android:text="ArcShape"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.ArcShapeView
+                        android:background="@color/colorAccent"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/layout_local"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+            <Button
+                    android:text="OvalShape"
+                    style="@style/button"/>
+            <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.OvalShapeView
+                    android:background="@color/colorAccent"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                <Button
+                        android:text="RoundRectShape"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.RoundRectShapeView
+                        android:background="@color/colorAccent"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
