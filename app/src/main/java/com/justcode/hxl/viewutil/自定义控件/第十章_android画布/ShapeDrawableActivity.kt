@@ -1,15 +1,9 @@
 package com.justcode.hxl.viewutil.自定义控件.第十章_android画布
 
 import android.content.Context
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Rect
-import android.graphics.RectF
+import android.graphics.*
 import android.graphics.drawable.ShapeDrawable
-import android.graphics.drawable.shapes.ArcShape
-import android.graphics.drawable.shapes.OvalShape
-import android.graphics.drawable.shapes.RectShape
-import android.graphics.drawable.shapes.RoundRectShape
+import android.graphics.drawable.shapes.*
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.AttributeSet
@@ -96,5 +90,43 @@ class RoundRectShapeView @JvmOverloads constructor(
         shapeDrawable.setBounds(10,50,190,100)
         shapeDrawable.paint.color = Color.WHITE
 
+    }
+}
+class PathShapeView @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : BaseShapeView(context, attrs, defStyleAttr) {
+
+    val path = Path()
+    init {
+        path.moveTo(0f,0f)
+        path.lineTo(100f,0f)
+        path.lineTo(100f,100f)
+        path.lineTo(0f,100f)
+        //封闭路径
+        path.close()
+        /**
+         * stdWidth: 标准宽度 这个是单位是份数
+         * stdHeight:标准高度 这个是单位是份数
+         *
+         * 和path画的东西的关系是  横向路径100，stdWidth 1000，那么在图上就是，路径展示效果是 100/1000*view的宽度
+         */
+
+        shapeDrawable = ShapeDrawable(PathShape(path,1000f,100f))
+        shapeDrawable.setBounds(0,0,250,150)
+        shapeDrawable.paint.color = Color.YELLOW
+
+    }
+
+}
+
+class ShapeShaderView @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : BaseShapeView(context, attrs, defStyleAttr) {
+    init {
+        shapeDrawable = ShapeDrawable(RectShape())
+        shapeDrawable.setBounds(100,100,300,300)
+        val bitmap = BitmapFactory.decodeResource(resources,R.drawable.avator)
+        val bitmapShader = BitmapShader(bitmap,Shader.TileMode.CLAMP,Shader.TileMode.CLAMP)
+        shapeDrawable.paint.setShader(bitmapShader)
     }
 }
