@@ -89,20 +89,34 @@
             </LinearLayout>
 
             <LinearLayout
+                style="@style/layout_local"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <Button
+                    android:text="ShapeShader"
+                    style="@style/button"/>
+            <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.ShapeShaderView
+                    android:background="@color/colorAccent"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"/>
+
+        </LinearLayout>
+
+            <LinearLayout
                     style="@style/layout_local"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                 <Button
-                        android:text="ShapeShader"
+                        android:text="放大镜效果"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.ShapeShaderView
-                        android:background="@color/colorAccent"
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"/>
+                <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.TelescopeView
+
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"/>
 
             </LinearLayout>
-
 
 
         </LinearLayout>
