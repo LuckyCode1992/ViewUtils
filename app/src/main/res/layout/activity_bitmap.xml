@@ -14,14 +14,17 @@
                 style="@style/layout_local"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-            <Button
-                    android:id="@+id/btn_shape_drawable"
-                    android:text="ShapeDrawable"
-                    style="@style/button"/>
-            <Button
-                    android:id="@+id/btn_bitmap"
-                    android:text="bitmap"
-                    style="@style/button"/>
+
+            <LinearLayout
+                    android:layout_height="wrap_content"
+                    style="@style/layout_local">
+                <ImageView
+                        android:id="@+id/iv_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
 
 
         </LinearLayout>

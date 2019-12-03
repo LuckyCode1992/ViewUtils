@@ -2,17 +2,23 @@ package com.justcode.hxl.viewutil.自定义控件.第十章_android画布
 
 import android.content.Context
 import android.graphics.*
+import android.graphics.drawable.Drawable
 import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.*
+import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
+import androidx.annotation.RequiresApi
 import com.justcode.hxl.viewutil.R
+import kotlinx.android.synthetic.main.activity_shape_drawable.*
+import kotlinx.android.synthetic.main.activity_shape_drawable.view.*
 
 class ShapeDrawableActivity : AppCompatActivity() {
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shape_drawable)
@@ -29,6 +35,12 @@ class ShapeDrawableActivity : AppCompatActivity() {
          *      RoundRectShape:圆角矩形 可带有镂空效果
          *      PathShape:根据路径绘制shape
          */
+
+        val bitmap = BitmapFactory.decodeResource(resources,R.drawable.avator)
+        val drawable = CustomDrawable(bitmap)
+        img.setImageDrawable(drawable)
+        val drawableBack = CustomDrawable(bitmap)
+        img_back.background = drawableBack
 
     }
 }
@@ -95,6 +107,8 @@ class RoundRectShapeView @JvmOverloads constructor(
         shapeDrawable.setBounds(10, 50, 190, 100)
         shapeDrawable.paint.color = Color.WHITE
 
+
+
     }
 }
 
@@ -149,7 +163,7 @@ class TelescopeView @JvmOverloads constructor(
     //放大倍数
     val FACTOR = 3
 
-    val matrix0:Matrix = Matrix()
+    val matrix0: Matrix = Matrix()
 
     //拦截父view的事件，所有touch事件，都有本view处理
     override fun dispatchTouchEvent(event: MotionEvent?): Boolean {
@@ -186,8 +200,69 @@ class TelescopeView @JvmOverloads constructor(
             drawable?.setBounds(0, 0, RADIUS * 2, RADIUS * 2)
 
         }
-        canvas.drawBitmap(bitmap,0f,0f, null)
+        canvas.drawBitmap(bitmap, 0f, 0f, null)
         drawable?.draw(canvas)
+    }
+
+}
+
+class CustomDrawable(var bitmap: Bitmap) : Drawable() {
+
+    val paint = Paint()
+    var bitmapShader: BitmapShader? = null
+    var bound: RectF? = null
+
+    init {
+        paint.isAntiAlias = true
+    }
+
+    /**
+     *  和 view 的onDraw()方法基本一样
+     */
+    override fun draw(canvas: Canvas) {
+        canvas.drawRoundRect(bound, 20f, 20f, paint)
+    }
+
+    /**
+     *  设置透明度 from=0,to=255
+     */
+    override fun setAlpha(alpha: Int) {
+        paint.alpha = alpha
+    }
+
+    /**
+     * 获取 不透明度（显示模式）
+     * 只有4个值：PixelFormat.UNKNOWN  PixelFormat.TRANSLUCENT   PixelFormat.TRANSPARENT  PixelFormat.OPAQUE
+     *
+     * PixelFormat.TRANSLUCENT : 半透明 当前绘图具有Alpha通道。
+     * PixelFormat.TRANSPARENT：全透明
+     * PixelFormat.OPAQUE:不透明
+     * PixelFormat.UNKNOWN:未知
+     *
+     * 如果不知道用哪种，直接是使用 PixelFormat.TRANSLUCENT
+     *
+     */
+    override fun getOpacity(): Int {
+        return PixelFormat.TRANSLUCENT
+    }
+
+    override fun setColorFilter(colorFilter: ColorFilter?) {
+        paint.colorFilter = colorFilter
+    }
+
+    override fun setBounds(left: Int, top: Int, right: Int, bottom: Int) {
+        super.setBounds(left, top, right, bottom)
+        bitmapShader = BitmapShader(Bitmap.createScaledBitmap(bitmap,right-left,bottom-top,true),Shader.TileMode.CLAMP,Shader.TileMode.CLAMP)
+        paint.shader = bitmapShader
+        bound = RectF(left.toFloat(), top.toFloat(), right.toFloat(), bottom.toFloat())
+    }
+
+    override fun getIntrinsicWidth(): Int {
+        return bitmap.width
+    }
+
+    override fun getIntrinsicHeight(): Int {
+        return bitmap.height
     }
 
 }

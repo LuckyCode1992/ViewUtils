@@ -6,22 +6,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
     <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
         <LinearLayout
                 android:orientation="vertical"
                 style="@style/layout_local"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
             <LinearLayout
                     style="@style/layout_local"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="200dp">
+
                 <Button
                         android:text="RectShape"
                         style="@style/button"/>
+
                 <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.RectShapeView
                         android:background="@color/colorAccent"
                         android:layout_width="100dp"
@@ -34,38 +39,45 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="200dp">
+
                 <Button
                         android:text="ArcShape"
                         style="@style/button"/>
+
                 <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.ArcShapeView
                         android:background="@color/colorAccent"
                         android:layout_width="100dp"
                         android:layout_height="100dp"/>
 
             </LinearLayout>
-            <LinearLayout
-                style="@style/layout_local"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="200dp">
-            <Button
-                    android:text="OvalShape"
-                    style="@style/button"/>
-            <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.OvalShapeView
-                    android:background="@color/colorAccent"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"/>
-
-        </LinearLayout>
 
             <LinearLayout
                     style="@style/layout_local"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="200dp">
+
+                <Button
+                        android:text="OvalShape"
+                        style="@style/button"/>
+
+                <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.OvalShapeView
+                        android:background="@color/colorAccent"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
                 <Button
                         android:text="RoundRectShape"
                         style="@style/button"/>
+
                 <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.RoundRectShapeView
                         android:background="@color/colorAccent"
                         android:layout_width="100dp"
@@ -78,9 +90,11 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="200dp">
+
                 <Button
                         android:text="PathShape"
                         style="@style/button"/>
+
                 <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.PathShapeView
                         android:background="@color/colorAccent"
                         android:layout_width="100dp"
@@ -89,32 +103,73 @@
             </LinearLayout>
 
             <LinearLayout
-                style="@style/layout_local"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <Button
-                    android:text="ShapeShader"
-                    style="@style/button"/>
-            <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.ShapeShaderView
-                    android:background="@color/colorAccent"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"/>
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-        </LinearLayout>
+                <Button
+                        android:text="ShapeShader"
+                        style="@style/button"/>
+
+                <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.ShapeShaderView
+                        android:background="@color/colorAccent"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"/>
+
+            </LinearLayout>
 
             <LinearLayout
                     style="@style/layout_local"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                 <Button
                         android:text="放大镜效果"
                         style="@style/button"/>
+
                 <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.TelescopeView
 
                         android:layout_width="300dp"
                         android:layout_height="300dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <Button
+                        android:text="圆角drawable"
+                        style="@style/button"/>
+
+                <ImageView
+                        android:id="@+id/img"
+                        android:background="#333333"
+                        android:scaleType="fitStart"
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <Button
+                        android:text="圆角drawable"
+                        style="@style/button"/>
+
+                <ImageView
+                        android:id="@+id/img_back"
+                        android:background="#333333"
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"/>
 
             </LinearLayout>
 
