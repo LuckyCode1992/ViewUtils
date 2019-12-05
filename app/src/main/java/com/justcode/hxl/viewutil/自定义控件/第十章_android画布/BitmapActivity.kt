@@ -29,9 +29,9 @@ class BitmapActivity : AppCompatActivity() {
          *  2.1 使用默认画布
          *  2.2 自建画布
          */
-//        val bmp = BitmapFactory.decodeResource(resources, R.drawable.dog)
-//        val bmpDrawable = BitmapDrawable(resources, bmp)
-//        iv_1.setImageDrawable(bmpDrawable)
+        val bmp1 = BitmapFactory.decodeResource(resources, R.drawable.dog)
+        val bmpDrawable = BitmapDrawable(resources, bmp1)
+        iv_1.setImageDrawable(bmpDrawable)
 
         /**
          * bitmap 格式
@@ -58,8 +58,8 @@ class BitmapActivity : AppCompatActivity() {
          */
 
         //decodeResource()
-//        val b1 = BitmapFactory.decodeResource(resources, R.drawable.dog)
-//        iv_1.setImageBitmap(b1)
+        val b1 = BitmapFactory.decodeResource(resources, R.drawable.dog)
+        iv_2.setImageBitmap(b1)
 
         //decodeFile()  文件的路径
 //        val b2 = BitmapFactory.decodeFile("/data/data/xxx.png")
@@ -70,18 +70,18 @@ class BitmapActivity : AppCompatActivity() {
         // 3.InputStream转换为byte[]
         // 4.解析
 
-//        Thread {
-//            try {
-//                val data = getImage("http://wx2.sinaimg.cn/mw600/0076BSS5ly1g9ibf2nxeuj31900u0tty.jpg")
-//                val length = data?.size
-//                val b3 = BitmapFactory.decodeByteArray(data, 0, length ?: 0)
-//                iv_1.post {
-//                    iv_1.setImageBitmap(b3)
-//                }
-//            } catch (e: Exception) {
-//                e.printStackTrace()
-//            }
-//        }.start()
+        Thread {
+            try {
+                val data = getImage("http://wx2.sinaimg.cn/mw600/0076BSS5ly1g9ibf2nxeuj31900u0tty.jpg")
+                val length = data?.size
+                val b3 = BitmapFactory.decodeByteArray(data, 0, length ?: 0)
+                iv_3.post {
+                    iv_3.setImageBitmap(b3)
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }.start()
 
         /**
          *  BitmapFactory.Options
@@ -105,9 +105,60 @@ class BitmapActivity : AppCompatActivity() {
         //现在原始宽高存储Option对象的宽高实例域中
 
         val op2 = BitmapFactory.Options()
-        op2.inSampleSize = calSampleSize(op1,500,500)
-        val bmp = BitmapFactory.decodeResource(resources,R.drawable.scenery,op2)
-        iv_1.setImageBitmap(bmp)
+        op2.inSampleSize = calSampleSize(op1, 500, 500)
+        val bmp = BitmapFactory.decodeResource(resources, R.drawable.scenery, op2)
+        iv_4.setImageBitmap(bmp)
+
+        /**
+         * 创建bitmap的方法2：静态方法
+         */
+        // createBitmap(width,height,config)
+
+        //createBitmap(source,x,y,width,height)  : 裁剪图像
+        // source:裁剪的源图像
+        // x，y ：裁剪的的起始点
+        // width,height：裁剪的宽高
+        val src = BitmapFactory.decodeResource(resources,R.drawable.dog)
+        val cutedBmp = Bitmap.createBitmap(src,src.width/3,src.height/3,src.width/3,src.height/3)
+
+        iv_5.setImageBitmap(cutedBmp)
+
+        //createBitmap(source,x,y,width,height,matrix,filter) ：裁剪并添加矩阵
+        val matrix = Matrix()
+        matrix.setScale(2f,1f)
+        val src2 = BitmapFactory.decodeResource(resources,R.drawable.dog)
+        val cutedBmp2 = Bitmap.createBitmap(src2,src2.width/3,src2.height/3,src2.width/3,src2.height/3,matrix,true)
+        iv_6.setImageBitmap(cutedBmp2)
+
+        //createScaledBitmap(src,dstWidth,dstHeight,filter):缩放
+        // dstWidth:缩放后的宽度
+        val src3 = BitmapFactory.decodeResource(resources,R.drawable.scenery)
+        val bitmap3 = Bitmap.createScaledBitmap(src3,300,200,true)
+        iv_7.setImageBitmap(bitmap3)
+
+
+        // setPixel()和getPixel() 针对像素进行设置和获取
+        val src4 = BitmapFactory.decodeResource(resources,R.drawable.dog)
+        iv_8.setImageBitmap(src4)
+        val dseBmp = src4.copy(Bitmap.Config.ARGB_8888,true)
+        for (h in 0 until src4.height){
+            for (w in 0 until src4.width){
+                val originColor = src4.getPixel(w,h)
+                var red = Color.red(originColor)
+                val alpha = Color.alpha(originColor)
+                var green = Color.green(originColor)
+                var blue = Color.blue(originColor)
+                if (green<200){
+                    green +=30
+                }
+                dseBmp.setPixel(w,h,Color.argb(alpha,red,green,blue))
+            }
+        }
+        iv_9.setImageBitmap(dseBmp)
+
+
+
+
 
     }
 }
@@ -170,5 +221,40 @@ class ViewDemo @JvmOverloads constructor(
         val bitmap = Bitmap.createBitmap(200, 100, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
         canvas.drawColor(Color.YELLOW)
+    }
+}
+
+class LinearGradientView @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : View(context, attrs, defStyleAttr) {
+    lateinit var dstBitmap: Bitmap
+    val paint = Paint()
+
+    init {
+        val width0 = 500
+        val height0 = 300
+        dstBitmap = Bitmap.createBitmap(width0, height0, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(dstBitmap)
+        val paint0 = Paint()
+        val linearGradient = LinearGradient(
+            width0 / 2f,
+            0f,
+            width0 / 2f,
+            height0.toFloat(),
+            0xffffffff.toInt(),
+            0xff000000.toInt(),
+            Shader.TileMode.CLAMP
+        )
+        paint0.shader = linearGradient
+        canvas.drawRect(0f, 0f, width0.toFloat(), height0.toFloat(), paint0)
+    }
+
+    override fun onDraw(canvas: Canvas) {
+        super.onDraw(canvas)
+        canvas.drawBitmap(dstBitmap, 0f, 0f, paint)
+        paint.color = Color.RED
+        paint.style = Paint.Style.STROKE
+        paint.strokeWidth = 5f
+        canvas.drawRect(0f, 0f, dstBitmap.width.toFloat(), dstBitmap.height.toFloat(), paint)
     }
 }
