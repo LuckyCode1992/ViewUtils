@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".自定义控件.第十章_android画布.SurfaceViewActivity">
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                style="@style/layout_local"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    android:orientation="vertical"
+                    style="@style/layout_local"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                <Button
+                        android:text="ViewGesture"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.ViewGesturePath
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    style="@style/layout_local"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                <Button
+                        android:text="SurfaceGesturePath"
+                      style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.SurfaceGesturePath
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    style="@style/layout_local"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="动态背景效果"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.AnimationSurfaceView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

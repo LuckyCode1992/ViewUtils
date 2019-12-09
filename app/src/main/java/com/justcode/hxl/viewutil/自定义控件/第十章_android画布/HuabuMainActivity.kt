@@ -32,5 +32,8 @@ class HuabuMainActivity : AppCompatActivity() {
         btn_bitmap.setOnClickListener {
             start<BitmapActivity>()
         }
+        btn_surface_view.setOnClickListener {
+            start<SurfaceViewActivity>()
+        }
     }
 }

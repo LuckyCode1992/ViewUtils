@@ -22,6 +22,10 @@
                     android:id="@+id/btn_bitmap"
                     android:text="bitmap"
                     style="@style/button"/>
+            <Button
+                    android:id="@+id/btn_surface_view"
+                    android:text="surfaceView"
+                    style="@style/button"/>
 
 
         </LinearLayout>

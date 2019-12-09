@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           package="com.justcode.hxl.viewutil">
+
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
@@ -22,6 +23,10 @@
                 android:exported="false"
                 android:multiprocess="true"/>
 
+        <activity
+                android:name=".自定义控件.第十章_android画布.SurfaceViewActivity"
+                android:screenOrientation="portrait">
+        </activity>
         <activity
                 android:name=".自定义控件.第十章_android画布.BitmapActivity"
                 android:screenOrientation="portrait">
