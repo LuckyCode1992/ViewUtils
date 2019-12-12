@@ -41,6 +41,21 @@
                         android:layout_height="match_parent"/>
 
             </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    style="@style/layout_local"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                <Button
+                        android:text="双缓冲技术"
+                        style="@style/button"/>
+                <com.justcode.hxl.viewutil.自定义控件.第十章_android画布.DoubleBufferingView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
             <LinearLayout
                     android:orientation="vertical"
                     style="@style/layout_local"
@@ -54,6 +69,7 @@
                         android:layout_height="match_parent"/>
 
             </LinearLayout>
+
 
 
         </LinearLayout>

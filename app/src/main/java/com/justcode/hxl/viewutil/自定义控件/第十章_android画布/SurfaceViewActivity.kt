@@ -241,8 +241,59 @@ class AnimationSurfaceView @JvmOverloads constructor(
         if (bitposX <= -surfaceWidth / 2) {
             state = State.RIGHT
         }
-        if (bitposX>=0){
+        if (bitposX >= 0) {
             state = State.LEFT
         }
+    }
+}
+
+class DoubleBufferingView @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : SurfaceView(context, attrs, defStyleAttr) {
+    /**
+     *  surfaceView双缓冲技术
+     *  双缓冲技术需要两个图形缓冲区，一个是前端缓冲区，一个是后端缓冲区
+     */
+    val paint = Paint()
+
+    init {
+        paint.color = Color.RED
+        paint.textSize = 30f
+
+        holder.addCallback(object : SurfaceHolder.Callback {
+            override fun surfaceChanged(holder: SurfaceHolder?, format: Int, width: Int, height: Int) {
+
+            }
+
+            override fun surfaceDestroyed(holder: SurfaceHolder?) {
+
+            }
+
+            override fun surfaceCreated(holder: SurfaceHolder) {
+                drawText(holder)
+            }
+
+        })
+    }
+
+    private fun drawText(holder: SurfaceHolder) {
+        Thread{
+            for (i in 0 until 10){
+                //通过 holder.lockCanvas() 获得后端缓冲区
+                val canvas = holder.lockCanvas()
+                if (canvas!=null){
+                    canvas.drawText(i.toString(),i*30f,50f,paint)
+                }
+                //当绘图完成后，调用 holder.unlockCanvasAndPost(canvas) 将后端缓冲区与前端缓冲区交换，后端缓冲区就变成了前端缓冲区，将内容显示在屏幕上。
+                holder.unlockCanvasAndPost(canvas)
+                try {
+                    Thread.sleep(800)
+                }catch (e:Exception){
+                    e.printStackTrace()
+                }
+            }
+
+        }.start()
+
     }
 }
