@@ -1,5 +1,6 @@
 package com.justcode.hxl.viewutil
 
+import android.graphics.drawable.Drawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.justcode.hxl.viewutil.extend.bundleOf
@@ -9,6 +10,7 @@ import com.justcode.hxl.viewutil.recycleview_util.ExpandLayoutManagerActivity
 import com.justcode.hxl.viewutil.recycleview_util.StackCardLayoutActivity
 import com.justcode.hxl.viewutil.recycleview_util.viewpagerlayoutactivity.ViewPagerActivity
 import com.justcode.hxl.viewutil.shape_selector_util.ShapeAndSelectorActivity
+import com.justcode.hxl.viewutil.shape_selector_util.core.DrawableFactory
 import com.justcode.hxl.viewutil.自定义控件.第十章_android画布.HuabuMainActivity
 import com.justcode.hxl.viewutil.自定义控件.第九章_canvas与图层.CanvasMainActivity
 import com.justcode.hxl.viewutil.自定义控件.第六章_paint基本使用.PaintSimpleActivity
@@ -22,6 +24,16 @@ import com.justcode.hxl.viewutil.自定义控件.第一章_绘图基础.DrawingB
 import com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.DrawAdvancedActivity
 import com.justcode.hxl.viewutil.自定义控件.第二章_视图动画.ViewAnimationActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import android.R.layout
+import android.content.Context
+import android.graphics.*
+import android.graphics.drawable.BitmapDrawable
+import android.util.AttributeSet
+import android.util.Log
+import android.view.MotionEvent
+import android.view.View
+import android.view.View.MeasureSpec
+import com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.shader.LinearGradient2View
 
 
 /**
@@ -125,5 +137,56 @@ class MainActivity : AppCompatActivity() {
         btn_huabu_main.setOnClickListener {
             start<HuabuMainActivity>()
         }
+
+
+    }
+
+
+}
+
+class LinearGradient2Progress @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : View(context, attrs, defStyleAttr) {
+    val paint = Paint()
+    //颜色数值
+    val colors =
+        intArrayOf(0xffff0000.toInt(), 0xff00ff00.toInt(), 0xff0000ff.toInt(), 0xffffff00.toInt(), 0xff00ffff.toInt())
+    //比例分配 必须和颜色数组相匹配
+    val pos: FloatArray = floatArrayOf(0f, 0.2f, 0.4f, 0.6f, 1f)
+
+    var width0 = 10f
+
+    //拦截父view的事件，所有touch事件，都有本view处理
+    override fun dispatchTouchEvent(event: MotionEvent?): Boolean {
+        parent.requestDisallowInterceptTouchEvent(true)
+        return super.dispatchTouchEvent(event)
+    }
+    override fun onDraw(canvas: Canvas) {
+        super.onDraw(canvas)
+        paint.shader = LinearGradient(
+            0f, height / 2.toFloat(), width.toFloat(), height / 2.toFloat(), colors, pos, Shader.TileMode.CLAMP
+        )
+        canvas.drawRect(0f, 0f, width0.toFloat(), height.toFloat(), paint)
+    }
+
+    override fun onTouchEvent(event: MotionEvent): Boolean {
+
+        when (event.action) {
+            MotionEvent.ACTION_DOWN -> {
+                width0 = event.x
+                postInvalidate()
+                return true
+            }
+            MotionEvent.ACTION_MOVE -> {
+                width0 = event.x
+                Log.d("move_","x:${event.x}-width0:${width0}")
+                postInvalidate()
+            }
+            MotionEvent.ACTION_UP -> {
+
+            }
+        }
+
+        return super.onTouchEvent(event)
     }
 }
