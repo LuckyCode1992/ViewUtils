@@ -15,7 +15,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".自定义控件.第十二章_封装控件.PackageActivity">
+        </activity>
 
         <provider
                 android:name=".shape_selector_util.core.BackgroundContentProvider"

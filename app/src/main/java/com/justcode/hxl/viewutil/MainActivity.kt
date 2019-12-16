@@ -34,6 +34,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.View.MeasureSpec
 import com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.shader.LinearGradient2View
+import com.justcode.hxl.viewutil.自定义控件.第十二章_封装控件.PackageActivity
 
 
 /**
@@ -137,6 +138,9 @@ class MainActivity : AppCompatActivity() {
         btn_huabu_main.setOnClickListener {
             start<HuabuMainActivity>()
         }
+        btn_fengzhuang_main.setOnClickListener {
+            start<PackageActivity>()
+        }
 
 
     }
@@ -161,6 +165,7 @@ class LinearGradient2Progress @JvmOverloads constructor(
         parent.requestDisallowInterceptTouchEvent(true)
         return super.dispatchTouchEvent(event)
     }
+
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         paint.shader = LinearGradient(
@@ -179,7 +184,7 @@ class LinearGradient2Progress @JvmOverloads constructor(
             }
             MotionEvent.ACTION_MOVE -> {
                 width0 = event.x
-                Log.d("move_","x:${event.x}-width0:${width0}")
+                Log.d("move_", "x:${event.x}-width0:${width0}")
                 postInvalidate()
             }
             MotionEvent.ACTION_UP -> {
