@@ -99,9 +99,13 @@ class MyLayout @JvmOverloads constructor(
             //测量子控件
             val child = getChildAt(i)
             measureChild(child, widthMeasureSpec, heightMeasureSpec)
+            //margin
+            val lp: MarginLayoutParams = child.layoutParams as MarginLayoutParams
+
+
             //获得子控件的高度和宽度
-            val childWidth = child.measuredHeight
-            val childHeight = child.measuredHeight
+            val childWidth = child.measuredWidth+lp.leftMargin+lp.rightMargin
+            val childHeight = child.measuredHeight+lp.topMargin+lp.bottomMargin
             //得到最大的宽度，并累加
             height += childHeight
             width = Math.max(childWidth, width)
@@ -136,14 +140,33 @@ class MyLayout @JvmOverloads constructor(
         val count = childCount
         for (i in 0 until count) {
             val child = getChildAt(i)
-
-            val childHeight = child.measuredHeight
-            val childWidth = child.measuredWidth
+            // margin
+            val lp: MarginLayoutParams = child.layoutParams as MarginLayoutParams
+            val childHeight = child.measuredHeight+lp.topMargin+lp.bottomMargin
+            val childWidth = child.measuredWidth+lp.leftMargin+lp.rightMargin
 
             child.layout(0, top, childWidth, top + childHeight)
             top += childHeight
         }
 
+    }
+
+    /**
+     * 重写 generateDefaultLayoutParams才能获取控件的margin值
+     * 重写 generateLayoutParams 获取margin的相关参数
+     * 所以，需要重写这两个函数，才能实现 子控件的 margin
+     */
+    override fun generateLayoutParams(p: LayoutParams?): LayoutParams {
+        return MarginLayoutParams(p)
+
+    }
+
+    override fun generateLayoutParams(attrs: AttributeSet?): LayoutParams {
+        return MarginLayoutParams(context, attrs)
+    }
+
+    override fun generateDefaultLayoutParams(): LayoutParams {
+        return MarginLayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
     }
 
     override fun onDraw(canvas: Canvas?) {

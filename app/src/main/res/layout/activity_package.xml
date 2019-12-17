@@ -52,16 +52,19 @@
                  <TextView
                      android:text="第一个View"
                      android:background="#ff0000"
+                     android:layout_marginTop="10dp"
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"/>
                  <TextView
                          android:text="第二个View"
+                         android:layout_marginTop="20dp"
                          android:background="#00ff00"
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"/>
                  <TextView
                          android:text="第三个View"
                          android:background="#0000ff"
+                         android:layout_marginTop="30dp"
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"/>
              </com.justcode.hxl.viewutil.自定义控件.第十二章_封装控件.MyLayout>
