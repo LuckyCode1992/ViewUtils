@@ -1,9 +1,11 @@
 package com.justcode.hxl.viewutil.自定义控件.第十二章_封装控件
 
 import android.content.Context
+import android.graphics.Canvas
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.AttributeSet
+import android.util.Log
 import android.view.ViewGroup
 import android.widget.TextView
 import com.justcode.hxl.viewutil.R
@@ -83,14 +85,27 @@ class MyLayout @JvmOverloads constructor(
      */
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+        Log.d("MyLayout_", "onMeasure")
         val measureWidth = MeasureSpec.getSize(widthMeasureSpec)
         val measureHeight = MeasureSpec.getSize(heightMeasureSpec)
         val measureWidthMode = MeasureSpec.getMode(widthMeasureSpec)
         val measureHeightMode = MeasureSpec.getMode(heightMeasureSpec)
 
         //计算后的宽高
-        val width = 10
-        val height = 10
+        var width = 0
+        var height = 0
+        val count = childCount
+        for (i in 0 until count) {
+            //测量子控件
+            val child = getChildAt(i)
+            measureChild(child, widthMeasureSpec, heightMeasureSpec)
+            //获得子控件的高度和宽度
+            val childWidth = child.measuredHeight
+            val childHeight = child.measuredHeight
+            //得到最大的宽度，并累加
+            height += childHeight
+            width = Math.max(childWidth, width)
+        }
 
         setMeasuredDimension(
             if (measureWidthMode == MeasureSpec.EXACTLY) {
@@ -99,7 +114,7 @@ class MyLayout @JvmOverloads constructor(
                 width
             },
             if (measureHeightMode == MeasureSpec.EXACTLY) {
-                measuredHeight
+                measureHeight
             } else {
                 height
             }
@@ -107,8 +122,32 @@ class MyLayout @JvmOverloads constructor(
 
     }
 
+    /**
+     *  onLayout: 实现所有子控件布局的函数。
+     *   getMeasuredWidth和getWidth 函数的差别：
+     *      -  getMeasuredWidth是在measure过程结束后就可以获取到宽度值
+     *      -  getWidth 是在 layout过程结束后才能获取到宽度值
+     *      -  getMeasuredWidth中的值，是通过setMeasuredDimension函数进行设置
+     *      -  getWidth中的值，是通过layout函数进行设置
+     */
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
+        Log.d("MyLayout_", "onLayout")
+        var top = 0
+        val count = childCount
+        for (i in 0 until count) {
+            val child = getChildAt(i)
 
+            val childHeight = child.measuredHeight
+            val childWidth = child.measuredWidth
 
+            child.layout(0, top, childWidth, top + childHeight)
+            top += childHeight
+        }
+
+    }
+
+    override fun onDraw(canvas: Canvas?) {
+        super.onDraw(canvas)
+        Log.d("MyLayout_", "onDraw")
     }
 }

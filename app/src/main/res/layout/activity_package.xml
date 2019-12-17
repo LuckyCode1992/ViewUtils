@@ -16,23 +16,57 @@
                 style="@style/layout_local"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-<LinearLayout
-        style="@style/layout_local"
-        android:layout_width="match_parent"
-        android:layout_height="200dp">
-    <Button
-            android:text="自定义属性：declare-styleable标签使用"
-           style="@style/button"/>
-    <com.justcode.hxl.viewutil.自定义控件.第十二章_封装控件.MyTextView
-            android:id="@+id/tv_mytext"
-            app:header="@drawable/beauty_9"
-            app:headerHeight="100dp"
-            app:headerVisibleHeight="70dp"
-            app:age="young"
-            android:text="j12312321321321312"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-</LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:text="自定义属性：declare-styleable标签使用"
+                        style="@style/button"/>
+
+                <com.justcode.hxl.viewutil.自定义控件.第十二章_封装控件.MyTextView
+                        android:id="@+id/tv_mytext"
+                        app:header="@drawable/beauty_9"
+                        app:headerHeight="100dp"
+                        app:headerVisibleHeight="70dp"
+                        app:age="young"
+                        android:text="j12312321321321312"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/layout_local"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                <Button
+                        android:text="测量和布局"
+                        style="@style/button"/>
+
+             <com.justcode.hxl.viewutil.自定义控件.第十二章_封装控件.MyLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+                 <TextView
+                     android:text="第一个View"
+                     android:background="#ff0000"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"/>
+                 <TextView
+                         android:text="第二个View"
+                         android:background="#00ff00"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+                 <TextView
+                         android:text="第三个View"
+                         android:background="#0000ff"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+             </com.justcode.hxl.viewutil.自定义控件.第十二章_封装控件.MyLayout>
+
+            </LinearLayout>
         </LinearLayout>
 
 
