@@ -179,6 +179,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="封装控件" />
+            <Button
+                    android:id="@+id/btn_kongjian_gaoji"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="控件高级属性" />
         </LinearLayout>
 
     </ScrollView>

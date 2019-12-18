@@ -34,6 +34,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.View.MeasureSpec
 import com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.shader.LinearGradient2View
+import com.justcode.hxl.viewutil.自定义控件.第十三章_控件高级属性.ControlActivity
 import com.justcode.hxl.viewutil.自定义控件.第十二章_封装控件.PackageActivity
 
 
@@ -140,6 +141,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_fengzhuang_main.setOnClickListener {
             start<PackageActivity>()
+        }
+        btn_kongjian_gaoji.setOnClickListener {
+            start<ControlActivity>()
         }
 
 
