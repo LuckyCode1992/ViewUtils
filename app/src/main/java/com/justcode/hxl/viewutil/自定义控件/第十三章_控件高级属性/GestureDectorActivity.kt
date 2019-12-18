@@ -27,8 +27,6 @@ class GestureDectorActivity : AppCompatActivity() {
         tv_gesture.isLongClickable = true
 
 
-
-
     }
 }
 
@@ -104,7 +102,7 @@ class MyGestureListener : GestureDetector.OnGestureListener {
 }
 
 
-class MyDoubleGestureListener : GestureDetector.OnDoubleTapListener{
+class MyDoubleGestureListener : GestureDetector.OnDoubleTapListener {
     override fun onDoubleTap(e: MotionEvent?): Boolean {
         Log.d("gesture_", "onDoubleTap")
         return false
@@ -112,12 +110,12 @@ class MyDoubleGestureListener : GestureDetector.OnDoubleTapListener{
 
     override fun onDoubleTapEvent(e: MotionEvent?): Boolean {
         Log.d("gesture_", "onDoubleTapEvent")
-     return false
+        return false
     }
 
     override fun onSingleTapConfirmed(e: MotionEvent?): Boolean {
         Log.d("gesture_", "onSingleTapConfirmed")
-       return false
+        return false
     }
 
 }
