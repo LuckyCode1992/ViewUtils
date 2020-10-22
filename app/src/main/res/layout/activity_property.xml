@@ -48,7 +48,7 @@
                         android:id="@+id/btn_2"
                         android:text="字符变换"
                         style="@style/button"/>
-                <com.justcode.hxl.viewutil.自定义控件.第四章_属性动画进阶.MyTextView
+                <TextView
                         android:id="@+id/tv_2"
                         android:text="A"
                         android:textSize="50sp"

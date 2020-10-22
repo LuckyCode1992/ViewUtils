@@ -1,13 +1,11 @@
 package com.justcode.hxl.viewutil.自定义控件.第四章_属性动画进阶
 
-import android.animation.Keyframe
-import android.animation.ObjectAnimator
-import android.animation.PropertyValuesHolder
-import android.animation.TypeEvaluator
+import android.animation.*
 import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.AttributeSet
+import android.util.Log
 import android.view.animation.AccelerateInterpolator
 import android.widget.TextView
 import com.justcode.hxl.viewutil.R
@@ -29,13 +27,30 @@ class PropertyActivity : AppCompatActivity() {
         btn_1.setOnClickListener {
 
             val rotationHolder =
-                PropertyValuesHolder.ofFloat("rotation", 60f, -60f, 40f, -40f, -20f, 20f, 10f, -10f, 0f)
+                PropertyValuesHolder.ofFloat(
+                    "rotation",
+                    60f,
+                    -60f,
+                    40f,
+                    -40f,
+                    -20f,
+                    20f,
+                    10f,
+                    -10f,
+                    0f
+                )
             val alphaHolder = PropertyValuesHolder.ofFloat("alpha", 0.1f, 1.0f, 0.1f, 1.0f)
             val scaleXHolder = PropertyValuesHolder.ofFloat("scaleX", 0.5f, 1.0f, 0.5f, 1.0f)
             val scaleYHolder = PropertyValuesHolder.ofFloat("scaleY", 0.5f, 1.0f, 0.5f, 1.0f)
 
             val animator =
-                ObjectAnimator.ofPropertyValuesHolder(tv_1, rotationHolder, alphaHolder, scaleXHolder, scaleYHolder)
+                ObjectAnimator.ofPropertyValuesHolder(
+                    tv_1,
+                    rotationHolder,
+                    alphaHolder,
+                    scaleXHolder,
+                    scaleYHolder
+                )
             animator.duration = 3000
             animator.start()
 
@@ -45,11 +60,17 @@ class PropertyActivity : AppCompatActivity() {
          * 不知哪里不对
          */
         btn_2.setOnClickListener {
-            val charHolder = PropertyValuesHolder.ofObject("CharText", CharEvaluator(), 'A', 'Z')
-            val animator = ObjectAnimator.ofPropertyValuesHolder(tv_2, charHolder)
-            animator.duration = 3000
-            animator.interpolator = AccelerateInterpolator()
-            animator.start()
+            val valueAnimator2 =
+                ValueAnimator.ofObject(CharEvaluator(), 'A', 'Z')
+
+            valueAnimator2.duration = 2000;   //设置时长
+            valueAnimator2.addUpdateListener(
+                ValueAnimator.AnimatorUpdateListener {
+                    val char = it.animatedValue as Char
+                    tv_2.text = char.toString();
+                }
+            );
+            valueAnimator2.start() //开始
         }
 
         /**
@@ -147,16 +168,33 @@ class PropertyActivity : AppCompatActivity() {
             val scaleXFrame10 = Keyframe.ofFloat(1f, 1f)
 
             val frameHolder2 =
-                PropertyValuesHolder.ofKeyframe("scaleX", scaleXFrame0, scaleXFrame1, scaleXFrame9, scaleXFrame10)
+                PropertyValuesHolder.ofKeyframe(
+                    "scaleX",
+                    scaleXFrame0,
+                    scaleXFrame1,
+                    scaleXFrame9,
+                    scaleXFrame10
+                )
 
             val scaleYFrame0 = Keyframe.ofFloat(0f, 1f)
             val scaleYFrame1 = Keyframe.ofFloat(0.1f, 1.1f)
             val scaleYFrame9 = Keyframe.ofFloat(0.9f, 1.1f)
             val scaleYFrame10 = Keyframe.ofFloat(1f, 1f)
             val frameHolder3 =
-                PropertyValuesHolder.ofKeyframe("scaleY", scaleYFrame0, scaleYFrame1, scaleYFrame9, scaleYFrame10)
+                PropertyValuesHolder.ofKeyframe(
+                    "scaleY",
+                    scaleYFrame0,
+                    scaleYFrame1,
+                    scaleYFrame9,
+                    scaleYFrame10
+                )
 
-            val animator = ObjectAnimator.ofPropertyValuesHolder(iv_ring2, frameHolder, frameHolder2, frameHolder3)
+            val animator = ObjectAnimator.ofPropertyValuesHolder(
+                iv_ring2,
+                frameHolder,
+                frameHolder2,
+                frameHolder3
+            )
             animator.duration = 1000
             animator.start()
         }
