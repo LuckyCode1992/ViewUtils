@@ -184,6 +184,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="控件高级属性" />
+            <Button
+                android:id="@+id/btn_rotate_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="图片旋转" />
         </LinearLayout>
 
     </ScrollView>
