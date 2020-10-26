@@ -34,6 +34,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.View.MeasureSpec
 import com.justcode.hxl.viewutil.rotate.ImageRotateActivity
+import com.justcode.hxl.viewutil.自定义View.DrawMainActivity
 import com.justcode.hxl.viewutil.自定义控件.第七章_绘图进阶.shader.LinearGradient2View
 import com.justcode.hxl.viewutil.自定义控件.第十三章_控件高级属性.ControlActivity
 import com.justcode.hxl.viewutil.自定义控件.第十二章_封装控件.PackageActivity
@@ -149,6 +150,9 @@ class MainActivity : AppCompatActivity() {
         btn_rotate_image.setOnClickListener {
             start<ImageRotateActivity>()
         }
+        btn_draw.setOnClickListener {
+            start<DrawMainActivity>()
+        }
 
 
     }
@@ -162,7 +166,13 @@ class LinearGradient2Progress @JvmOverloads constructor(
     val paint = Paint()
     //颜色数值
     val colors =
-        intArrayOf(0xffff0000.toInt(), 0xff00ff00.toInt(), 0xff0000ff.toInt(), 0xffffff00.toInt(), 0xff00ffff.toInt())
+        intArrayOf(
+            0xffff0000.toInt(),
+            0xff00ff00.toInt(),
+            0xff0000ff.toInt(),
+            0xffffff00.toInt(),
+            0xff00ffff.toInt()
+        )
     //比例分配 必须和颜色数组相匹配
     val pos: FloatArray = floatArrayOf(0f, 0.2f, 0.4f, 0.6f, 1f)
 
@@ -177,7 +187,13 @@ class LinearGradient2Progress @JvmOverloads constructor(
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         paint.shader = LinearGradient(
-            0f, height / 2.toFloat(), width.toFloat(), height / 2.toFloat(), colors, pos, Shader.TileMode.CLAMP
+            0f,
+            height / 2.toFloat(),
+            width.toFloat(),
+            height / 2.toFloat(),
+            colors,
+            pos,
+            Shader.TileMode.CLAMP
         )
         canvas.drawRect(0f, 0f, width0.toFloat(), height.toFloat(), paint)
     }

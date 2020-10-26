@@ -15,16 +15,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".rotate.ImageRotateActivity"></activity>
+        <activity android:name=".自定义View.绘制1_1.Draw_1_1_Activity"></activity>
+        <activity android:name=".自定义View.DrawMainActivity" />
+        <activity android:name=".rotate.ImageRotateActivity" />
         <activity
             android:name=".自定义控件.第十三章_控件高级属性.GestureDectorActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第十三章_控件高级属性.ControlActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第十二章_封装控件.PackageActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
 
         <provider
             android:name=".shape_selector_util.core.BackgroundContentProvider"
@@ -34,106 +36,106 @@
 
         <activity
             android:name=".自定义控件.第十章_android画布.SurfaceViewActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第十章_android画布.BitmapActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第十章_android画布.ShapeDrawableActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第十章_android画布.HuabuMainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".recycleview_util.VegaLayoutActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第九章_canvas与图层.CanvasMainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第八章_混合模式.MixedModeActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".recycleview_util.TurnLayoutManagerActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".recycleview_util.StickyLayoutActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第七章_绘图进阶.shader.RadialGradientActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第七章_绘图进阶.shader.LinearGradientActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第七章_绘图进阶.shader.BitmapShaderActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第七章_绘图进阶.发光效果和图片阴影.BlurMaskFilterActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第七章_绘图进阶.阴影效果.ShadowLayerActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第七章_绘图进阶.DrawAdvancedActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第七章_绘图进阶.贝塞尔曲线.BezierActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".recycleview_util.StackCardLayoutActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第六章_paint基本使用.PaintSimpleActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".recycleview_util.CircularLayoutActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第五章_动画进阶.SVGdemoActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".recycleview_util.ExpandLayoutManagerActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第五章_动画进阶.PathMeasureActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".recycleview_util.FlowDragLayoutManagerActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第四章_属性动画进阶.ViewPropertyAnimatorActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第四章_属性动画进阶.PropertyActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".recycleview_util.TantanCardLayoutActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".recycleview_util.GreedoLayoutManagerActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第三章_属性动画.AnimatorPathActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第三章_属性动画.AnimatorSetActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".recycleview_util.WeatherActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".recycleview_util.ShopActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".recycleview_util.DiscreateScrollLayoutMangerActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第三章_属性动画.ObjectAnimatorActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".recycleview_util.HiveLayoutmanagerActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".自定义控件.第三章_属性动画.OfOjectActivity"
             android:screenOrientation="portrait" />
