@@ -4,4 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <com.justcode.hxl.viewutil.自定义View.绘制1_1.pratice1_1.ColorView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </RelativeLayout>
