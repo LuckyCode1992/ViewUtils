@@ -1,0 +1,17 @@
+package com.justcode.hxl.viewutil.自定义View.绘制1_1.饼图.interfaces;
+
+import com.justcode.hxl.viewutil.自定义View.绘制1_1.饼图.entry.PieEntry;
+
+;
+
+public interface OnSectorChangeListener <T extends PieEntry> {
+    /**
+     *
+     * @param pieEntry
+     * @param cx
+     * @param cy
+     * @param radius
+     * @param source  BaseSectorDrawable.Source
+     */
+    void onSectorChange(T pieEntry,int cx,int cy,int radius,int source);
+}

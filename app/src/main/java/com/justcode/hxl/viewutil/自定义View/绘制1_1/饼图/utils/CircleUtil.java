@@ -1,10 +1,13 @@
-package com.justcode.hxl.viewutil.自定义View.绘制1_1.饼图.utils
+package com.justcode.hxl.viewutil.自定义View.绘制1_1.饼图.utils;
 
-import android.graphics.PointF
+import android.graphics.PointF;
 
 
-object CircleUtil {
-
+/**
+ * 有关圆形的一些数学计算工具
+ * Created by Acorn on 2015/8/27.
+ */
+public class CircleUtil {
     /**
      * 根据角度angle获取在此角与圆心连线中距离圆心为distanceToCenter远的点
      *
@@ -13,17 +16,15 @@ object CircleUtil {
      * @param cX               圆心
      * @param cY               圆心
      */
-    fun getPositionByAngle(angle: Float, distanceToCenter: Int, cX: Int, cY: Int): PointF {
-        val res = PointF()
-        val x1: Double
-        val y1: Double
+    public static PointF getPositionByAngle(float angle, int distanceToCenter, int cX, int cY) {
+        PointF res = new PointF();
+        double x1, y1;
         //角度转成弧度
-        //角度转成弧度
-        val radians: Double = angle2radians(angle)
-        x1 = cX + distanceToCenter * Math.cos(radians)
-        y1 = cY + distanceToCenter * Math.sin(radians)
-        res[x1.toFloat()] = y1.toFloat()
-        return res
+        double radians = angle2radians(angle);
+        x1 = cX + distanceToCenter * Math.cos(radians);
+        y1 = cY + distanceToCenter * Math.sin(radians);
+        res.set((float) x1, (float) y1);
+        return res;
     }
 
     /**
@@ -36,15 +37,9 @@ object CircleUtil {
      * @param cY               圆心
      * @return
      */
-    fun getPositionByAngle(
-        sAngle: Float,
-        sweepAngle: Float,
-        distanceToCenter: Int,
-        cX: Int,
-        cY: Int
-    ): PointF {
-        val angle = sAngle + sweepAngle / 2
-        return getPositionByAngle(angle, distanceToCenter, cX, cY)
+    public static PointF getPositionByAngle(float sAngle, float sweepAngle, int distanceToCenter, int cX, int cY) {
+        float angle = sAngle + (sweepAngle / 2);
+        return getPositionByAngle(angle, distanceToCenter, cX, cY);
     }
 
     /**
@@ -56,13 +51,8 @@ object CircleUtil {
      * @param cY 圆心
      * @return 角度, 若radius不为0且坐标超出圆的范围时返回-1.
      */
-    fun getAngleByPosition(
-        x1: Float,
-        y1: Float,
-        cX: Int,
-        cY: Int
-    ): Float {
-        return getAngleByPosition(x1, y1, cX, cY, 0)
+    public static float getAngleByPosition(float x1, float y1, int cX, int cY) {
+        return getAngleByPosition(x1, y1, cX, cY, 0);
     }
 
     /**
@@ -75,36 +65,32 @@ object CircleUtil {
      * @param radius 圆的半径,用于判断点是否超出圆的范围,超出时返回-1.传值为0时不判断是否超出范围
      * @return 角度, 若radius不为0且坐标超出圆的范围时返回-1.
      */
-    fun getAngleByPosition(
-        x1: Float,
-        y1: Float,
-        cX: Int,
-        cY: Int,
-        radius: Int
-    ): Float { // 对边
-        val oppositeSide = y1 - cY
+    public static float getAngleByPosition(float x1, float y1, int cX, int cY, int radius) {
+        // 对边
+        float oppositeSide = y1 - cY;
         // 邻边
-        val adjacentSide = x1 - cX
+        float adjacentSide = x1 - cX;
         if (radius > 0) { //半径大于0时,判断坐标点是否超出圆形范围
-// 点超出圆形范围
+            // 点超出圆形范围
             if (Math.abs(oppositeSide) > radius || Math.abs(adjacentSide) > radius) {
-                return -1f
+                return -1f;
             }
             // 点到圆心距离超过了半径
-            if (Math.sqrt(oppositeSide * oppositeSide + adjacentSide * adjacentSide.toDouble()) > radius) {
-                return -1f
+            if (Math.sqrt(oppositeSide * oppositeSide + adjacentSide * adjacentSide) > radius) {
+                return -1f;
             }
         }
         //弧度
-        val tanRadians = Math.atan(oppositeSide / adjacentSide.toDouble())
-        var angle = radians2angle(tanRadians)
+        double tanRadians = Math.atan(oppositeSide / adjacentSide);
+        double angle = radians2angle(tanRadians);
         if (x1 < cX) {
-            angle = 180 + angle
+            angle = 180 + angle;
         } else if (x1 > cX && y1 < cY) {
-            angle = 360 + angle
+            angle = 360 + angle;
         }
-        return angle.toFloat() % 360
+        return (float) angle % 360;
     }
+
 
     /**
      * 获取扇形中心点坐标
@@ -116,15 +102,9 @@ object CircleUtil {
      * @param radius     半径
      * @return 扇形中心点坐标
      */
-    fun getSectorCenterPosition(
-        sAngle: Float,
-        sweepAngle: Float,
-        cX: Int,
-        cY: Int,
-        radius: Int
-    ): PointF {
-        val angle = sAngle + sweepAngle / 2
-        return getPositionByAngle(angle, radius / 2, cX, cY)
+    public static PointF getSectorCenterPosition(float sAngle, float sweepAngle, int cX, int cY, int radius) {
+        float angle = sAngle + (sweepAngle) / 2;
+        return getPositionByAngle(angle, radius / 2, cX, cY);
     }
 
     /**
@@ -136,15 +116,10 @@ object CircleUtil {
      * @param touchY 触摸位置
      * @return 圆心到触摸点的距离(正数)
      */
-    fun getDistanceByPosition(
-        cx: Int,
-        cy: Int,
-        touchX: Float,
-        touchY: Float
-    ): Float {
-        val side1 = Math.abs(cx.toFloat() - touchX)
-        val side2 = Math.abs(cy.toFloat() - touchY)
-        return Math.sqrt(side1 * side1 + side2 * side2.toDouble()).toFloat()
+    public static float getDistanceByPosition(int cx, int cy, float touchX, float touchY) {
+        float side1 = Math.abs((float) cx - touchX);
+        float side2 = Math.abs((float) cy - touchY);
+        return (float) Math.sqrt(side1 * side1 + side2 * side2);
     }
 
     /**
@@ -155,16 +130,11 @@ object CircleUtil {
      * @param sectorEndAngle
      * @return
      */
-    fun isContainAngle(
-        targetAngle: Float,
-        sectorStartAngle: Float,
-        sectorEndAngle: Float
-    ): Boolean {
-        return (targetAngle.compareTo(sectorStartAngle) == 0 ||
-                targetAngle.compareTo(sectorStartAngle) == 1) &&
-                targetAngle.compareTo(sectorEndAngle) == -1
+    public static boolean isContainAngle(float targetAngle, float sectorStartAngle, float sectorEndAngle) {
+        return (Float.compare(targetAngle, sectorStartAngle) == 0 ||
+                Float.compare(targetAngle, sectorStartAngle) == 1) &&
+                Float.compare(targetAngle, sectorEndAngle) == -1;
     }
-
 
     /**
      * 角度转弧度
@@ -172,8 +142,8 @@ object CircleUtil {
      * @param angle
      * @return
      */
-    fun angle2radians(angle: Float): Double {
-        return angle / 180f * Math.PI
+    public static double angle2radians(float angle) {
+        return angle / 180f * Math.PI;
     }
 
     /**
@@ -182,7 +152,7 @@ object CircleUtil {
      * @param radians
      * @return
      */
-    fun radians2angle(radians: Double): Double {
-        return 180f * radians / Math.PI
+    public static double radians2angle(double radians) {
+        return 180f * radians / Math.PI;
     }
 }

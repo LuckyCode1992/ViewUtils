@@ -7,7 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewStub
+import android.widget.Toast
 import com.justcode.hxl.viewutil.R
+import com.justcode.hxl.viewutil.extend.start
+import com.justcode.hxl.viewutil.自定义View.绘制1_1.饼图.PieViewActivity
+import kotlinx.android.synthetic.main.page_fragment_1_1.view.*
 
 
 class PageFragment :
@@ -40,6 +44,11 @@ class PageFragment :
             view.findViewById<View>(R.id.practiceStub) as ViewStub
         practiceStub.layoutResource = practiceLayoutRes
         practiceStub.inflate()
+        if (sampleLayoutRes == R.layout.sample_pie_chart) {
+            view.rl_back.setOnClickListener {
+                context?.start<PieViewActivity>()
+            }
+        }
 
         return view
     }

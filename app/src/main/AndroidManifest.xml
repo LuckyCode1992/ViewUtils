@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".自定义View.绘制1_1.Draw_1_1_Activity"></activity>
+        <activity android:name=".自定义View.绘制1_1.饼图.PieViewActivity"></activity>
+        <activity android:name=".自定义View.绘制1_1.Draw_1_1_Activity" />
         <activity android:name=".自定义View.DrawMainActivity" />
         <activity android:name=".rotate.ImageRotateActivity" />
         <activity
