@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.justcode.hxl.viewutil.R
 import com.justcode.hxl.viewutil.extend.start
 import com.justcode.hxl.viewutil.自定义View.绘制1_1.Draw_1_1_Activity
+import com.justcode.hxl.viewutil.自定义View.绘制1_2.Draw_1_2_Activity
 import kotlinx.android.synthetic.main.activity_draw_main.*
 
 class DrawMainActivity : AppCompatActivity() {
@@ -15,6 +16,9 @@ class DrawMainActivity : AppCompatActivity() {
 
         btn_1_1.setOnClickListener {
            start<Draw_1_1_Activity>()
+        }
+        btn_1_2.setOnClickListener {
+            start<Draw_1_2_Activity>()
         }
 
 

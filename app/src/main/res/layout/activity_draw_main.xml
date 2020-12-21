@@ -20,6 +20,11 @@
               android:text="自定义View 1-1 绘制基础"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/btn_1_2"
+                android:text="自定义View 1-2 Paint详解"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
 
     </ScrollView>
